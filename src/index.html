@@ -11,7 +11,7 @@
 <body>
   <header class="header" role="banner">
     <div class="header__inner">
-      <a href="/" class="header__brand" data-i18n="app.title">Terminosfera</a>
+      <a href="/" class="header__brand">Terminosfera</a>
       <div class="header__actions">
         <div id="language-switcher"></div>
         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
@@ -22,39 +22,58 @@
   <main class="main" id="app" role="main"></main>
 
   <template id="page-home">
+    <div class="hero">
+      <h1 class="hero__title">Терміносфера</h1>
+      <p class="hero__subtitle">Багатомовна база IT-термінів</p>
+    </div>
+
     <div class="search-box" role="search">
-      <span class="search-box__icon" aria-hidden="true">🔍</span>
+      <span class="search-box__icon">🔍</span>
       <input
         type="search"
         class="search-box__input"
         id="search-input"
-        data-i18n="search.placeholder"
-        placeholder="Search terms..."
+        placeholder="Пошук термінів..."
         autocomplete="off"
       />
-      <button class="search-box__clear" id="search-clear" aria-label="Clear search">✕</button>
+      <button class="search-box__clear" id="search-clear" aria-label="Clear">✕</button>
     </div>
-    <div id="category-filter" class="category-filter"></div>
-    <div id="term-list" class="term-list"></div>
+
+    <hr class="divider" />
+
+    <div class="popular-categories">
+      <p class="popular-categories__title">Популярні категорії</p>
+      <div class="popular-categories__list" id="popular-categories"></div>
+    </div>
+
+    <hr class="divider" />
+
+    <div id="results-area"></div>
+
+    <div class="stats" id="stats">
+      <span id="stat-terms">96</span> термінів
+      <span class="stats__dot">·</span>
+      <span id="stat-categories">15</span> категорій
+      <span class="stats__dot">·</span>
+      3 мови
+    </div>
   </template>
 
   <template id="page-term">
-    <a href="/" class="term-page__back" data-i18n="term.back">← Back to terms</a>
-    <article class="term-page" id="term-content"></article>
+    <a href="/" class="term-page__back">← Назад</a>
+    <article class="term-page">
+      <div class="term-page__headword">
+        <h1 class="term-page__title" id="term-title"></h1>
+        <p class="term-page__title-translations" id="term-translations"></p>
+      </div>
+
+      <div id="term-content"></div>
+    </article>
   </template>
 
-  <template id="term-card">
-    <a class="term-card" data-link>
-      <div class="term-card__title" data-field="title"></div>
-      <div class="term-card__translations" data-field="translations"></div>
-      <div class="term-card__definition" data-field="definition"></div>
-      <div class="term-card__category" data-field="category"></div>
-    </a>
-  </template>
-
-  <template id="term-detail-section">
+  <template id="term-section">
     <section class="term-page__section">
-      <h2 class="term-page__section-title" data-field="section-title"></h2>
+      <h2 class="term-page__section-title" data-field="title"></h2>
       <div data-field="content"></div>
     </section>
   </template>

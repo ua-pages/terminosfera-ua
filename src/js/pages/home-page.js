@@ -1,87 +1,138 @@
 import { appStore } from '../store.js'
+import { router } from '../router.js'
 import { filterTerms } from '../search.js'
-import { renderTermList } from '../components/term-card.js'
-import { setupSearchBox, resetSearchBox } from '../components/search-box.js'
 
-const CATEGORIES = [
-  'Git', 'Frontend', 'DevOps', 'Backend', 'Database', 'Architecture',
-  'Computer Science', 'AI/ML', 'Cloud', 'Mobile', 'Project Management',
-  'Design', 'Network', 'Security', 'Testing',
-]
+const POPULAR_CATEGORIES = ['Git', 'Frontend', 'DevOps', 'AI/ML', 'Cloud']
 
 /**
- * Renders the home page.
+ * Renders the home page with search, categories, and term list.
  * @param {HTMLElement} container
  */
 export function renderHomePage(container) {
   const template = document.getElementById('page-home')
   const clone = template.content.cloneNode(true)
-
   container.innerHTML = ''
   container.appendChild(clone)
 
-  resetSearchBox()
-  setupSearchBox()
-
-  renderCategoryFilter()
-  renderTermListWithFilters()
+  setupSearch()
+  renderPopularCategories()
+  updateStats()
 }
 
-function renderCategoryFilter() {
-  const container = document.getElementById('category-filter')
-  const { categoryFilter } = appStore.state
+function setupSearch() {
+  const input = document.getElementById('search-input')
+  const clear = document.getElementById('search-clear')
 
-  const allBtn = document.createElement('button')
-  allBtn.className = `category-filter__btn${!categoryFilter ? ' category-filter__btn--active' : ''}`
-  allBtn.textContent = 'All'
-  allBtn.addEventListener('click', () => {
-    appStore.setState({ categoryFilter: '' })
-    renderTermListWithFilters()
-    updateFilterButtons()
+  input.addEventListener('input', () => {
+    appStore.setState({ searchQuery: input.value })
+    clear.classList.toggle('search-box__clear--visible', input.value.length > 0)
+    renderResults()
   })
-  container.appendChild(allBtn)
 
-  for (const cat of CATEGORIES) {
+  clear.addEventListener('click', () => {
+    input.value = ''
+    input.focus()
+    appStore.setState({ searchQuery: '' })
+    clear.classList.remove('search-box__clear--visible')
+    renderResults()
+  })
+}
+
+function renderPopularCategories() {
+  const container = document.getElementById('popular-categories')
+  container.innerHTML = ''
+
+  for (const cat of POPULAR_CATEGORIES) {
     const btn = document.createElement('button')
-    btn.className = `category-filter__btn${categoryFilter === cat ? ' category-filter__btn--active' : ''}`
+    btn.className = 'popular-categories__btn'
     btn.textContent = cat
-    btn.dataset.category = cat
     btn.addEventListener('click', () => {
-      appStore.setState({ categoryFilter: cat })
-      renderTermListWithFilters()
-      updateFilterButtons()
+      renderCategoryResults(cat)
     })
     container.appendChild(btn)
   }
 }
 
-function updateFilterButtons() {
-  const { categoryFilter } = appStore.state
-  const buttons = document.querySelectorAll('.category-filter__btn')
-  buttons.forEach((btn) => {
-    const isActive = !categoryFilter
-      ? !btn.dataset.category
-      : btn.dataset.category === categoryFilter
-    btn.classList.toggle('category-filter__btn--active', isActive)
-  })
+function renderCategoryResults(category) {
+  const app = document.getElementById('app')
+  const { terms } = appStore.state
+  const filtered = terms.filter((t) => t.category === category)
+  showTermList(filtered, app)
 }
 
-function renderTermListWithFilters() {
-  const listEl = document.getElementById('term-list')
-  if (!listEl) return
-
-  const { terms, searchQuery, categoryFilter } = appStore.state
-
-  let filtered = searchQuery ? filterTerms(terms, searchQuery) : [...terms]
-  if (categoryFilter) {
-    filtered = filtered.filter((t) => t.category === categoryFilter)
+function renderResults() {
+  const { terms, searchQuery } = appStore.state
+  if (!searchQuery.trim()) {
+    hideResults()
+    return
   }
 
-  renderTermList(filtered, listEl)
+  const filtered = filterTerms(terms, searchQuery)
+  const app = document.getElementById('app')
+  showTermList(filtered, app)
 }
 
-appStore.subscribe((state) => {
-  if (state.searchQuery !== undefined) {
-    renderTermListWithFilters()
+function showTermList(terms, container) {
+  const list = document.createElement('div')
+  list.className = 'term-list'
+
+  if (terms.length === 0) {
+    const empty = document.createElement('div')
+    empty.className = 'term-list__empty'
+    empty.textContent = 'Нічого не знайдено'
+    const existing = container.querySelector('.term-list')
+    if (existing) existing.replaceWith(empty)
+    else container.appendChild(empty)
+    return
   }
-})
+
+  for (const term of terms) {
+    const { lang } = appStore.state
+    const card = document.createElement('a')
+    card.className = 'term-card'
+    card.href = `#/term/${term.id}`
+
+    const title = document.createElement('span')
+    title.className = 'term-card__title'
+    title.textContent = term.translations[lang]
+
+    const trans = document.createElement('span')
+    trans.className = 'term-card__translations'
+    trans.textContent = `${term.translations.en} · ${term.translations.uk} · ${term.translations.es}`
+
+    const cat = document.createElement('span')
+    cat.className = 'term-card__category'
+    cat.textContent = term.category
+
+    card.appendChild(title)
+    card.appendChild(trans)
+    card.appendChild(cat)
+
+    card.addEventListener('click', (e) => {
+      e.preventDefault()
+      router.navigate(`/term/${term.id}`)
+    })
+
+    list.appendChild(card)
+  }
+
+  const existing = container.querySelector('.term-list')
+  if (existing) existing.replaceWith(list)
+  else container.appendChild(list)
+}
+
+function hideResults() {
+  const existing = document.querySelector('.term-list, .term-list__empty')
+  if (existing) existing.remove()
+}
+
+function updateStats() {
+  const state = appStore.state
+  const stats = document.getElementById('stats')
+  if (!stats) return
+  const catCount = new Set(state.terms.map((t) => t.category)).size
+  const el = document.getElementById('stat-terms')
+  if (el) el.textContent = state.terms.length
+  const el2 = document.getElementById('stat-categories')
+  if (el2) el2.textContent = catCount
+}
