@@ -78,7 +78,7 @@ body {
   padding: var(--space-2xl) var(--space-md) var(--space-2xl);
 }
 
-/* Hero */
+/* Hero — DevDocs-style search landing */
 
 .hero {
   text-align: center;
@@ -111,7 +111,7 @@ body {
   font-style: italic;
 }
 
-/* Search box */
+/* Search — DevDocs-inspired */
 
 .search-box {
   position: relative;
@@ -122,14 +122,14 @@ body {
 
 .search-box__input {
   width: 100%;
-  padding: 12px 16px 12px 44px;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid var(--color-border);
+  padding: 14px 16px 14px 44px;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
   font-family: var(--font-serif);
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--color-text);
   outline: none;
+  transition: border-color 0.15s ease;
 }
 
 .search-box__input::placeholder {
@@ -138,25 +138,24 @@ body {
 }
 
 .search-box__input:focus {
-  border-bottom-color: var(--color-text-muted);
+  border-color: var(--color-text-muted);
 }
 
 .search-box__icon {
   position: absolute;
-  left: 12px;
+  left: 14px;
   top: 50%;
   transform: translateY(-50%);
   color: var(--color-text-muted);
-  font-size: 1rem;
+  font-size: 0.95rem;
   pointer-events: none;
 }
 
 .search-box__clear {
   position: absolute;
-  right: 4px;
+  right: 8px;
   top: 50%;
   transform: translateY(-50%);
-  padding: 4px 6px;
   font-family: var(--font-sans);
   font-size: 0.75rem;
   color: var(--color-text-muted);
@@ -188,10 +187,10 @@ body {
 
 .popular-categories__title {
   font-family: var(--font-sans);
-  font-size: 0.7rem;
-  font-weight: 700;
+  font-size: 0.65rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   color: var(--color-text-muted);
   margin-bottom: var(--space-md);
   text-align: center;
@@ -201,7 +200,7 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: var(--space-md);
+  gap: var(--space-md) var(--space-lg);
 }
 
 .popular-categories__btn {
@@ -237,7 +236,7 @@ body {
   margin: 0 var(--space-sm);
 }
 
-/* Term list */
+/* Term list — Wikipedia-style article list */
 
 .term-list {
   display: flex;
@@ -299,7 +298,7 @@ body {
   white-space: nowrap;
 }
 
-/* Term page */
+/* Term page — Oxford-style entry + Wikipedia article flow */
 
 .term-page__back {
   display: inline-flex;
@@ -317,16 +316,16 @@ body {
 }
 
 .term-page__headword {
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-md);
   border-bottom: 1px solid var(--color-border);
-  padding-bottom: var(--space-lg);
 }
 
 .term-page__title {
   font-family: var(--font-serif);
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.1;
   color: var(--color-text);
   margin-bottom: var(--space-xs);
 }
@@ -338,14 +337,19 @@ body {
   font-style: italic;
 }
 
-.term-page__section {
-  margin-bottom: var(--space-lg);
+.term-page__content {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.term-page__content > * + * {
+  margin-top: var(--space-lg);
 }
 
 .term-page__section-title {
   font-family: var(--font-sans);
-  font-size: 0.65rem;
-  font-weight: 700;
+  font-size: 0.6rem;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--color-text-muted);
@@ -355,14 +359,13 @@ body {
 .term-page__definition {
   font-family: var(--font-serif);
   font-size: 1rem;
-  line-height: 1.7;
+  line-height: 1.75;
   color: var(--color-text);
 }
 
 .term-page__etymology-origin {
   font-family: var(--font-serif);
   font-weight: 600;
-  font-size: 0.95rem;
   margin-bottom: var(--space-xs);
 }
 
@@ -370,7 +373,6 @@ body {
   font-family: var(--font-serif);
   color: var(--color-text-secondary);
   line-height: 1.7;
-  font-size: 0.95rem;
 }
 
 .term-page__related {
@@ -382,14 +384,12 @@ body {
 .term-page__related-link {
   font-family: var(--font-serif);
   font-size: 0.95rem;
-  color: var(--color-text);
+  color: var(--color-primary);
   text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.15s ease;
 }
 
 .term-page__related-link:hover {
-  border-bottom-color: var(--color-text-muted);
+  text-decoration: underline;
 }
 
 /* Language switcher */
