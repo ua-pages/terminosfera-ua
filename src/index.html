@@ -23,12 +23,10 @@
 
   <template id="page-home">
     <div class="hero">
-      <h1 class="hero__title">
-        Терміносфера
-        <span class="hero__badge">β</span>
-      </h1>
-      <p class="hero__subtitle">Українська база IT-термінів</p>
+      <h1 class="hero__title">Терміносфера</h1>
     </div>
+
+    <div class="progress-bar" id="progress-bar"></div>
 
     <div class="search-box" role="search">
       <span class="search-box__icon">🔍</span>
@@ -44,21 +42,18 @@
 
     <hr class="divider" />
 
-    <div class="popular-categories">
-      <p class="popular-categories__title">Популярні категорії</p>
-      <div class="popular-categories__list" id="popular-categories"></div>
+    <div id="results-area"></div>
+
+    <div class="suggestions" id="suggestions">
+      <p class="suggestions__title">Спробуйте сьогодні</p>
+      <div class="suggestions__list" id="suggestions-list"></div>
+      <button class="suggestions__action" id="suggestions-shuffle">🎲 Показати інші</button>
     </div>
 
     <hr class="divider" />
 
-    <div id="results-area"></div>
-
-    <div class="stats" id="stats">
-      <span id="stat-terms">96</span> термінів
-      <span class="stats__dot">·</span>
-      <span id="stat-categories">15</span> категорій
-      <span class="stats__dot">·</span>
-      3 мови
+    <div class="stats">
+      3 мови · <span id="stat-terms">96</span> термінів
     </div>
   </template>
 
@@ -66,16 +61,18 @@
     <a href="/" class="term-page__back">← Назад</a>
     <article class="term-page">
       <div class="term-page__headword">
-        <h1 class="term-page__title" id="term-title"></h1>
-        <p class="term-page__title-translations" id="term-translations"></p>
+        <button class="term-page__learn-btn" id="term-learn-btn" aria-label="Mark as learned">○</button>
+        <div class="term-page__title-wrapper">
+          <h1 class="term-page__title" id="term-title"></h1>
+          <p class="term-page__title-translations" id="term-translations"></p>
+        </div>
       </div>
-
       <div class="term-page__content" id="term-content"></div>
     </article>
   </template>
 
   <template id="term-section">
-    <section class="term-page__section">
+    <section>
       <h2 class="term-page__section-title" data-field="title"></h2>
       <div data-field="content"></div>
     </section>

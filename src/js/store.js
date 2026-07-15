@@ -62,4 +62,23 @@ export const appStore = new Store({
   terms: [],
   searchQuery: '',
   categoryFilter: '',
+  learned: loadLearned(),
 })
+
+function loadLearned() {
+  try {
+    const raw = localStorage.getItem('terminosfera-learned')
+    return raw ? JSON.parse(raw) : []
+  } catch {
+    return []
+  }
+}
+
+export function toggleLearned(id) {
+  const { learned } = appStore.state
+  const next = learned.includes(id)
+    ? learned.filter((x) => x !== id)
+    : [...learned, id]
+  appStore.setState({ learned: next })
+  localStorage.setItem('terminosfera-learned', JSON.stringify(next))
+}

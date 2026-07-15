@@ -1,11 +1,11 @@
-import { appStore } from '../store.js'
+import { appStore, toggleLearned } from '../store.js'
 import { router } from '../router.js'
 
 const FLAGS = { en: '🇬🇧', uk: '🇺🇦', es: '🇪🇸' }
 const LANG_CODES = ['en', 'uk', 'es']
 
 /**
- * Renders the term detail page like a dictionary entry.
+ * Renders the term detail page.
  * @param {import('../types.js').Term} term
  * @param {HTMLElement} container
  */
@@ -32,6 +32,13 @@ export function renderTermPage(term, container) {
     .map((code) => `${FLAGS[code]} ${term.translations[code]}`)
     .join('  ·  ')
 
+  const learnBtn = document.getElementById('term-learn-btn')
+  updateLearnBtn(learnBtn, term.id)
+  learnBtn.addEventListener('click', () => {
+    toggleLearned(term.id)
+    updateLearnBtn(learnBtn, term.id)
+  })
+
   const content = document.getElementById('term-content')
   content.innerHTML = ''
 
@@ -57,6 +64,14 @@ export function renderTermPage(term, container) {
   }
 }
 
+function updateLearnBtn(btn, id) {
+  const { learned } = appStore.state
+  const isLearned = learned.includes(id)
+  btn.textContent = isLearned ? '●' : '○'
+  btn.classList.toggle('term-page__learn-btn--learned', isLearned)
+  btn.setAttribute('aria-label', isLearned ? 'Mark as unlearned' : 'Mark as learned')
+}
+
 /**
  * @param {HTMLElement} container
  * @param {string} title
@@ -66,11 +81,10 @@ function appendSection(container, title, html) {
   const template = document.getElementById('term-section')
   const clone = template.content.cloneNode(true)
 
-  const section = clone.querySelector('.term-page__section')
+  const section = clone.querySelector('section')
   section.querySelector('[data-field="title"]').textContent = title
   section.querySelector('[data-field="content"]').innerHTML = html
 
-  // Update links for SPA navigation
   section.querySelectorAll('a[href^="#/term/"]').forEach((a) => {
     a.addEventListener('click', (e) => {
       e.preventDefault()

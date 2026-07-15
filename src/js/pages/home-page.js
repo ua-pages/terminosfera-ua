@@ -2,91 +2,133 @@ import { appStore } from '../store.js'
 import { router } from '../router.js'
 import { filterTerms } from '../search.js'
 
-const POPULAR_CATEGORIES = ['Git', 'Frontend', 'DevOps', 'AI/ML', 'Cloud']
+const SUGGESTION_COUNT = 5
 
 /**
- * Renders the home page with search, categories, and term list.
+ * Renders the home page.
  * @param {HTMLElement} container
  */
 export function renderHomePage(container) {
   const template = document.getElementById('page-home')
   const clone = template.content.cloneNode(true)
+
   container.innerHTML = ''
   container.appendChild(clone)
 
-  setupSearch()
-  renderPopularCategories()
+  appStore.subscribe(render)
+  render()
+}
+
+function render() {
+  renderProgress()
+  renderSuggestions()
   updateStats()
+  setupSearch()
+  setupShuffle()
+}
+
+function renderProgress() {
+  const bar = document.getElementById('progress-bar')
+  if (!bar) return
+
+  const { terms, learned } = appStore.state
+  const count = learned.length
+  const total = terms.length
+  const pct = total > 0 ? Math.round((count / total) * 100) : 0
+
+  bar.innerHTML = `
+    Вивчено ${count} із ${total} термінів
+    <div class="progress-bar__track">
+      <div class="progress-bar__fill" style="width: ${pct}%"></div>
+    </div>
+  `
+}
+
+function renderSuggestions() {
+  const list = document.getElementById('suggestions-list')
+  if (!list) return
+  list.innerHTML = ''
+
+  const terms = getSuggestions()
+  for (const term of terms) {
+    const btn = document.createElement('button')
+    btn.className = 'suggestions__btn'
+    btn.textContent = term.translations.en
+    btn.addEventListener('click', () => router.navigate(`/term/${term.id}`))
+    list.appendChild(btn)
+  }
+}
+
+function getSuggestions() {
+  const { terms, learned } = appStore.state
+  const unlearned = terms.filter((t) => !learned.includes(t.id))
+
+  const pool = unlearned.length >= SUGGESTION_COUNT ? unlearned : terms
+  const shuffled = [...pool].sort(() => Math.random() - 0.5)
+  return shuffled.slice(0, SUGGESTION_COUNT)
+}
+
+function setupShuffle() {
+  const btn = document.getElementById('suggestions-shuffle')
+  if (!btn) return
+
+  const handler = () => {
+    renderSuggestions()
+  }
+
+  btn.removeEventListener('click', handler)
+  btn.addEventListener('click', handler)
 }
 
 function setupSearch() {
   const input = document.getElementById('search-input')
   const clear = document.getElementById('search-clear')
+  if (!input) return
 
-  input.addEventListener('input', () => {
+  const handler = () => {
     appStore.setState({ searchQuery: input.value })
     clear.classList.toggle('search-box__clear--visible', input.value.length > 0)
-    renderResults()
-  })
+    renderSearchResults()
+  }
+
+  input.removeEventListener('input', handler)
+  input.addEventListener('input', handler)
 
   clear.addEventListener('click', () => {
     input.value = ''
     input.focus()
     appStore.setState({ searchQuery: '' })
     clear.classList.remove('search-box__clear--visible')
-    renderResults()
+    renderSearchResults()
   })
 }
 
-function renderPopularCategories() {
-  const container = document.getElementById('popular-categories')
-  container.innerHTML = ''
-
-  for (const cat of POPULAR_CATEGORIES) {
-    const btn = document.createElement('button')
-    btn.className = 'popular-categories__btn'
-    btn.textContent = cat
-    btn.addEventListener('click', () => {
-      renderCategoryResults(cat)
-    })
-    container.appendChild(btn)
-  }
-}
-
-function renderCategoryResults(category) {
-  const app = document.getElementById('app')
-  const { terms } = appStore.state
-  const filtered = terms.filter((t) => t.category === category)
-  showTermList(filtered, app)
-}
-
-function renderResults() {
+function renderSearchResults() {
   const { terms, searchQuery } = appStore.state
+  const area = document.getElementById('results-area')
+
   if (!searchQuery.trim()) {
-    hideResults()
+    area.innerHTML = ''
+    document.getElementById('suggestions').style.display = ''
     return
   }
 
-  const filtered = filterTerms(terms, searchQuery)
-  const app = document.getElementById('app')
-  showTermList(filtered, app)
-}
+  document.getElementById('suggestions').style.display = 'none'
 
-function showTermList(terms, container) {
+  const filtered = filterTerms(terms, searchQuery)
   const list = document.createElement('div')
   list.className = 'term-list'
 
-  if (terms.length === 0) {
+  if (filtered.length === 0) {
     const empty = document.createElement('div')
     empty.className = 'term-list__empty'
     empty.textContent = 'Нічого не знайдено'
-    const existing = container.querySelector('.term-list')
-    if (existing) existing.replaceWith(empty)
-    else container.appendChild(empty)
+    area.innerHTML = ''
+    area.appendChild(empty)
     return
   }
 
-  for (const term of terms) {
+  for (const term of filtered) {
     const { lang } = appStore.state
     const card = document.createElement('a')
     card.className = 'term-card'
@@ -116,23 +158,11 @@ function showTermList(terms, container) {
     list.appendChild(card)
   }
 
-  const existing = container.querySelector('.term-list')
-  if (existing) existing.replaceWith(list)
-  else container.appendChild(list)
-}
-
-function hideResults() {
-  const existing = document.querySelector('.term-list, .term-list__empty')
-  if (existing) existing.remove()
+  area.innerHTML = ''
+  area.appendChild(list)
 }
 
 function updateStats() {
-  const state = appStore.state
-  const stats = document.getElementById('stats')
-  if (!stats) return
-  const catCount = new Set(state.terms.map((t) => t.category)).size
   const el = document.getElementById('stat-terms')
-  if (el) el.textContent = state.terms.length
-  const el2 = document.getElementById('stat-categories')
-  if (el2) el2.textContent = catCount
+  if (el) el.textContent = appStore.state.terms.length
 }

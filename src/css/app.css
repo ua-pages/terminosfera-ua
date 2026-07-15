@@ -171,6 +171,30 @@ body {
   color: var(--color-text);
 }
 
+/* Progress bar */
+
+.progress-bar {
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-lg);
+}
+
+.progress-bar__track {
+  width: 200px;
+  height: 4px;
+  background: var(--color-border);
+  margin: var(--space-sm) auto 0;
+  position: relative;
+}
+
+.progress-bar__fill {
+  height: 100%;
+  background: var(--color-text-muted);
+  transition: width 0.3s ease;
+}
+
 /* Divider */
 
 .divider {
@@ -179,13 +203,13 @@ body {
   margin: var(--space-lg) 0;
 }
 
-/* Popular categories */
+/* Suggestions */
 
-.popular-categories {
-  margin-bottom: var(--space-xl);
+.suggestions {
+  text-align: center;
 }
 
-.popular-categories__title {
+.suggestions__title {
   font-family: var(--font-sans);
   font-size: 0.65rem;
   font-weight: 600;
@@ -193,34 +217,44 @@ body {
   letter-spacing: 0.08em;
   color: var(--color-text-muted);
   margin-bottom: var(--space-md);
-  text-align: center;
 }
 
-.popular-categories__list {
+.suggestions__list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: var(--space-md) var(--space-lg);
 }
 
-.popular-categories__btn {
+.suggestions__btn {
   padding: 0;
   font-family: var(--font-serif);
-  font-size: 0.95rem;
-  color: var(--color-text-secondary);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
   background: none;
   border: none;
   transition: color 0.15s ease;
 }
 
-.popular-categories__btn:hover {
-  color: var(--color-text);
-  text-decoration: underline;
+.suggestions__btn:hover {
+  color: var(--color-primary);
 }
 
-.popular-categories__btn--active {
+.suggestions__action {
+  display: block;
+  margin: var(--space-md) auto 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  background: none;
+  border: none;
+  transition: color 0.15s ease;
+}
+
+.suggestions__action:hover {
   color: var(--color-text);
-  font-weight: 600;
 }
 
 /* Stats */
@@ -319,6 +353,33 @@ body {
   margin-bottom: var(--space-lg);
   padding-bottom: var(--space-md);
   border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-md);
+}
+
+.term-page__learn-btn {
+  font-family: var(--font-sans);
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.15s ease;
+  flex-shrink: 0;
+}
+
+.term-page__learn-btn:hover {
+  color: var(--color-text);
+}
+
+.term-page__learn-btn--learned {
+  color: var(--color-success);
+}
+
+.term-page__title-wrapper {
+  flex: 1;
 }
 
 .term-page__title {
