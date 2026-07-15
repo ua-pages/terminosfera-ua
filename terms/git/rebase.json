@@ -1,0 +1,12 @@
+{
+  "id": "rebase",
+  "translations": { "en": "Rebase", "uk": "Ребейз", "es": "Rebase" },
+  "definition": {
+    "en": "A Git operation that moves commits to a new base branch.",
+    "uk": "Операція Git, яка переносить коміти на нову базову гілку.",
+    "es": "Operación de Git que mueve commits a una nueva rama base."
+  },
+  "etymology": { "origin": "English", "root": "re- + base", "meaning": "to base again" },
+  "category": "Git",
+  "related": ["merge", "branch", "commit", "conflict"]
+}

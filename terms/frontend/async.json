@@ -1,0 +1,12 @@
+{
+  "id": "async",
+  "translations": { "en": "Asynchronous", "uk": "Асинхронний", "es": "Asíncrono" },
+  "definition": {
+    "en": "Allowing multiple operations to run without waiting for each other to complete.",
+    "uk": "Режим виконання, коли операції не чекають завершення одна одної.",
+    "es": "Permite que varias operaciones se ejecuten sin esperar a que cada una termine."
+  },
+  "etymology": { "origin": "Greek", "root": "asyn + chronos", "meaning": "not together in time" },
+  "category": "Frontend",
+  "related": ["callback", "promise", "ajax", "event"]
+}

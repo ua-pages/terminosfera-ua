@@ -1,0 +1,12 @@
+{
+  "id": "event",
+  "translations": { "en": "Event", "uk": "Подія", "es": "Evento" },
+  "definition": {
+    "en": "An action or occurrence recognized by software for handling asynchronously.",
+    "uk": "Дія або випадок, які програма може обробляти асинхронно.",
+    "es": "Acción u ocurrencia reconocida por el software para manejarse de forma asíncrona."
+  },
+  "etymology": { "origin": "Latin", "root": "eventus", "meaning": "outcome, occurrence" },
+  "category": "Frontend",
+  "related": ["dom", "callback", "promise", "async"]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "commit",
+  "translations": { "en": "Commit", "uk": "Коміт", "es": "Commit" },
+  "definition": {
+    "en": "A snapshot of changes saved to the repository history.",
+    "uk": "Знімок змін, збережений в історії репозиторію.",
+    "es": "Instantánea de cambios guardada en el historial del repositorio."
+  },
+  "etymology": { "origin": "Latin", "root": "committere", "meaning": "to bring together" },
+  "category": "Git",
+  "related": ["repository", "branch", "merge", "log", "push"]
+}

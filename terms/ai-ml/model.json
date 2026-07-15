@@ -1,0 +1,12 @@
+{
+  "id": "model",
+  "translations": { "en": "Model", "uk": "Модель", "es": "Modelo" },
+  "definition": {
+    "en": "A mathematical representation trained on data to make predictions or decisions.",
+    "uk": "Математичне представлення, навчене на даних для прогнозування або прийняття рішень.",
+    "es": "Representación matemática entrenada con datos para hacer predicciones o tomar decisiones."
+  },
+  "etymology": { "origin": "Latin", "root": "modulus", "meaning": "small measure, standard" },
+  "category": "AI/ML",
+  "related": ["inference", "training", "algorithm"]
+}

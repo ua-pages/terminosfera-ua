@@ -1,0 +1,12 @@
+{
+  "id": "logging",
+  "translations": { "en": "Logging", "uk": "Логування", "es": "Registro" },
+  "definition": {
+    "en": "Recording events and messages from applications for debugging and analysis.",
+    "uk": "Запис подій та повідомлень застосунків для налагодження та аналізу.",
+    "es": "Registro de eventos y mensajes de aplicaciones para depuración y análisis."
+  },
+  "etymology": { "origin": "Greek", "root": "logos", "meaning": "word, account" },
+  "category": "DevOps",
+  "related": ["monitoring", "infrastructure", "deployment"]
+}

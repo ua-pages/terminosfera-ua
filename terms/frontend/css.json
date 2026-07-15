@@ -1,0 +1,12 @@
+{
+  "id": "css",
+  "translations": { "en": "CSS", "uk": "CSS", "es": "CSS" },
+  "definition": {
+    "en": "A stylesheet language used to describe the presentation of HTML documents.",
+    "uk": "Мова таблиць стилів для опису представлення HTML-документів.",
+    "es": "Lenguaje de hojas de estilo para describir la presentación de documentos HTML."
+  },
+  "etymology": { "origin": "English", "root": "Cascading Style Sheets", "meaning": "acronym" },
+  "category": "Frontend",
+  "related": ["html", "javascript", "dom", "responsive"]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "component",
+  "translations": { "en": "Component", "uk": "Компонент", "es": "Componente" },
+  "definition": {
+    "en": "A reusable, self-contained piece of a user interface.",
+    "uk": "Багаторазовий, самодостатній елемент інтерфейсу користувача.",
+    "es": "Pieza reutilizable e independiente de una interfaz de usuario."
+  },
+  "etymology": { "origin": "Latin", "root": "componere", "meaning": "to put together" },
+  "category": "Frontend",
+  "related": ["framework", "module", "api"]
+}

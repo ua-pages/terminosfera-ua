@@ -1,0 +1,12 @@
+{
+  "id": "stash",
+  "translations": { "en": "Stash", "uk": "Стеш", "es": "Stash" },
+  "definition": {
+    "en": "Temporarily saving uncommitted changes to work on something else.",
+    "uk": "Тимчасове збереження незакомічених змін для перемикання на іншу роботу.",
+    "es": "Guardado temporal de cambios no confirmados para trabajar en otra cosa."
+  },
+  "etymology": { "origin": "Old French", "root": "estache", "meaning": "cache, hiding place" },
+  "category": "Git",
+  "related": ["commit", "branch", "log"]
+}

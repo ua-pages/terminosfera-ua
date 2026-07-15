@@ -1,0 +1,12 @@
+{
+  "id": "kubernetes",
+  "translations": { "en": "Kubernetes", "uk": "Kubernetes", "es": "Kubernetes" },
+  "definition": {
+    "en": "An orchestration platform for automating container deployment and scaling.",
+    "uk": "Платформа оркестрації для автоматизації розгортання та масштабування контейнерів.",
+    "es": "Plataforma de orquestación para automatizar el despliegue y escalado de contenedores."
+  },
+  "etymology": { "origin": "Greek", "root": "kybernētēs", "meaning": "helmsman, pilot" },
+  "category": "DevOps",
+  "related": ["docker", "container", "orchestration", "scalability"]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "schema",
+  "translations": { "en": "Schema", "uk": "Схема", "es": "Esquema" },
+  "definition": {
+    "en": "The structure that defines the organization of data in a database.",
+    "uk": "Структура, що визначає організацію даних у базі даних.",
+    "es": "Estructura que define la organización de los datos en una base de datos."
+  },
+  "etymology": { "origin": "Greek", "root": "skhēma", "meaning": "form, figure, shape" },
+  "category": "Database",
+  "related": ["database", "migration", "query", "index"]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "unit-test",
+  "translations": { "en": "Unit Test", "uk": "Юніт-тест", "es": "Prueba unitaria" },
+  "definition": {
+    "en": "A test that verifies the behavior of a single component or function.",
+    "uk": "Тест, що перевіряє поведінку окремого компонента або функції.",
+    "es": "Prueba que verifica el comportamiento de un solo componente o función."
+  },
+  "etymology": { "origin": "Latin + Old French", "root": "unitas + test", "meaning": "unity + witness" },
+  "category": "Testing",
+  "related": ["integration-test", "regression", "ci-cd"]
+}

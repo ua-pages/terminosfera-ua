@@ -1,0 +1,12 @@
+{
+  "id": "callback",
+  "translations": { "en": "Callback", "uk": "Колбек", "es": "Callback" },
+  "definition": {
+    "en": "A function passed as an argument to another function for later execution.",
+    "uk": "Функція, передана як аргумент іншій функції для подальшого виконання.",
+    "es": "Función pasada como argumento a otra función para su ejecución posterior."
+  },
+  "etymology": { "origin": "English", "root": "call + back", "meaning": "to call again later" },
+  "category": "Frontend",
+  "related": ["javascript", "promise", "async", "event"]
+}

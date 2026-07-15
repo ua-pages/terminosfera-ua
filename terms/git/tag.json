@@ -1,0 +1,12 @@
+{
+  "id": "tag",
+  "translations": { "en": "Tag", "uk": "Тег", "es": "Etiqueta" },
+  "definition": {
+    "en": "A named reference to a specific commit, often used for releases.",
+    "uk": "Іменоване посилання на певний коміт, часто для релізів.",
+    "es": "Referencia con nombre a un commit específico, usada a menudo para lanzamientos."
+  },
+  "etymology": { "origin": "Germanic", "root": "tagō", "meaning": "to touch, mark" },
+  "category": "Git",
+  "related": ["commit", "branch", "release"]
+}

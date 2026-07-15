@@ -1,0 +1,12 @@
+{
+  "id": "integration-test",
+  "translations": { "en": "Integration Test", "uk": "Інтеграційний тест", "es": "Prueba de integración" },
+  "definition": {
+    "en": "A test that verifies how multiple components work together.",
+    "uk": "Тест, що перевіряє, як кілька компонентів працюють разом.",
+    "es": "Prueba que verifica cómo múltiples componentes funcionan juntos."
+  },
+  "etymology": { "origin": "Latin", "root": "integrare + test", "meaning": "to make whole + witness" },
+  "category": "Testing",
+  "related": ["unit-test", "regression", "pipeline"]
+}

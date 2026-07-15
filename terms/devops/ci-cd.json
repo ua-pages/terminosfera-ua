@@ -1,0 +1,12 @@
+{
+  "id": "ci-cd",
+  "translations": { "en": "CI/CD", "uk": "CI/CD", "es": "CI/CD" },
+  "definition": {
+    "en": "Automated practices for continuous integration and delivery of software.",
+    "uk": "Автоматизовані практики безперервної інтеграції та доставки програмного забезпечення.",
+    "es": "Prácticas automatizadas de integración y entrega continua de software."
+  },
+  "etymology": { "origin": "English", "root": "Continuous Integration / Continuous Delivery", "meaning": "acronym" },
+  "category": "DevOps",
+  "related": ["deployment", "pipeline", "infrastructure", "testing"]
+}

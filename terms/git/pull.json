@@ -1,0 +1,12 @@
+{
+  "id": "pull",
+  "translations": { "en": "Pull", "uk": "Пул", "es": "Pull" },
+  "definition": {
+    "en": "Fetching changes from a remote repository and merging them.",
+    "uk": "Отримання змін з віддаленого репозиторію та їх злиття.",
+    "es": "Obtener cambios de un repositorio remoto y fusionarlos."
+  },
+  "etymology": { "origin": "Latin", "root": "pellere", "meaning": "to drive, push" },
+  "category": "Git",
+  "related": ["push", "fetch", "merge", "remote", "repository"]
+}

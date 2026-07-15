@@ -1,0 +1,12 @@
+{
+  "id": "message-queue",
+  "translations": { "en": "Message Queue", "uk": "Черга повідомлень", "es": "Cola de mensajes" },
+  "definition": {
+    "en": "A communication mechanism for asynchronous message passing between services.",
+    "uk": "Механізм зв'язку для асинхронної передачі повідомлень між сервісами.",
+    "es": "Mecanismo de comunicación para paso de mensajes asíncrono entre servicios."
+  },
+  "etymology": { "origin": "Latin + French", "root": "mittere + queue", "meaning": "to send + tail" },
+  "category": "Architecture",
+  "related": ["microservices", "orchestration", "scalability"]
+}

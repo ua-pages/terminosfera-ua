@@ -1,0 +1,12 @@
+{
+  "id": "server",
+  "translations": { "en": "Server", "uk": "Сервер", "es": "Servidor" },
+  "definition": {
+    "en": "A computer or program that provides services or resources to clients.",
+    "uk": "Комп'ютер або програма, що надає послуги або ресурси клієнтам.",
+    "es": "Computadora o programa que proporciona servicios o recursos a clientes."
+  },
+  "etymology": { "origin": "Latin", "root": "servire", "meaning": "to serve" },
+  "category": "Backend",
+  "related": ["endpoint", "api", "middleware", "infrastructure"]
+}

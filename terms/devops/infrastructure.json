@@ -1,0 +1,12 @@
+{
+  "id": "infrastructure",
+  "translations": { "en": "Infrastructure", "uk": "Інфраструктура", "es": "Infraestructura" },
+  "definition": {
+    "en": "The underlying hardware and software resources that support IT systems.",
+    "uk": "Апаратні та програмні ресурси, що підтримують роботу IT-систем.",
+    "es": "Recursos de hardware y software subyacentes que soportan los sistemas de TI."
+  },
+  "etymology": { "origin": "Latin", "root": "infra + structura", "meaning": "below + structure" },
+  "category": "DevOps",
+  "related": ["deployment", "monitoring", "scalability", "configuration"]
+}

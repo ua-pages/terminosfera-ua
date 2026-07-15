@@ -1,0 +1,12 @@
+{
+  "id": "middleware",
+  "translations": { "en": "Middleware", "uk": "Мідлвар", "es": "Middleware" },
+  "definition": {
+    "en": "Software that connects different applications or components in a system.",
+    "uk": "Програмне забезпечення, що з'єднує різні застосунки або компоненти системи.",
+    "es": "Software que conecta diferentes aplicaciones o componentes de un sistema."
+  },
+  "etymology": { "origin": "English", "root": "middle + ware", "meaning": "software in the middle" },
+  "category": "Backend",
+  "related": ["server", "endpoint", "api", "authentication"]
+}

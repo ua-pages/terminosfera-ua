@@ -1,0 +1,12 @@
+{
+  "id": "module",
+  "translations": { "en": "Module", "uk": "Модуль", "es": "Módulo" },
+  "definition": {
+    "en": "A self-contained unit of code that can be imported and reused.",
+    "uk": "Самодостатня одиниця коду, яку можна імпортувати та використовувати повторно.",
+    "es": "Unidad de código independiente que se puede importar y reutilizar."
+  },
+  "etymology": { "origin": "Latin", "root": "modulus", "meaning": "small measure, standard" },
+  "category": "Frontend",
+  "related": ["framework", "component", "closure"]
+}

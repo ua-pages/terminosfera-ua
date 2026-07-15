@@ -1,0 +1,12 @@
+{
+  "id": "fork",
+  "translations": { "en": "Fork", "uk": "Форк", "es": "Fork" },
+  "definition": {
+    "en": "A personal copy of another user's repository on a hosting platform.",
+    "uk": "Особиста копія чужого репозиторію на хостинговій платформі.",
+    "es": "Copia personal del repositorio de otro usuario en una plataforma de alojamiento."
+  },
+  "etymology": { "origin": "Latin", "root": "furca", "meaning": "pitchfork, branch" },
+  "category": "Git",
+  "related": ["repository", "clone", "branch", "remote"]
+}

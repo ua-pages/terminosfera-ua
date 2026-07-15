@@ -1,0 +1,12 @@
+{
+  "id": "database",
+  "translations": { "en": "Database", "uk": "База даних", "es": "Base de datos" },
+  "definition": {
+    "en": "An organized collection of structured data stored electronically.",
+    "uk": "Організований набір структурованих даних, що зберігаються в електронному вигляді.",
+    "es": "Colección organizada de datos estructurados almacenados electrónicamente."
+  },
+  "etymology": { "origin": "Latin", "root": "datum + base", "meaning": "data foundation" },
+  "category": "Database",
+  "related": ["schema", "index", "query", "migration", "transaction"]
+}

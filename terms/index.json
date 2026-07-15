@@ -1,0 +1,386 @@
+[
+  {
+    "id": "abstraction",
+    "category": "Computer Science"
+  },
+  {
+    "id": "ajax",
+    "category": "Frontend"
+  },
+  {
+    "id": "algorithm",
+    "category": "Computer Science"
+  },
+  {
+    "id": "api",
+    "category": "Frontend"
+  },
+  {
+    "id": "api-gateway",
+    "category": "Architecture"
+  },
+  {
+    "id": "apk",
+    "category": "Mobile"
+  },
+  {
+    "id": "async",
+    "category": "Frontend"
+  },
+  {
+    "id": "authentication",
+    "category": "Backend"
+  },
+  {
+    "id": "authorization",
+    "category": "Backend"
+  },
+  {
+    "id": "availability-zone",
+    "category": "Cloud"
+  },
+  {
+    "id": "aws",
+    "category": "Cloud"
+  },
+  {
+    "id": "azure",
+    "category": "Cloud"
+  },
+  {
+    "id": "backlog",
+    "category": "Project Management"
+  },
+  {
+    "id": "branch",
+    "category": "Git"
+  },
+  {
+    "id": "cache",
+    "category": "Architecture"
+  },
+  {
+    "id": "callback",
+    "category": "Frontend"
+  },
+  {
+    "id": "ci-cd",
+    "category": "DevOps"
+  },
+  {
+    "id": "clone",
+    "category": "Git"
+  },
+  {
+    "id": "closure",
+    "category": "Frontend"
+  },
+  {
+    "id": "commit",
+    "category": "Git"
+  },
+  {
+    "id": "complexity",
+    "category": "Computer Science"
+  },
+  {
+    "id": "component",
+    "category": "Frontend"
+  },
+  {
+    "id": "configuration",
+    "category": "DevOps"
+  },
+  {
+    "id": "conflict",
+    "category": "Git"
+  },
+  {
+    "id": "container",
+    "category": "DevOps"
+  },
+  {
+    "id": "css",
+    "category": "Frontend"
+  },
+  {
+    "id": "data-structure",
+    "category": "Computer Science"
+  },
+  {
+    "id": "database",
+    "category": "Database"
+  },
+  {
+    "id": "deployment",
+    "category": "DevOps"
+  },
+  {
+    "id": "dns",
+    "category": "Network"
+  },
+  {
+    "id": "docker",
+    "category": "DevOps"
+  },
+  {
+    "id": "dom",
+    "category": "Frontend"
+  },
+  {
+    "id": "embedding",
+    "category": "AI/ML"
+  },
+  {
+    "id": "encryption",
+    "category": "Security"
+  },
+  {
+    "id": "endpoint",
+    "category": "Backend"
+  },
+  {
+    "id": "epic",
+    "category": "Project Management"
+  },
+  {
+    "id": "event",
+    "category": "Frontend"
+  },
+  {
+    "id": "fetch",
+    "category": "Git"
+  },
+  {
+    "id": "firewall",
+    "category": "Security"
+  },
+  {
+    "id": "flutter",
+    "category": "Mobile"
+  },
+  {
+    "id": "fork",
+    "category": "Git"
+  },
+  {
+    "id": "framework",
+    "category": "Frontend"
+  },
+  {
+    "id": "gcp",
+    "category": "Cloud"
+  },
+  {
+    "id": "html",
+    "category": "Frontend"
+  },
+  {
+    "id": "inference",
+    "category": "AI/ML"
+  },
+  {
+    "id": "infrastructure",
+    "category": "DevOps"
+  },
+  {
+    "id": "integration-test",
+    "category": "Testing"
+  },
+  {
+    "id": "ipa",
+    "category": "Mobile"
+  },
+  {
+    "id": "javascript",
+    "category": "Frontend"
+  },
+  {
+    "id": "json",
+    "category": "Frontend"
+  },
+  {
+    "id": "kubernetes",
+    "category": "DevOps"
+  },
+  {
+    "id": "latency",
+    "category": "Network"
+  },
+  {
+    "id": "load-balancer",
+    "category": "DevOps"
+  },
+  {
+    "id": "log",
+    "category": "Git"
+  },
+  {
+    "id": "logging",
+    "category": "DevOps"
+  },
+  {
+    "id": "merge",
+    "category": "Git"
+  },
+  {
+    "id": "message-queue",
+    "category": "Architecture"
+  },
+  {
+    "id": "microservices",
+    "category": "DevOps"
+  },
+  {
+    "id": "middleware",
+    "category": "Backend"
+  },
+  {
+    "id": "migration",
+    "category": "Database"
+  },
+  {
+    "id": "model",
+    "category": "AI/ML"
+  },
+  {
+    "id": "module",
+    "category": "Frontend"
+  },
+  {
+    "id": "monitoring",
+    "category": "DevOps"
+  },
+  {
+    "id": "orchestration",
+    "category": "DevOps"
+  },
+  {
+    "id": "pipeline",
+    "category": "DevOps"
+  },
+  {
+    "id": "promise",
+    "category": "Frontend"
+  },
+  {
+    "id": "prompt",
+    "category": "AI/ML"
+  },
+  {
+    "id": "protocol",
+    "category": "Network"
+  },
+  {
+    "id": "prototype",
+    "category": "Design"
+  },
+  {
+    "id": "proxy",
+    "category": "Architecture"
+  },
+  {
+    "id": "pull",
+    "category": "Git"
+  },
+  {
+    "id": "push",
+    "category": "Git"
+  },
+  {
+    "id": "query",
+    "category": "Database"
+  },
+  {
+    "id": "react-native",
+    "category": "Mobile"
+  },
+  {
+    "id": "rebase",
+    "category": "Git"
+  },
+  {
+    "id": "recursion",
+    "category": "Computer Science"
+  },
+  {
+    "id": "region",
+    "category": "Cloud"
+  },
+  {
+    "id": "regression",
+    "category": "Testing"
+  },
+  {
+    "id": "remote",
+    "category": "Git"
+  },
+  {
+    "id": "repository",
+    "category": "Git"
+  },
+  {
+    "id": "responsive",
+    "category": "Design"
+  },
+  {
+    "id": "rest",
+    "category": "Architecture"
+  },
+  {
+    "id": "scalability",
+    "category": "DevOps"
+  },
+  {
+    "id": "schema",
+    "category": "Database"
+  },
+  {
+    "id": "sdk",
+    "category": "Mobile"
+  },
+  {
+    "id": "server",
+    "category": "Backend"
+  },
+  {
+    "id": "sprint",
+    "category": "Project Management"
+  },
+  {
+    "id": "stakeholder",
+    "category": "Project Management"
+  },
+  {
+    "id": "stash",
+    "category": "Git"
+  },
+  {
+    "id": "story",
+    "category": "Project Management"
+  },
+  {
+    "id": "tag",
+    "category": "Git"
+  },
+  {
+    "id": "token",
+    "category": "AI/ML"
+  },
+  {
+    "id": "transaction",
+    "category": "Database"
+  },
+  {
+    "id": "unit-test",
+    "category": "Testing"
+  },
+  {
+    "id": "vulnerability",
+    "category": "Security"
+  },
+  {
+    "id": "wireframe",
+    "category": "Design"
+  }
+]

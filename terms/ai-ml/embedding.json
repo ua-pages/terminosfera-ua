@@ -1,0 +1,12 @@
+{
+  "id": "embedding",
+  "translations": { "en": "Embedding", "uk": "Ембеддинг", "es": "Embedding" },
+  "definition": {
+    "en": "A dense vector representation of data, such as words or images, in a continuous space.",
+    "uk": "Щільне векторне представлення даних (слів, зображень) у неперервному просторі.",
+    "es": "Representación vectorial densa de datos, como palabras o imágenes, en un espacio continuo."
+  },
+  "etymology": { "origin": "English", "root": "embed", "meaning": "to fix firmly in a surrounding mass" },
+  "category": "AI/ML",
+  "related": ["model", "token", "inference"]
+}

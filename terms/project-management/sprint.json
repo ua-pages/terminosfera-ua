@@ -1,0 +1,12 @@
+{
+  "id": "sprint",
+  "translations": { "en": "Sprint", "uk": "Спринт", "es": "Sprint" },
+  "definition": {
+    "en": "A fixed time period in Agile development for completing a set of tasks.",
+    "uk": "Фіксований період часу в Agile-розробці для виконання набору завдань.",
+    "es": "Período de tiempo fijo en el desarrollo Agile para completar un conjunto de tareas."
+  },
+  "etymology": { "origin": "Old English", "root": "sprintan", "meaning": "to leap, spring" },
+  "category": "Project Management",
+  "related": ["backlog", "epic", "story"]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "recursion",
+  "translations": { "en": "Recursion", "uk": "Рекурсія", "es": "Recursión" },
+  "definition": {
+    "en": "A technique where a function calls itself to solve smaller instances of a problem.",
+    "uk": "Техніка, коли функція викликає саму себе для розв'язання менших підзадач.",
+    "es": "Técnica donde una función se llama a sí misma para resolver instancias más pequeñas de un problema."
+  },
+  "etymology": { "origin": "Latin", "root": "recurrere", "meaning": "to run back" },
+  "category": "Computer Science",
+  "related": ["algorithm", "complexity", "closure"]
+}

@@ -1,0 +1,72 @@
+{
+  "termCount": 96,
+  "categoriesCount": 15,
+  "categories": [
+    {
+      "name": "Frontend",
+      "count": 15
+    },
+    {
+      "name": "Git",
+      "count": 15
+    },
+    {
+      "name": "DevOps",
+      "count": 14
+    },
+    {
+      "name": "AI/ML",
+      "count": 5
+    },
+    {
+      "name": "Architecture",
+      "count": 5
+    },
+    {
+      "name": "Backend",
+      "count": 5
+    },
+    {
+      "name": "Cloud",
+      "count": 5
+    },
+    {
+      "name": "Computer Science",
+      "count": 5
+    },
+    {
+      "name": "Database",
+      "count": 5
+    },
+    {
+      "name": "Mobile",
+      "count": 5
+    },
+    {
+      "name": "Project Management",
+      "count": 5
+    },
+    {
+      "name": "Design",
+      "count": 3
+    },
+    {
+      "name": "Network",
+      "count": 3
+    },
+    {
+      "name": "Security",
+      "count": 3
+    },
+    {
+      "name": "Testing",
+      "count": 3
+    }
+  ],
+  "translationsCount": 288,
+  "etymologyFilled": 96,
+  "etymologyEmpty": 0,
+  "etymologyPercent": 100,
+  "relatedConnections": 348,
+  "lastUpdated": "2026-07-15"
+}

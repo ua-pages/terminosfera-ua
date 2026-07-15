@@ -1,0 +1,12 @@
+{
+  "id": "configuration",
+  "translations": { "en": "Configuration", "uk": "Конфігурація", "es": "Configuración" },
+  "definition": {
+    "en": "Settings and parameters that define how software behaves in a given environment.",
+    "uk": "Налаштування та параметри, що визначають поведінку ПЗ у певному середовищі.",
+    "es": "Ajustes y parámetros que definen el comportamiento del software en un entorno determinado."
+  },
+  "etymology": { "origin": "Latin", "root": "configurare", "meaning": "to shape, arrange" },
+  "category": "DevOps",
+  "related": ["deployment", "infrastructure", "pipeline"]
+}

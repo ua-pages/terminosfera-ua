@@ -1,0 +1,12 @@
+{
+  "id": "regression",
+  "translations": { "en": "Regression", "uk": "Регресія", "es": "Regresión" },
+  "definition": {
+    "en": "A type of testing that ensures new changes don't break existing functionality.",
+    "uk": "Тип тестування, що гарантує, що нові зміни не ламають наявну функціональність.",
+    "es": "Tipo de prueba que garantiza que los cambios nuevos no rompan la funcionalidad existente."
+  },
+  "etymology": { "origin": "Latin", "root": "regredi", "meaning": "to go back" },
+  "category": "Testing",
+  "related": ["unit-test", "integration-test", "ci-cd"]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "query",
+  "translations": { "en": "Query", "uk": "Запит", "es": "Consulta" },
+  "definition": {
+    "en": "A request for data or information from a database.",
+    "uk": "Запит на отримання даних або інформації з бази даних.",
+    "es": "Solicitud de datos o información de una base de datos."
+  },
+  "etymology": { "origin": "Latin", "root": "quaerere", "meaning": "to ask, seek" },
+  "category": "Database",
+  "related": ["database", "index", "schema", "migration"]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "api",
+  "translations": { "en": "API", "uk": "API", "es": "API" },
+  "definition": {
+    "en": "A set of rules for communication between software components.",
+    "uk": "Набір правил для взаємодії між програмними компонентами.",
+    "es": "Conjunto de reglas para la comunicación entre componentes de software."
+  },
+  "etymology": { "origin": "English", "root": "Application Programming Interface", "meaning": "acronym" },
+  "category": "Frontend",
+  "related": ["endpoint", "ajax", "json", "rest"]
+}

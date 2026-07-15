@@ -1,0 +1,12 @@
+{
+  "id": "json",
+  "translations": { "en": "JSON", "uk": "JSON", "es": "JSON" },
+  "definition": {
+    "en": "A lightweight data-interchange format for structured data.",
+    "uk": "Легкий формат обміну даними для структурованої інформації.",
+    "es": "Formato ligero de intercambio de datos para información estructurada."
+  },
+  "etymology": { "origin": "English", "root": "JavaScript Object Notation", "meaning": "acronym" },
+  "category": "Frontend",
+  "related": ["javascript", "api", "ajax", "rest"]
+}

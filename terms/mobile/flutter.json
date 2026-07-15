@@ -1,0 +1,12 @@
+{
+  "id": "flutter",
+  "translations": { "en": "Flutter", "uk": "Flutter", "es": "Flutter" },
+  "definition": {
+    "en": "Google's open-source UI framework for building cross-platform mobile apps.",
+    "uk": "Відкритий UI-фреймворк Google для створення крос-платформних мобільних застосунків.",
+    "es": "Framework de UI de código abierto de Google para crear aplicaciones móviles multiplataforma."
+  },
+  "etymology": { "origin": "English", "root": "flutter", "meaning": "to move quickly, flap" },
+  "category": "Mobile",
+  "related": ["react-native", "sdk", "apk", "ipa"]
+}

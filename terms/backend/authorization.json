@@ -1,0 +1,12 @@
+{
+  "id": "authorization",
+  "translations": { "en": "Authorization", "uk": "Авторизація", "es": "Autorización" },
+  "definition": {
+    "en": "The process of granting or denying access to specific resources.",
+    "uk": "Процес надання або заборони доступу до певних ресурсів.",
+    "es": "Proceso de conceder o denegar acceso a recursos específicos."
+  },
+  "etymology": { "origin": "Latin", "root": "auctoritas", "meaning": "authority, power" },
+  "category": "Backend",
+  "related": ["authentication", "encryption", "middleware"]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "inference",
+  "translations": { "en": "Inference", "uk": "Інференція", "es": "Inferencia" },
+  "definition": {
+    "en": "The process of running a trained model on new data to produce predictions.",
+    "uk": "Процес запуску навченої моделі на нових даних для отримання прогнозів.",
+    "es": "Proceso de ejecutar un modelo entrenado sobre datos nuevos para producir predicciones."
+  },
+  "etymology": { "origin": "Latin", "root": "inferre", "meaning": "to bring in, deduce" },
+  "category": "AI/ML",
+  "related": ["model", "training", "token"]
+}

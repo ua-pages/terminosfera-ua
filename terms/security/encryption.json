@@ -1,0 +1,12 @@
+{
+  "id": "encryption",
+  "translations": { "en": "Encryption", "uk": "Шифрування", "es": "Cifrado" },
+  "definition": {
+    "en": "The process of encoding data to prevent unauthorized access.",
+    "uk": "Процес кодування даних для запобігання несанкціонованому доступу.",
+    "es": "Proceso de codificación de datos para evitar el acceso no autorizado."
+  },
+  "etymology": { "origin": "Greek", "root": "kryptein", "meaning": "to hide" },
+  "category": "Security",
+  "related": ["authentication", "authorization", "vulnerability"]
+}

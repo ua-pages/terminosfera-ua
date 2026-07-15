@@ -1,0 +1,12 @@
+{
+  "id": "fetch",
+  "translations": { "en": "Fetch", "uk": "Фетч", "es": "Fetch" },
+  "definition": {
+    "en": "Downloading objects and refs from a remote repository without merging.",
+    "uk": "Завантаження об'єктів та посилань з віддаленого репозиторію без злиття.",
+    "es": "Descarga de objetos y referencias de un repositorio remoto sin fusionar."
+  },
+  "etymology": { "origin": "Old English", "root": "feccan", "meaning": "to bring, get" },
+  "category": "Git",
+  "related": ["pull", "push", "remote", "repository"]
+}

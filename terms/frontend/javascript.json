@@ -1,0 +1,12 @@
+{
+  "id": "javascript",
+  "translations": { "en": "JavaScript", "uk": "JavaScript", "es": "JavaScript" },
+  "definition": {
+    "en": "A high-level programming language used for dynamic web content.",
+    "uk": "Мова програмування високого рівня для динамічного веб-контенту.",
+    "es": "Lenguaje de programación de alto nivel para contenido web dinámico."
+  },
+  "etymology": { "origin": "English", "root": "Java + script", "meaning": "named after Java language with scripting syntax" },
+  "category": "Frontend",
+  "related": ["html", "css", "framework", "dom", "promise"]
+}

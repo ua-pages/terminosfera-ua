@@ -1,0 +1,12 @@
+{
+  "id": "authentication",
+  "translations": { "en": "Authentication", "uk": "Автентифікація", "es": "Autenticación" },
+  "definition": {
+    "en": "The process of verifying the identity of a user or system.",
+    "uk": "Процес перевірки особи користувача або системи.",
+    "es": "Proceso de verificación de la identidad de un usuario o sistema."
+  },
+  "etymology": { "origin": "Greek", "root": "authentikos", "meaning": "original, genuine" },
+  "category": "Backend",
+  "related": ["authorization", "encryption", "middleware"]
+}

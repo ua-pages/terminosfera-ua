@@ -1,0 +1,12 @@
+{
+  "id": "push",
+  "translations": { "en": "Push", "uk": "Пуш", "es": "Push" },
+  "definition": {
+    "en": "Uploading local commits to a remote repository.",
+    "uk": "Завантаження локальних комітів у віддалений репозиторій.",
+    "es": "Subida de commits locales a un repositorio remoto."
+  },
+  "etymology": { "origin": "Latin", "root": "pulsare", "meaning": "to beat, drive" },
+  "category": "Git",
+  "related": ["pull", "commit", "remote", "repository", "fetch"]
+}

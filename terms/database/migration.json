@@ -1,0 +1,12 @@
+{
+  "id": "migration",
+  "translations": { "en": "Migration", "uk": "Міграція", "es": "Migración" },
+  "definition": {
+    "en": "A controlled change to the database schema over time.",
+    "uk": "Контрольована зміна схеми бази даних протягом часу.",
+    "es": "Cambio controlado al esquema de la base de datos a lo largo del tiempo."
+  },
+  "etymology": { "origin": "Latin", "root": "migrare", "meaning": "to move, change place" },
+  "category": "Database",
+  "related": ["schema", "database", "query"]
+}

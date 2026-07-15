@@ -1,0 +1,12 @@
+{
+  "id": "rest",
+  "translations": { "en": "REST", "uk": "REST", "es": "REST" },
+  "definition": {
+    "en": "An architectural style for designing networked applications using HTTP.",
+    "uk": "Архітектурний стиль для проєктування мережевих застосунків через HTTP.",
+    "es": "Estilo arquitectónico para diseñar aplicaciones en red utilizando HTTP."
+  },
+  "etymology": { "origin": "English", "root": "Representational State Transfer", "meaning": "acronym" },
+  "category": "Architecture",
+  "related": ["api", "endpoint", "api-gateway", "json"]
+}

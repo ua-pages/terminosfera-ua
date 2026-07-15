@@ -1,0 +1,12 @@
+{
+  "id": "microservices",
+  "translations": { "en": "Microservices", "uk": "Мікросервіси", "es": "Microservicios" },
+  "definition": {
+    "en": "An architectural style that structures an application as small independent services.",
+    "uk": "Архітектурний стиль, що структурує застосунок як набір невеликих незалежних сервісів.",
+    "es": "Estilo arquitectónico que estructura una aplicación como pequeños servicios independientes."
+  },
+  "etymology": { "origin": "Greek + Latin", "root": "mikros + servitium", "meaning": "small + service" },
+  "category": "DevOps",
+  "related": ["orchestration", "container", "deployment", "api-gateway"]
+}

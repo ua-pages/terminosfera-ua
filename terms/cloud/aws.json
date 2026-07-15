@@ -1,0 +1,12 @@
+{
+  "id": "aws",
+  "translations": { "en": "AWS", "uk": "AWS", "es": "AWS" },
+  "definition": {
+    "en": "Amazon Web Services — a comprehensive cloud computing platform by Amazon.",
+    "uk": "Amazon Web Services — комплексна хмарна платформа від Amazon.",
+    "es": "Amazon Web Services — plataforma integral de computación en la nube de Amazon."
+  },
+  "etymology": { "origin": "English", "root": "Amazon Web Services", "meaning": "acronym" },
+  "category": "Cloud",
+  "related": ["azure", "gcp", "region", "availability-zone"]
+}

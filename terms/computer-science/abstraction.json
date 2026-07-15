@@ -1,0 +1,12 @@
+{
+  "id": "abstraction",
+  "translations": { "en": "Abstraction", "uk": "Абстракція", "es": "Abstracción" },
+  "definition": {
+    "en": "Hiding complex implementation details behind a simplified interface.",
+    "uk": "Приховування складних деталей реалізації за спрощеним інтерфейсом.",
+    "es": "Ocultamiento de detalles complejos de implementación detrás de una interfaz simplificada."
+  },
+  "etymology": { "origin": "Latin", "root": "abstrahere", "meaning": "to draw away from" },
+  "category": "Computer Science",
+  "related": ["algorithm", "data-structure", "api"]
+}

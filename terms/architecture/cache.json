@@ -1,0 +1,12 @@
+{
+  "id": "cache",
+  "translations": { "en": "Cache", "uk": "Кеш", "es": "Caché" },
+  "definition": {
+    "en": "A temporary storage layer for frequently accessed data to speed up retrieval.",
+    "uk": "Тимчасовий прошарок зберігання для часто запитуваних даних.",
+    "es": "Capa de almacenamiento temporal para datos de acceso frecuente."
+  },
+  "etymology": { "origin": "French", "root": "cacher", "meaning": "to hide" },
+  "category": "Architecture",
+  "related": ["deployment", "proxy", "database"]
+}

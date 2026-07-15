@@ -1,0 +1,12 @@
+{
+  "id": "ajax",
+  "translations": { "en": "AJAX", "uk": "AJAX", "es": "AJAX" },
+  "definition": {
+    "en": "A technique for updating parts of a web page without reloading.",
+    "uk": "Техніка оновлення частин веб-сторінки без перезавантаження.",
+    "es": "Técnica para actualizar partes de una página web sin recargarla."
+  },
+  "etymology": { "origin": "English", "root": "Asynchronous JavaScript and XML", "meaning": "acronym" },
+  "category": "Frontend",
+  "related": ["javascript", "api", "json", "async", "callback"]
+}

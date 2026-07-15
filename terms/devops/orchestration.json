@@ -1,0 +1,12 @@
+{
+  "id": "orchestration",
+  "translations": { "en": "Orchestration", "uk": "Оркестрація", "es": "Orquestación" },
+  "definition": {
+    "en": "Automated coordination and management of containers and services.",
+    "uk": "Автоматизована координація та управління контейнерами та сервісами.",
+    "es": "Coordinación y gestión automatizada de contenedores y servicios."
+  },
+  "etymology": { "origin": "Greek", "root": "orkhēstra", "meaning": "dancing place in theater" },
+  "category": "DevOps",
+  "related": ["kubernetes", "docker", "container", "infrastructure"]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "monitoring",
+  "translations": { "en": "Monitoring", "uk": "Моніторинг", "es": "Monitoreo" },
+  "definition": {
+    "en": "Observing system metrics and logs to ensure performance and reliability.",
+    "uk": "Спостереження за метриками та логами системи для забезпечення продуктивності та надійності.",
+    "es": "Observación de métricas y registros del sistema para garantizar rendimiento y fiabilidad."
+  },
+  "etymology": { "origin": "Latin", "root": "monere", "meaning": "to warn, remind" },
+  "category": "DevOps",
+  "related": ["logging", "scalability", "infrastructure"]
+}

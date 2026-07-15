@@ -1,0 +1,12 @@
+{
+  "id": "prompt",
+  "translations": { "en": "Prompt", "uk": "Промпт", "es": "Prompt" },
+  "definition": {
+    "en": "An input text given to a language model to generate a response.",
+    "uk": "Вхідний текст, переданий мовній моделі для генерації відповіді.",
+    "es": "Texto de entrada dado a un modelo de lenguaje para generar una respuesta."
+  },
+  "etymology": { "origin": "Latin", "root": "promptus", "meaning": "brought forth, ready" },
+  "category": "AI/ML",
+  "related": ["model", "inference", "token"]
+}

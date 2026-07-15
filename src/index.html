@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Terminosfera — Multilingual IT terminology database with translations, definitions, and etymology." />
+  <title>Terminosfera</title>
+  <link rel="stylesheet" href="css/app.css" />
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="header__inner">
+      <a href="/" class="header__brand" data-i18n="app.title">Terminosfera</a>
+      <div class="header__actions">
+        <div id="language-switcher"></div>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main" id="app" role="main"></main>
+
+  <template id="page-home">
+    <div class="search-box" role="search">
+      <span class="search-box__icon" aria-hidden="true">🔍</span>
+      <input
+        type="search"
+        class="search-box__input"
+        id="search-input"
+        data-i18n="search.placeholder"
+        placeholder="Search terms..."
+        autocomplete="off"
+      />
+      <button class="search-box__clear" id="search-clear" aria-label="Clear search">✕</button>
+    </div>
+    <div id="category-filter" class="category-filter"></div>
+    <div id="term-list" class="term-list"></div>
+  </template>
+
+  <template id="page-term">
+    <a href="/" class="term-page__back" data-i18n="term.back">← Back to terms</a>
+    <article class="term-page" id="term-content"></article>
+  </template>
+
+  <template id="term-card">
+    <a class="term-card" data-link>
+      <div class="term-card__title" data-field="title"></div>
+      <div class="term-card__translations" data-field="translations"></div>
+      <div class="term-card__definition" data-field="definition"></div>
+      <div class="term-card__category" data-field="category"></div>
+    </a>
+  </template>
+
+  <template id="term-detail-section">
+    <section class="term-page__section">
+      <h2 class="term-page__section-title" data-field="section-title"></h2>
+      <div data-field="content"></div>
+    </section>
+  </template>
+</body>
+</html>

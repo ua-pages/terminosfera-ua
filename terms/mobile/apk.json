@@ -1,0 +1,12 @@
+{
+  "id": "apk",
+  "translations": { "en": "APK", "uk": "APK", "es": "APK" },
+  "definition": {
+    "en": "Android Package Kit — the package format for Android applications.",
+    "uk": "Android Package Kit — формат пакунка для застосунків Android.",
+    "es": "Android Package Kit — formato de paquete para aplicaciones Android."
+  },
+  "etymology": { "origin": "English", "root": "Android Package Kit", "meaning": "acronym" },
+  "category": "Mobile",
+  "related": ["ipa", "sdk", "flutter", "react-native"]
+}

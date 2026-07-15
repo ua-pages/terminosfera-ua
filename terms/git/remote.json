@@ -1,0 +1,12 @@
+{
+  "id": "remote",
+  "translations": { "en": "Remote", "uk": "Ремоут", "es": "Remoto" },
+  "definition": {
+    "en": "A version of the repository hosted on a server or network.",
+    "uk": "Версія репозиторію, розміщена на сервері або в мережі.",
+    "es": "Versión del repositorio alojada en un servidor o red."
+  },
+  "etymology": { "origin": "Latin", "root": "remotus", "meaning": "removed, distant" },
+  "category": "Git",
+  "related": ["repository", "clone", "push", "pull", "fetch"]
+}

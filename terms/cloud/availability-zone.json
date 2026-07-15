@@ -1,0 +1,12 @@
+{
+  "id": "availability-zone",
+  "translations": { "en": "Availability Zone", "uk": "Зона доступності", "es": "Zona de disponibilidad" },
+  "definition": {
+    "en": "An isolated data center location within a cloud region for fault tolerance.",
+    "uk": "Ізольований дата-центр у межах хмарного регіону для стійкості до збоїв.",
+    "es": "Ubicación aislada de centro de datos dentro de una región en la nube para tolerancia a fallos."
+  },
+  "etymology": { "origin": "Latin + Greek", "root": "habilitas + zone", "meaning": "ability + belt" },
+  "category": "Cloud",
+  "related": ["region", "aws", "gcp"]
+}

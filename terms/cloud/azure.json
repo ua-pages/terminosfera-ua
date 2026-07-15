@@ -1,0 +1,12 @@
+{
+  "id": "azure",
+  "translations": { "en": "Azure", "uk": "Azure", "es": "Azure" },
+  "definition": {
+    "en": "Microsoft's cloud computing platform for building, deploying, and managing applications.",
+    "uk": "Хмарна платформа Microsoft для створення, розгортання та керування застосунками.",
+    "es": "Plataforma de computación en la nube de Microsoft para crear, desplegar y gestionar aplicaciones."
+  },
+  "etymology": { "origin": "Persian", "root": "lāžward", "meaning": "lapis lazuli, sky blue" },
+  "category": "Cloud",
+  "related": ["aws", "gcp", "region"]
+}

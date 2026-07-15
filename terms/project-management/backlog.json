@@ -1,0 +1,12 @@
+{
+  "id": "backlog",
+  "translations": { "en": "Backlog", "uk": "Беклог", "es": "Backlog" },
+  "definition": {
+    "en": "An ordered list of tasks, features, or requirements to be completed in a project.",
+    "uk": "Упорядкований список завдань, функцій або вимог, які необхідно виконати в проєкті.",
+    "es": "Lista ordenada de tareas, funcionalidades o requisitos por completar en un proyecto."
+  },
+  "etymology": { "origin": "English", "root": "back + log", "meaning": "log at the back of the fireplace" },
+  "category": "Project Management",
+  "related": ["sprint", "epic", "story"]
+}

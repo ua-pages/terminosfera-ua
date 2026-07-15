@@ -1,0 +1,12 @@
+{
+  "id": "protocol",
+  "translations": { "en": "Protocol", "uk": "Протокол", "es": "Protocolo" },
+  "definition": {
+    "en": "A set of rules defining how data is transmitted over a network.",
+    "uk": "Набір правил, що визначають передачу даних через мережу.",
+    "es": "Conjunto de reglas que definen cómo se transmiten los datos a través de una red."
+  },
+  "etymology": { "origin": "Greek", "root": "prōtokollon", "meaning": "first sheet of a papyrus roll" },
+  "category": "Network",
+  "related": ["dns", "latency", "rest"]
+}

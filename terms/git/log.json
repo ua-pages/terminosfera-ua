@@ -1,0 +1,12 @@
+{
+  "id": "log",
+  "translations": { "en": "Git Log", "uk": "Лог Git", "es": "Registro de Git" },
+  "definition": {
+    "en": "A record of commits showing the history of a repository.",
+    "uk": "Запис комітів, що показує історію репозиторію.",
+    "es": "Registro de commits que muestra el historial de un repositorio."
+  },
+  "etymology": { "origin": "Greek", "root": "logos", "meaning": "word, account, record" },
+  "category": "Git",
+  "related": ["commit", "repository", "branch"]
+}

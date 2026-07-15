@@ -1,0 +1,12 @@
+{
+  "id": "scalability",
+  "translations": { "en": "Scalability", "uk": "Масштабованість", "es": "Escalabilidad" },
+  "definition": {
+    "en": "The ability of a system to handle increased load by adding resources.",
+    "uk": "Здатність системи справлятися зі збільшеним навантаженням шляхом додавання ресурсів.",
+    "es": "Capacidad de un sistema para manejar una mayor carga añadiendo recursos."
+  },
+  "etymology": { "origin": "Latin", "root": "scala", "meaning": "ladder" },
+  "category": "DevOps",
+  "related": ["load-balancer", "kubernetes", "orchestration", "infrastructure"]
+}

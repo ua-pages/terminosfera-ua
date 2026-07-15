@@ -1,0 +1,12 @@
+{
+  "id": "deployment",
+  "translations": { "en": "Deployment", "uk": "Деплой", "es": "Despliegue" },
+  "definition": {
+    "en": "The process of making an application available for use on a server.",
+    "uk": "Процес запуску застосунку в робоче середовище на сервері.",
+    "es": "Proceso de poner una aplicación a disposición de los usuarios en un servidor."
+  },
+  "etymology": { "origin": "French", "root": "déployer", "meaning": "to unfold, spread out" },
+  "category": "DevOps",
+  "related": ["ci-cd", "pipeline", "container", "infrastructure"]
+}

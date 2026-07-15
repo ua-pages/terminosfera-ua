@@ -1,0 +1,12 @@
+{
+  "id": "algorithm",
+  "translations": { "en": "Algorithm", "uk": "Алгоритм", "es": "Algoritmo" },
+  "definition": {
+    "en": "A finite sequence of instructions for solving a problem or performing a computation.",
+    "uk": "Скінченна послідовність інструкцій для розв'язання задачі або виконання обчислень.",
+    "es": "Secuencia finita de instrucciones para resolver un problema o realizar un cálculo."
+  },
+  "etymology": { "origin": "Arabic", "root": "al-Khwārizmī", "meaning": "named after the mathematician" },
+  "category": "Computer Science",
+  "related": ["data-structure", "complexity", "recursion"]
+}

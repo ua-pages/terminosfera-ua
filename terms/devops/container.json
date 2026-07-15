@@ -1,0 +1,12 @@
+{
+  "id": "container",
+  "translations": { "en": "Container", "uk": "Контейнер", "es": "Contenedor" },
+  "definition": {
+    "en": "A lightweight, standalone package of software including everything to run it.",
+    "uk": "Легкий, автономний пакет програмного забезпечення з усім необхідним для запуску.",
+    "es": "Paquete ligero e independiente de software que incluye todo lo necesario para ejecutarlo."
+  },
+  "etymology": { "origin": "Latin", "root": "continere", "meaning": "to hold together" },
+  "category": "DevOps",
+  "related": ["docker", "kubernetes", "deployment", "orchestration"]
+}

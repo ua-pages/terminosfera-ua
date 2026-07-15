@@ -1,0 +1,12 @@
+{
+  "id": "data-structure",
+  "translations": { "en": "Data Structure", "uk": "Структура даних", "es": "Estructura de datos" },
+  "definition": {
+    "en": "A specialized format for organizing, processing, and storing data.",
+    "uk": "Спеціалізований формат для організації, обробки та зберігання даних.",
+    "es": "Formato especializado para organizar, procesar y almacenar datos."
+  },
+  "etymology": { "origin": "Latin", "root": "datum + structura", "meaning": "given + structure" },
+  "category": "Computer Science",
+  "related": ["algorithm", "complexity", "database"]
+}

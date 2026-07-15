@@ -1,0 +1,12 @@
+{
+  "id": "dns",
+  "translations": { "en": "DNS", "uk": "DNS", "es": "DNS" },
+  "definition": {
+    "en": "A system that translates domain names into IP addresses.",
+    "uk": "Система, яка перетворює доменні імена на IP-адреси.",
+    "es": "Sistema que traduce nombres de dominio a direcciones IP."
+  },
+  "etymology": { "origin": "English", "root": "Domain Name System", "meaning": "acronym" },
+  "category": "Network",
+  "related": ["protocol", "latency", "server"]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "region",
+  "translations": { "en": "Region", "uk": "Регіон", "es": "Región" },
+  "definition": {
+    "en": "A geographic area containing multiple data centers for cloud services.",
+    "uk": "Географічна зона з кількома дата-центрами для хмарних сервісів.",
+    "es": "Área geográfica que contiene múltiples centros de datos para servicios en la nube."
+  },
+  "etymology": { "origin": "Latin", "root": "regio", "meaning": "direction, boundary, district" },
+  "category": "Cloud",
+  "related": ["availability-zone", "aws", "azure", "gcp"]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "pipeline",
+  "translations": { "en": "Pipeline", "uk": "Паплайн", "es": "Pipeline" },
+  "definition": {
+    "en": "A sequence of automated steps for building, testing, and deploying software.",
+    "uk": "Послідовність автоматизованих кроків для збірки, тестування та розгортання ПЗ.",
+    "es": "Secuencia de pasos automatizados para compilar, probar y desplegar software."
+  },
+  "etymology": { "origin": "Latin", "root": "pipa", "meaning": "pipe, tube" },
+  "category": "DevOps",
+  "related": ["ci-cd", "deployment", "infrastructure", "monitoring"]
+}

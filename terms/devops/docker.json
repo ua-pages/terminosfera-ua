@@ -1,0 +1,12 @@
+{
+  "id": "docker",
+  "translations": { "en": "Docker", "uk": "Docker", "es": "Docker" },
+  "definition": {
+    "en": "A platform for developing, shipping, and running applications in containers.",
+    "uk": "Платформа для розробки, доставки та запуску застосунків у контейнерах.",
+    "es": "Plataforma para desarrollar, enviar y ejecutar aplicaciones en contenedores."
+  },
+  "etymology": { "origin": "English", "root": "docker", "meaning": "named after the company" },
+  "category": "DevOps",
+  "related": ["container", "kubernetes", "deployment", "orchestration"]
+}

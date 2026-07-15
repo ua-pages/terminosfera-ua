@@ -1,0 +1,12 @@
+{
+  "id": "epic",
+  "translations": { "en": "Epic", "uk": "Епік", "es": "Épica" },
+  "definition": {
+    "en": "A large body of work in Agile that can be broken down into multiple stories.",
+    "uk": "Великий обсяг роботи в Agile, який можна розбити на кілька історій.",
+    "es": "Gran bloque de trabajo en Agile que puede dividirse en múltiples historias."
+  },
+  "etymology": { "origin": "Greek", "root": "epikos", "meaning": "narrative, poem" },
+  "category": "Project Management",
+  "related": ["story", "backlog", "sprint"]
+}

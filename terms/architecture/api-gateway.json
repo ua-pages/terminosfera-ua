@@ -1,0 +1,12 @@
+{
+  "id": "api-gateway",
+  "translations": { "en": "API Gateway", "uk": "API Gateway", "es": "API Gateway" },
+  "definition": {
+    "en": "A server that acts as a single entry point for routing API requests.",
+    "uk": "Сервер, що виступає єдиною точкою входу для маршрутизації API-запитів.",
+    "es": "Servidor que actúa como punto de entrada único para enrutar solicitudes de API."
+  },
+  "etymology": { "origin": "English", "root": "API + gate + way", "meaning": "gateway for APIs" },
+  "category": "Architecture",
+  "related": ["api", "proxy", "microservices", "endpoint"]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "firewall",
+  "translations": { "en": "Firewall", "uk": "Фаєрвол", "es": "Cortafuegos" },
+  "definition": {
+    "en": "A security system that monitors and controls network traffic based on rules.",
+    "uk": "Система безпеки, що контролює мережевий трафік на основі правил.",
+    "es": "Sistema de seguridad que monitorea y controla el tráfico de red según reglas."
+  },
+  "etymology": { "origin": "German + English", "root": "Feuer + wall", "meaning": "fire + wall" },
+  "category": "Security",
+  "related": ["encryption", "vulnerability", "network"]
+}

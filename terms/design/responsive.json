@@ -1,0 +1,12 @@
+{
+  "id": "responsive",
+  "translations": { "en": "Responsive Design", "uk": "Адаптивний дизайн", "es": "Diseño responsive" },
+  "definition": {
+    "en": "A design approach that ensures web pages render well on various screen sizes.",
+    "uk": "Підхід до дизайну, що забезпечує коректне відображення сторінок на різних екранах.",
+    "es": "Enfoque de diseño que garantiza que las páginas web se vean bien en varios tamaños de pantalla."
+  },
+  "etymology": { "origin": "Latin", "root": "respondere", "meaning": "to answer, react" },
+  "category": "Design",
+  "related": ["wireframe", "prototype", "css"]
+}

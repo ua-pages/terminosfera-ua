@@ -1,0 +1,12 @@
+{
+  "id": "story",
+  "translations": { "en": "User Story", "uk": "Користувацька історія", "es": "Historia de usuario" },
+  "definition": {
+    "en": "A brief description of a feature from the perspective of an end user.",
+    "uk": "Короткий опис функціональності з точки зору кінцевого користувача.",
+    "es": "Breve descripción de una funcionalidad desde la perspectiva del usuario final."
+  },
+  "etymology": { "origin": "Greek", "root": "historia", "meaning": "account, narrative" },
+  "category": "Project Management",
+  "related": ["epic", "backlog", "sprint"]
+}

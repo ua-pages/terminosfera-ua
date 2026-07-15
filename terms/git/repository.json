@@ -1,0 +1,12 @@
+{
+  "id": "repository",
+  "translations": { "en": "Repository", "uk": "Репозиторій", "es": "Repositorio" },
+  "definition": {
+    "en": "A storage location for source code with version history.",
+    "uk": "Сховище вихідного коду з історією версій.",
+    "es": "Ubicación de almacenamiento para código fuente con historial de versiones."
+  },
+  "etymology": { "origin": "Latin", "root": "repositorium", "meaning": "storage place" },
+  "category": "Git",
+  "related": ["commit", "branch", "remote", "clone", "fork"]
+}

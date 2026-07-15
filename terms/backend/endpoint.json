@@ -1,0 +1,12 @@
+{
+  "id": "endpoint",
+  "translations": { "en": "Endpoint", "uk": "Ендпоінт", "es": "Endpoint" },
+  "definition": {
+    "en": "A specific URL or interface where a service can be accessed.",
+    "uk": "Конкретна URL-адреса або інтерфейс доступу до сервісу.",
+    "es": "URL o interfaz específica donde se puede acceder a un servicio."
+  },
+  "etymology": { "origin": "English", "root": "end + point", "meaning": "point of termination" },
+  "category": "Backend",
+  "related": ["api", "server", "rest", "middleware"]
+}

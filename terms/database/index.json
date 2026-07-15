@@ -1,0 +1,12 @@
+{
+  "id": "index",
+  "translations": { "en": "Index", "uk": "Індекс", "es": "Índice" },
+  "definition": {
+    "en": "A data structure that improves the speed of data retrieval in a database.",
+    "uk": "Структура даних, що пришвидшує пошук записів у базі даних.",
+    "es": "Estructura de datos que mejora la velocidad de recuperación en una base de datos."
+  },
+  "etymology": { "origin": "Latin", "root": "indicare", "meaning": "to point out" },
+  "category": "Database",
+  "related": ["database", "query", "schema"]
+}

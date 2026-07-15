@@ -1,0 +1,12 @@
+{
+  "id": "merge",
+  "translations": { "en": "Merge", "uk": "Злиття", "es": "Fusión" },
+  "definition": {
+    "en": "The process of combining changes from different branches.",
+    "uk": "Процес об'єднання змін з різних гілок.",
+    "es": "Proceso de combinar cambios de diferentes ramas."
+  },
+  "etymology": { "origin": "Latin", "root": "mergere", "meaning": "to dip, plunge" },
+  "category": "Git",
+  "related": ["branch", "rebase", "conflict", "commit", "pull"]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "ipa",
+  "translations": { "en": "IPA", "uk": "IPA", "es": "IPA" },
+  "definition": {
+    "en": "iOS App Store Package — the archive format for iOS applications.",
+    "uk": "iOS App Store Package — формат архіву для застосунків iOS.",
+    "es": "iOS App Store Package — formato de archivo para aplicaciones iOS."
+  },
+  "etymology": { "origin": "English", "root": "iOS App Store Package", "meaning": "acronym" },
+  "category": "Mobile",
+  "related": ["apk", "sdk", "flutter", "react-native"]
+}

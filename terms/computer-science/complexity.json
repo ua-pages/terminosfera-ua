@@ -1,0 +1,12 @@
+{
+  "id": "complexity",
+  "translations": { "en": "Computational Complexity", "uk": "Обчислювальна складність", "es": "Complejidad computacional" },
+  "definition": {
+    "en": "A measure of the resources required by an algorithm to solve a problem.",
+    "uk": "Міра ресурсів, необхідних алгоритму для розв'язання задачі.",
+    "es": "Medida de los recursos requeridos por un algoritmo para resolver un problema."
+  },
+  "etymology": { "origin": "Latin", "root": "complexus", "meaning": "entwined, tangled" },
+  "category": "Computer Science",
+  "related": ["algorithm", "data-structure", "recursion"]
+}

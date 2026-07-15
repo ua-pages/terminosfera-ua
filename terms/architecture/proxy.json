@@ -1,0 +1,12 @@
+{
+  "id": "proxy",
+  "translations": { "en": "Proxy", "uk": "Проксі", "es": "Proxy" },
+  "definition": {
+    "en": "An intermediary server that forwards requests between clients and other servers.",
+    "uk": "Проміжний сервер, який передає запити між клієнтами та іншими серверами.",
+    "es": "Servidor intermediario que reenvía solicitudes entre clientes y otros servidores."
+  },
+  "etymology": { "origin": "Latin", "root": "proximus", "meaning": "nearest, next" },
+  "category": "Architecture",
+  "related": ["cache", "load-balancer", "api-gateway"]
+}

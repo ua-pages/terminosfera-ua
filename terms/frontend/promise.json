@@ -1,0 +1,12 @@
+{
+  "id": "promise",
+  "translations": { "en": "Promise", "uk": "Проміс", "es": "Promise" },
+  "definition": {
+    "en": "An object representing the eventual completion or failure of an async operation.",
+    "uk": "Об'єкт, що представляє майбутнє завершення або помилку асинхронної операції.",
+    "es": "Objeto que representa la finalización o fallo eventual de una operación asíncrona."
+  },
+  "etymology": { "origin": "Latin", "root": "promittere", "meaning": "to send forth, promise" },
+  "category": "Frontend",
+  "related": ["javascript", "callback", "async"]
+}

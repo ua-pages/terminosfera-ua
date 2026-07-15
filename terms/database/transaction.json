@@ -1,0 +1,12 @@
+{
+  "id": "transaction",
+  "translations": { "en": "Transaction", "uk": "Транзакція", "es": "Transacción" },
+  "definition": {
+    "en": "A unit of work performed as a single atomic operation in a database.",
+    "uk": "Одиниця роботи, що виконується як одна атомарна операція в базі даних.",
+    "es": "Unidad de trabajo realizada como una única operación atómica en una base de datos."
+  },
+  "etymology": { "origin": "Latin", "root": "transigere", "meaning": "to drive through, accomplish" },
+  "category": "Database",
+  "related": ["database", "query", "schema"]
+}

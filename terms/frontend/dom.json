@@ -1,0 +1,12 @@
+{
+  "id": "dom",
+  "translations": { "en": "DOM", "uk": "DOM", "es": "DOM" },
+  "definition": {
+    "en": "A programming interface for HTML and XML documents representing the page structure.",
+    "uk": "Програмний інтерфейс для HTML та XML-документів, що представляє структуру сторінки.",
+    "es": "Interfaz de programación para documentos HTML y XML que representa la estructura de la página."
+  },
+  "etymology": { "origin": "English", "root": "Document Object Model", "meaning": "acronym" },
+  "category": "Frontend",
+  "related": ["html", "css", "javascript", "event"]
+}

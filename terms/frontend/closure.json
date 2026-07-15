@@ -1,0 +1,12 @@
+{
+  "id": "closure",
+  "translations": { "en": "Closure", "uk": "Замикання", "es": "Clausura" },
+  "definition": {
+    "en": "A function that retains access to variables from its outer scope after the outer function returns.",
+    "uk": "Функція, яка зберігає доступ до змінних зовнішньої області видимості після повернення зовнішньої функції.",
+    "es": "Función que retiene acceso a variables de su ámbito externo después de que la función externa haya retornado."
+  },
+  "etymology": { "origin": "Latin", "root": "claudere", "meaning": "to close, shut" },
+  "category": "Frontend",
+  "related": ["javascript", "callback", "module"]
+}

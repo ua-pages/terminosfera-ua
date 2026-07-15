@@ -1,0 +1,12 @@
+{
+  "id": "gcp",
+  "translations": { "en": "GCP", "uk": "GCP", "es": "GCP" },
+  "definition": {
+    "en": "Google Cloud Platform — a suite of cloud computing services by Google.",
+    "uk": "Google Cloud Platform — набір хмарних сервісів від Google.",
+    "es": "Google Cloud Platform — conjunto de servicios de computación en la nube de Google."
+  },
+  "etymology": { "origin": "English", "root": "Google Cloud Platform", "meaning": "acronym" },
+  "category": "Cloud",
+  "related": ["aws", "azure", "region", "availability-zone"]
+}

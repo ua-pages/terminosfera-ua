@@ -1,0 +1,12 @@
+{
+  "id": "stakeholder",
+  "translations": { "en": "Stakeholder", "uk": "Стейкхолдер", "es": "Interesado" },
+  "definition": {
+    "en": "A person or group with an interest in the outcome of a project.",
+    "uk": "Особа або група, зацікавлена в результаті проєкту.",
+    "es": "Persona o grupo con interés en el resultado de un proyecto."
+  },
+  "etymology": { "origin": "English", "root": "stake + holder", "meaning": "one who holds a stake" },
+  "category": "Project Management",
+  "related": ["backlog", "epic", "story"]
+}

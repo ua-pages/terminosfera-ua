@@ -1,0 +1,12 @@
+{
+  "id": "conflict",
+  "translations": { "en": "Merge Conflict", "uk": "Конфлікт злиття", "es": "Conflicto de fusión" },
+  "definition": {
+    "en": "A situation when two branches have incompatible changes in the same file.",
+    "uk": "Ситуація, коли дві гілки мають несумісні зміни в одному файлі.",
+    "es": "Situación en la que dos ramas tienen cambios incompatibles en el mismo archivo."
+  },
+  "etymology": { "origin": "Latin", "root": "conflictus", "meaning": "striking together" },
+  "category": "Git",
+  "related": ["merge", "rebase", "branch", "commit"]
+}

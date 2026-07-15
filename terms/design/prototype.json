@@ -1,0 +1,12 @@
+{
+  "id": "prototype",
+  "translations": { "en": "Prototype", "uk": "Прототип", "es": "Prototipo" },
+  "definition": {
+    "en": "An early model of a product used to test concepts and functionality.",
+    "uk": "Рання модель продукту для тестування концепцій та функціональності.",
+    "es": "Modelo temprano de un producto utilizado para probar conceptos y funcionalidad."
+  },
+  "etymology": { "origin": "Greek", "root": "prōtos + typos", "meaning": "first + impression" },
+  "category": "Design",
+  "related": ["wireframe", "responsive", "component"]
+}

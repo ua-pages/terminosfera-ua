@@ -1,0 +1,12 @@
+{
+  "id": "wireframe",
+  "translations": { "en": "Wireframe", "uk": "Вайрфрейм", "es": "Wireframe" },
+  "definition": {
+    "en": "A low-fidelity visual guide representing the structure of a page.",
+    "uk": "Низькодеталізований візуальний шаблон, що представляє структуру сторінки.",
+    "es": "Guía visual de baja fidelidad que representa la estructura de una página."
+  },
+  "etymology": { "origin": "English", "root": "wire + frame", "meaning": "metal wire framework" },
+  "category": "Design",
+  "related": ["prototype", "responsive", "component"]
+}

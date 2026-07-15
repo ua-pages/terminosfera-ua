@@ -1,0 +1,11 @@
+{
+  "project": "Терміносфера",
+  "repository": "terminosfera-ua",
+  "description": "Multilingual IT terminology database with translations, definitions, and etymology.",
+  "languages": ["en", "uk", "es"],
+  "schemaVersion": "1.0",
+  "termCount": 96,
+  "categories": 15,
+  "lastUpdated": "2026-07-15",
+  "status": "MVP"
+}

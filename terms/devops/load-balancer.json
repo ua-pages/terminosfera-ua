@@ -1,0 +1,12 @@
+{
+  "id": "load-balancer",
+  "translations": { "en": "Load Balancer", "uk": "Балансувальник навантаження", "es": "Balanceador de carga" },
+  "definition": {
+    "en": "A system that distributes network traffic across multiple servers.",
+    "uk": "Система, яка розподіляє мережевий трафік між кількома серверами.",
+    "es": "Sistema que distribuye el tráfico de red entre múltiples servidores."
+  },
+  "etymology": { "origin": "English", "root": "load + balance", "meaning": "to distribute weight evenly" },
+  "category": "DevOps",
+  "related": ["scalability", "infrastructure", "proxy"]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "sdk",
+  "translations": { "en": "SDK", "uk": "SDK", "es": "SDK" },
+  "definition": {
+    "en": "Software Development Kit — a collection of tools and libraries for building software.",
+    "uk": "Software Development Kit — набір інструментів і бібліотек для розробки ПЗ.",
+    "es": "Software Development Kit — conjunto de herramientas y bibliotecas para crear software."
+  },
+  "etymology": { "origin": "English", "root": "Software Development Kit", "meaning": "acronym" },
+  "category": "Mobile",
+  "related": ["apk", "ipa", "flutter", "react-native"]
+}

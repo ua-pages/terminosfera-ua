@@ -1,0 +1,12 @@
+{
+  "id": "branch",
+  "translations": { "en": "Branch", "uk": "Гілка", "es": "Rama" },
+  "definition": {
+    "en": "A parallel version of the repository used for isolated development.",
+    "uk": "Паралельна версія репозиторію для ізольованої розробки.",
+    "es": "Versión paralela del repositorio utilizada para desarrollo aislado."
+  },
+  "etymology": { "origin": "Latin", "root": "branca", "meaning": "paw, limb" },
+  "category": "Git",
+  "related": ["repository", "merge", "rebase", "fork", "conflict"]
+}

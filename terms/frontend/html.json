@@ -1,0 +1,12 @@
+{
+  "id": "html",
+  "translations": { "en": "HTML", "uk": "HTML", "es": "HTML" },
+  "definition": {
+    "en": "The standard markup language for creating web pages.",
+    "uk": "Стандартна мова розмітки для створення веб-сторінок.",
+    "es": "El lenguaje de marcado estándar para crear páginas web."
+  },
+  "etymology": { "origin": "English", "root": "HyperText Markup Language", "meaning": "acronym" },
+  "category": "Frontend",
+  "related": ["css", "javascript", "dom", "json"]
+}

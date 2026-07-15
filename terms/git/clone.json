@@ -1,0 +1,12 @@
+{
+  "id": "clone",
+  "translations": { "en": "Clone", "uk": "Клонування", "es": "Clonar" },
+  "definition": {
+    "en": "Creating a local copy of a remote repository.",
+    "uk": "Створення локальної копії віддаленого репозиторію.",
+    "es": "Creación de una copia local de un repositorio remoto."
+  },
+  "etymology": { "origin": "Greek", "root": "klōn", "meaning": "twig, slip" },
+  "category": "Git",
+  "related": ["repository", "remote", "fork", "push", "pull"]
+}

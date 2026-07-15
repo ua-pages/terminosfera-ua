@@ -1,0 +1,12 @@
+{
+  "id": "framework",
+  "translations": { "en": "Framework", "uk": "Фреймворк", "es": "Framework" },
+  "definition": {
+    "en": "A reusable set of libraries and tools for software development.",
+    "uk": "Набір бібліотек та інструментів для розробки програмного забезпечення.",
+    "es": "Conjunto reutilizable de bibliotecas y herramientas para desarrollo de software."
+  },
+  "etymology": { "origin": "English", "root": "frame + work", "meaning": "structure for building" },
+  "category": "Frontend",
+  "related": ["component", "module", "library"]
+}

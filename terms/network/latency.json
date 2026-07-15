@@ -1,0 +1,12 @@
+{
+  "id": "latency",
+  "translations": { "en": "Latency", "uk": "Латентність", "es": "Latencia" },
+  "definition": {
+    "en": "The delay between sending and receiving data over a network.",
+    "uk": "Затримка між відправленням та отриманням даних через мережу.",
+    "es": "Retardo entre el envío y la recepción de datos a través de una red."
+  },
+  "etymology": { "origin": "Latin", "root": "latere", "meaning": "to lie hidden" },
+  "category": "Network",
+  "related": ["protocol", "dns", "scalability"]
+}

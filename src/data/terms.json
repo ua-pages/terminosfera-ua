@@ -1,0 +1,102 @@
+[
+  {
+    "id": "repository",
+    "translations": {
+      "en": "Repository",
+      "uk": "Репозиторій",
+      "es": "Repositorio"
+    },
+    "definition": {
+      "en": "Storage location for source code, typically used in version control systems like Git.",
+      "uk": "Сховище вихідного коду, яке використовується в системах контролю версій, як-от Git.",
+      "es": "Ubicación de almacenamiento para código fuente, utilizada en sistemas de control de versiones como Git."
+    },
+    "etymology": {
+      "origin": "Latin",
+      "root": "repositorium",
+      "meaning": "storage place, store"
+    },
+    "category": "Git",
+    "related": ["commit", "deployment"]
+  },
+  {
+    "id": "commit",
+    "translations": {
+      "en": "Commit",
+      "uk": "Коміт",
+      "es": "Commit"
+    },
+    "definition": {
+      "en": "A snapshot of changes made to a repository at a specific point in time.",
+      "uk": "Знімок змін, внесених до репозиторію в певний момент часу.",
+      "es": "Una instantánea de los cambios realizados en un repositorio en un momento específico."
+    },
+    "etymology": {
+      "origin": "Latin",
+      "root": "committere",
+      "meaning": "to bring together, to entrust"
+    },
+    "category": "Git",
+    "related": ["repository"]
+  },
+  {
+    "id": "deployment",
+    "translations": {
+      "en": "Deployment",
+      "uk": "Деплой",
+      "es": "Despliegue"
+    },
+    "definition": {
+      "en": "The process of making an application or service available for use, typically on a server.",
+      "uk": "Процес запуску застосунку або сервісу в робоче середовище, зазвичай на сервері.",
+      "es": "El proceso de poner una aplicación o servicio a disposición de los usuarios, generalmente en un servidor."
+    },
+    "etymology": {
+      "origin": "French",
+      "root": "déployer",
+      "meaning": "to unfold, to spread out"
+    },
+    "category": "DevOps",
+    "related": ["cache"]
+  },
+  {
+    "id": "cache",
+    "translations": {
+      "en": "Cache",
+      "uk": "Кеш",
+      "es": "Caché"
+    },
+    "definition": {
+      "en": "A temporary storage layer that stores frequently accessed data for faster retrieval.",
+      "uk": "Тимчасовий прошарок зберігання, який зберігає дані, що часто запитуються, для швидшого доступу.",
+      "es": "Capa de almacenamiento temporal que guarda datos de acceso frecuente para una recuperación más rápida."
+    },
+    "etymology": {
+      "origin": "French",
+      "root": "cacher",
+      "meaning": "to hide"
+    },
+    "category": "Architecture",
+    "related": ["deployment"]
+  },
+  {
+    "id": "algorithm",
+    "translations": {
+      "en": "Algorithm",
+      "uk": "Алгоритм",
+      "es": "Algoritmo"
+    },
+    "definition": {
+      "en": "A finite sequence of well-defined instructions used to solve a problem or perform a computation.",
+      "uk": "Скінченна послідовність чітко визначених інструкцій для розв'язання задачі або виконання обчислень.",
+      "es": "Secuencia finita de instrucciones bien definidas utilizadas para resolver un problema o realizar un cálculo."
+    },
+    "etymology": {
+      "origin": "Arabic",
+      "root": "al-Khwārizmī",
+      "meaning": "named after the Persian mathematician Muhammad ibn Musa al-Khwarizmi"
+    },
+    "category": "Computer Science",
+    "related": []
+  }
+]
