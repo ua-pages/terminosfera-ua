@@ -50,6 +50,13 @@ export class Router {
     return hash.startsWith('/') ? hash : '/' + hash
   }
 
+  /**
+   * Re-resolves the current route — useful after language change.
+   */
+  resolve() {
+    this.#resolve()
+  }
+
   #resolve() {
     for (const hook of this.#beforeHooks) {
       hook()

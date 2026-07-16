@@ -50,10 +50,11 @@ function renderSuggestions() {
   list.innerHTML = ''
 
   const terms = getSuggestions()
+  const { lang } = appStore.state
   for (const term of terms) {
     const btn = document.createElement('button')
     btn.className = 'suggestions__btn'
-    btn.textContent = term.translations.en
+    btn.textContent = term.translations[lang]
     btn.addEventListener('click', () => router.navigate(`/term/${term.id}`))
     list.appendChild(btn)
   }
@@ -182,7 +183,20 @@ function renderSearchResults() {
   area.appendChild(list)
 }
 
+const STATS_LABELS = {
+  en: '3 languages · ',
+  uk: '3 мови · ',
+  es: '3 idiomas · ',
+}
+const STATS_SUFFIX = {
+  en: ' terms',
+  uk: ' термінів',
+  es: ' términos',
+}
+
 function updateStats() {
   const el = document.getElementById('stat-terms')
-  if (el) el.textContent = appStore.state.terms.length
+  if (!el) return
+  const { lang, terms } = appStore.state
+  el.textContent = STATS_LABELS[lang] + terms.length + STATS_SUFFIX[lang]
 }

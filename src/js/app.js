@@ -42,6 +42,15 @@ router.on('/http-status-codes/:code', (params) => {
 
 router.init()
 
+let prevLang = appStore.state.lang
+appStore.subscribe(() => {
+  const currentLang = appStore.state.lang
+  if (currentLang !== prevLang) {
+    prevLang = currentLang
+    router.resolve()
+  }
+})
+
 setTimeout(restoreSavedRoute, 0)
 
 document.querySelector('.header__brand').addEventListener('click', (e) => {
