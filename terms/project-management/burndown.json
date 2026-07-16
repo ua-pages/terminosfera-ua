@@ -1,0 +1,25 @@
+{
+  "id": "burndown",
+  "translations": {
+    "en": "Burndown",
+    "uk": "Берндаун",
+    "es": "Burndown"
+  },
+  "definition": {
+    "en": "A chart that shows the amount of work remaining versus time in a sprint or project.",
+    "uk": "Діаграма, яка показує кількість роботи, що залишилася, порівняно з часом у спринті або проєкті.",
+    "es": "Un gráfico que muestra la cantidad de trabajo restante versus el tiempo en un sprint o proyecto."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "burn + down",
+    "meaning": "work burning down to zero"
+  },
+  "category": "Project Management",
+  "related": [
+    "sprint",
+    "backlog",
+    "scrum",
+    "story"
+  ]
+}

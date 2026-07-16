@@ -1,0 +1,25 @@
+{
+  "id": "mfa",
+  "translations": {
+    "en": "MFA",
+    "uk": "MFA",
+    "es": "MFA"
+  },
+  "definition": {
+    "en": "Multi-Factor Authentication — a security method that requires two or more verification factors to gain access to an account.",
+    "uk": "Multi-Factor Authentication — метод безпеки, який вимагає два або більше факторів верифікації для отримання доступу до облікового запису.",
+    "es": "Multi-Factor Authentication — un método de seguridad que requiere dos o más factores de verificación para obtener acceso a una cuenta."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "Multi-Factor Authentication",
+    "meaning": "multiple proof requirements"
+  },
+  "category": "Security",
+  "related": [
+    "authentication",
+    "jwt",
+    "oauth",
+    "encryption"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "backpressure",
+  "translations": {
+    "en": "Backpressure",
+    "uk": "Зворотний тиск",
+    "es": "Contrapresión"
+  },
+  "definition": {
+    "en": "A resistance force that limits the flow of data when a system cannot process it fast enough to keep up with incoming requests.",
+    "uk": "Сила опору, яка обмежує потік даних, коли система не може обробляти їх достатньо швидко для обробки вхідних запитів.",
+    "es": "Una fuerza de resistencia que limita el flujo de datos cuando un sistema no puede procesarlo lo suficientemente rápido para seguir las solicitudes entrantes."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "back + pressure",
+    "meaning": "resistance pushing back"
+  },
+  "category": "Architecture",
+  "related": [
+    "message-queue",
+    "scalability",
+    "fan-out",
+    "service-mesh"
+  ]
+}

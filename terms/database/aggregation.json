@@ -1,0 +1,25 @@
+{
+  "id": "aggregation",
+  "translations": {
+    "en": "Aggregation",
+    "uk": "Агрегація",
+    "es": "Agregación"
+  },
+  "definition": {
+    "en": "A database operation that processes data records and returns computed results, such as sums, averages, or counts.",
+    "uk": "Операція бази даних, яка обробляє записи даних та повертає обчислені результати, такі як суми, середні або підрахунки.",
+    "es": "Una operación de base de datos que procesa registros de datos y retorna resultados computados, como sumas, promedios o conteos."
+  },
+  "etymology": {
+    "origin": "Latin",
+    "root": "aggregare",
+    "meaning": "to add to a flock"
+  },
+  "category": "Database",
+  "related": [
+    "query",
+    "database",
+    "schema",
+    "transaction"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "bisect",
+  "translations": {
+    "en": "Bisect",
+    "uk": "Бісект",
+    "es": "Bisect"
+  },
+  "definition": {
+    "en": "A Git command that uses binary search to find the commit that introduced a bug.",
+    "uk": "Команда Git, яка використовує бінарний пошук для знаходження коміту, який ввів помилку.",
+    "es": "Un comando de Git que usa búsqueda binaria para encontrar el commit que introdujo un error."
+  },
+  "etymology": {
+    "origin": "Latin",
+    "root": "bi + secare",
+    "meaning": "to cut in two"
+  },
+  "category": "Git",
+  "related": [
+    "commit",
+    "log",
+    "merge"
+  ]
+}

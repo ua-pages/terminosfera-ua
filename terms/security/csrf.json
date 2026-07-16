@@ -1,0 +1,25 @@
+{
+  "id": "csrf",
+  "translations": {
+    "en": "CSRF",
+    "uk": "CSRF",
+    "es": "CSRF"
+  },
+  "definition": {
+    "en": "Cross-Site Request Forgery — an attack that tricks a user's browser into making unintended requests to a site where they're authenticated.",
+    "uk": "Cross-Site Request Forgery — атака, яка змушує браузер користувача виконувати небажані запити до сайту, де він автентифікований.",
+    "es": "Cross-Site Request Forgery — un ataque que engaña al navegador del usuario para que haga solicitudes no deseadas a un sitio donde está autenticado."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "Cross-Site Request Forgery",
+    "meaning": "forged requests from another site"
+  },
+  "category": "Security",
+  "related": [
+    "xss",
+    "authentication",
+    "encryption",
+    "cors"
+  ]
+}

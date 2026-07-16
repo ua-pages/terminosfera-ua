@@ -1,0 +1,25 @@
+{
+  "id": "fan-out",
+  "translations": {
+    "en": "Fan-Out",
+    "uk": "Розгалуження",
+    "es": "Fan-Out"
+  },
+  "definition": {
+    "en": "A messaging pattern where a single message is published to multiple downstream services for parallel processing.",
+    "uk": "Патерн повідомлень, де одне повідомлення публікується для кількох сервісів для паралельної обробки.",
+    "es": "Un patrón de mensajería donde un mensaje único se publica a múltiples servicios aguas abajo para procesamiento paralelo."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "fan + out",
+    "meaning": "spreading out like a fan"
+  },
+  "category": "Architecture",
+  "related": [
+    "message-queue",
+    "microservices",
+    "circuit-breaker",
+    "service-mesh"
+  ]
+}

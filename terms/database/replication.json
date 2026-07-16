@@ -1,0 +1,25 @@
+{
+  "id": "replication",
+  "translations": {
+    "en": "Replication",
+    "uk": "Реплікація",
+    "es": "Replicación"
+  },
+  "definition": {
+    "en": "The process of copying data from one database server to another to ensure consistency and availability.",
+    "uk": "Процес копіювання даних з одного сервера бази даних на інший для забезпечення узгодженості та доступності.",
+    "es": "El proceso de copiar datos de un servidor de base de datos a otro para garantizar consistencia y disponibilidad."
+  },
+  "etymology": {
+    "origin": "Latin",
+    "root": "replicare",
+    "meaning": "to fold back, repeat"
+  },
+  "category": "Database",
+  "related": [
+    "database",
+    "transaction",
+    "schema",
+    "sharding"
+  ]
+}

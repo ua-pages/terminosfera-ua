@@ -1,0 +1,25 @@
+{
+  "id": "accessibility",
+  "translations": {
+    "en": "Accessibility",
+    "uk": "Доступність",
+    "es": "Accesibilidad"
+  },
+  "definition": {
+    "en": "The practice of designing products and interfaces that can be used by people with diverse abilities.",
+    "uk": "Практика проектування продуктів та інтерфейсів, які можуть використовувати люди з різними здібностями.",
+    "es": "La práctica de diseñar productos e interfaces que pueden ser usados por personas con diferentes habilidades."
+  },
+  "etymology": {
+    "origin": "Latin",
+    "root": "accessibilis",
+    "meaning": "able to be reached"
+  },
+  "category": "Design",
+  "related": [
+    "ux",
+    "ui",
+    "responsive",
+    "component"
+  ]
+}

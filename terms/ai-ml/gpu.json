@@ -1,0 +1,25 @@
+{
+  "id": "gpu",
+  "translations": {
+    "en": "GPU",
+    "uk": "GPU",
+    "es": "GPU"
+  },
+  "definition": {
+    "en": "Graphics Processing Unit — a specialized processor designed to handle parallel computations, widely used for training AI models.",
+    "uk": "Graphics Processing Unit — спеціалізований процесор, призначений для обробки паралельних обчислень, широко використовуваний для навчання AI-моделей.",
+    "es": "Graphics Processing Unit — un procesador especializado diseñado para manejar cálculos paralelos, ampliamente usado para entrenar modelos de IA."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "Graphics Processing Unit",
+    "meaning": "processor for parallel math"
+  },
+  "category": "AI/ML",
+  "related": [
+    "deep-learning",
+    "neural-network",
+    "model",
+    "inference"
+  ]
+}

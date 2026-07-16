@@ -1,0 +1,25 @@
+{
+  "id": "subnet",
+  "translations": {
+    "en": "Subnet",
+    "uk": "Підмережа",
+    "es": "Subred"
+  },
+  "definition": {
+    "en": "A logical subdivision of an IP network, created to improve performance and security by segmenting network traffic.",
+    "uk": "Логічний підрозділ IP-мережі, створений для покращення продуктивності та безпеки шляхом сегментації мережевого трафіку.",
+    "es": "Una subdivisión lógica de una red IP, creada para mejorar el rendimiento y la seguridad segmentando el tráfico de red."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "sub + network",
+    "meaning": "a smaller network within a larger one"
+  },
+  "category": "Network",
+  "related": [
+    "dns",
+    "protocol",
+    "latency",
+    "vpn"
+  ]
+}

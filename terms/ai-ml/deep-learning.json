@@ -1,0 +1,25 @@
+{
+  "id": "deep-learning",
+  "translations": {
+    "en": "Deep Learning",
+    "uk": "Глибоке навчання",
+    "es": "Aprendizaje profundo"
+  },
+  "definition": {
+    "en": "A subset of machine learning that uses neural networks with multiple layers to learn hierarchical representations of data.",
+    "uk": "Підмножина машинного навчання, яка використовує нейронні мережі з кількома шарами для вивчення ієрархічних подань даних.",
+    "es": "Un subconjunto del aprendizaje automático que usa redes neuronales con múltiples capas para aprender representaciones jerárquicas de datos."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "deep + learning",
+    "meaning": "learning through many layers"
+  },
+  "category": "AI/ML",
+  "related": [
+    "neural-network",
+    "transformer",
+    "model",
+    "gpu"
+  ]
+}

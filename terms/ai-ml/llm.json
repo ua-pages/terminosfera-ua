@@ -1,0 +1,25 @@
+{
+  "id": "llm",
+  "translations": {
+    "en": "LLM",
+    "uk": "LLM",
+    "es": "LLM"
+  },
+  "definition": {
+    "en": "Large Language Model — a type of AI model trained on vast amounts of text data to understand and generate human language.",
+    "uk": "Large Language Model — тип AI-моделі, навченої на великих обсягах текстових даних для розуміння та генерації людської мови.",
+    "es": "Large Language Model — un tipo de modelo de IA entrenado con grandes cantidades de datos de texto para comprender y generar lenguaje humano."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "Large Language Model",
+    "meaning": "massive text-based AI"
+  },
+  "category": "AI/ML",
+  "related": [
+    "transformer",
+    "model",
+    "token",
+    "prompt"
+  ]
+}

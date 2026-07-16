@@ -1,0 +1,25 @@
+{
+  "id": "multi-cloud",
+  "translations": {
+    "en": "Multi-Cloud",
+    "uk": "Мультихмара",
+    "es": "Multi-nube"
+  },
+  "definition": {
+    "en": "The use of multiple cloud computing services from different cloud providers within a single architecture.",
+    "uk": "Використання кількох сервісів хмарних обчислень від різних провайдерів хмари в межах однієї архітектури.",
+    "es": "El uso de múltiples servicios de computación en la nube de diferentes proveedores dentro de una arquitectura única."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "multi + cloud",
+    "meaning": "across multiple cloud providers"
+  },
+  "category": "Cloud",
+  "related": [
+    "aws",
+    "azure",
+    "gcp",
+    "region"
+  ]
+}

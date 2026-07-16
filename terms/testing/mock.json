@@ -1,0 +1,25 @@
+{
+  "id": "mock",
+  "translations": {
+    "en": "Mock",
+    "uk": "Мок",
+    "es": "Mock"
+  },
+  "definition": {
+    "en": "A simulated object that mimics the behavior of real objects in controlled ways for testing purposes.",
+    "uk": "Імітований об'єкт, який імітує поведінку реальних об'єктів контрольованими способами для цілей тестування.",
+    "es": "Un objeto simulado que imita el comportamiento de objetos reales de maneras controladas para propósitos de prueba."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "mock",
+    "meaning": "to imitate"
+  },
+  "category": "Testing",
+  "related": [
+    "unit-test",
+    "stub",
+    "integration-test",
+    "regression"
+  ]
+}

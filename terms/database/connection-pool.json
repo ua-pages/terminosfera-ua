@@ -1,0 +1,25 @@
+{
+  "id": "connection-pool",
+  "translations": {
+    "en": "Connection Pool",
+    "uk": "Пул з'єднань",
+    "es": "Pool de conexiones"
+  },
+  "definition": {
+    "en": "A cache of database connections maintained so that connections can be reused, reducing overhead of opening new connections.",
+    "uk": "Кеш з'єднань з базою даних, що підтримується для перевикористання з'єднань, зменшуючи накладні витрати на відкриття нових з'єднань.",
+    "es": "Una caché de conexiones de base de datos mantenida para reutilizar conexiones, reduciendo la sobrecarga de abrir nuevas conexiones."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "connection + pool",
+    "meaning": "shared collection of connections"
+  },
+  "category": "Database",
+  "related": [
+    "database",
+    "server",
+    "query",
+    "migration"
+  ]
+}

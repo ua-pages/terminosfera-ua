@@ -1,0 +1,25 @@
+{
+  "id": "inheritance",
+  "translations": {
+    "en": "Inheritance",
+    "uk": "Наслідування",
+    "es": "Herencia"
+  },
+  "definition": {
+    "en": "An OOP mechanism where a new class derives properties and behavior from an existing class.",
+    "uk": "Механізм ООП, де новий клас отримує властивості та поведінку від існуючого класу.",
+    "es": "Un mecanismo de POO donde una nueva clase deriva propiedades y comportamiento de una clase existente."
+  },
+  "etymology": {
+    "origin": "Latin",
+    "root": "in + hereditare",
+    "meaning": "to receive as an heir"
+  },
+  "category": "Computer Science",
+  "related": [
+    "polymorphism",
+    "abstraction",
+    "data-structure",
+    "recursion"
+  ]
+}

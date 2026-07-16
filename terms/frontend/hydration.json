@@ -1,0 +1,25 @@
+{
+  "id": "hydration",
+  "translations": {
+    "en": "Hydration",
+    "uk": "Гідратація",
+    "es": "Hidratación"
+  },
+  "definition": {
+    "en": "The process where JavaScript attaches event handlers to server-rendered HTML to make it interactive.",
+    "uk": "Процес, при якому JavaScript приєднує обробники подій до HTML, згенерованого сервером, щоб зробити його інтерактивним.",
+    "es": "El proceso donde JavaScript adjunta manejadores de eventos al HTML renderizado por el servidor para hacerlo interactivo."
+  },
+  "etymology": {
+    "origin": "Greek",
+    "root": "hydor",
+    "meaning": "water — metaphor for bringing static content to life"
+  },
+  "category": "Frontend",
+  "related": [
+    "server",
+    "component",
+    "framework",
+    "javascript"
+  ]
+}

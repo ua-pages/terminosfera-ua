@@ -1,0 +1,25 @@
+{
+  "id": "progressive-web-app",
+  "translations": {
+    "en": "Progressive Web App",
+    "uk": "Прогресивний веб-застосунок",
+    "es": "Aplicación web progresiva"
+  },
+  "definition": {
+    "en": "A type of web application that provides native app-like experiences using modern web technologies and capabilities.",
+    "uk": "Тип веб-застосунку, який забезпечує досвід, подібний до нативних застосунків, використовуючи сучасні веб-технології та можливості.",
+    "es": "Un tipo de aplicación web que proporciona experiencias similares a apps nativas usando tecnologías y capacidades web modernas."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "Progressive Web App",
+    "meaning": "evolving web experience"
+  },
+  "category": "Frontend",
+  "related": [
+    "service-worker",
+    "web-component",
+    "javascript",
+    "framework"
+  ]
+}

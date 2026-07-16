@@ -1,0 +1,25 @@
+{
+  "id": "paas",
+  "translations": {
+    "en": "PaaS",
+    "uk": "PaaS",
+    "es": "PaaS"
+  },
+  "definition": {
+    "en": "Platform as a Service — a cloud model that provides a platform allowing customers to develop, run, and manage applications.",
+    "uk": "Platform as a Service — хмарна модель, яка надає платформу для розробки, запуску та керування застосунками.",
+    "es": "Platform as a Service — un modelo de nube que proporciona una plataforma para desarrollar, ejecutar y gestionar aplicaciones."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "Platform as a Service",
+    "meaning": "cloud-based development platform"
+  },
+  "category": "Cloud",
+  "related": [
+    "iaas",
+    "saas",
+    "deployment",
+    "aws"
+  ]
+}

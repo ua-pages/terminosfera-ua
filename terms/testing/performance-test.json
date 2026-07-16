@@ -1,0 +1,25 @@
+{
+  "id": "performance-test",
+  "translations": {
+    "en": "Performance Testing",
+    "uk": "Тестування продуктивності",
+    "es": "Prueba de rendimiento"
+  },
+  "definition": {
+    "en": "Testing conducted to evaluate the speed, responsiveness, and stability of a system under a particular workload.",
+    "uk": "Тестування, проведене для оцінки швидкості, адаптивності та стабільності системи при певному навантаженні.",
+    "es": "Pruebas realizadas para evaluar la velocidad, capacidad de respuesta y estabilidad de un sistema bajo una carga de trabajo particular."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "performance + testing",
+    "meaning": "measuring how fast it runs"
+  },
+  "category": "Testing",
+  "related": [
+    "unit-test",
+    "integration-test",
+    "regression",
+    "scalability"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "tcp",
+  "translations": {
+    "en": "TCP",
+    "uk": "TCP",
+    "es": "TCP"
+  },
+  "definition": {
+    "en": "Transmission Control Protocol — a reliable, connection-oriented protocol that ensures data is delivered accurately and in order.",
+    "uk": "Transmission Control Protocol — надійний протокол зі з'єднанням, який забезпечує точну та послідовну доставку даних.",
+    "es": "Transmission Control Protocol — un protocolo confiable orientado a conexión que asegura que los datos se entreguen con precisión y en orden."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "Transmission Control Protocol",
+    "meaning": "ordered data delivery"
+  },
+  "category": "Network",
+  "related": [
+    "udp",
+    "http",
+    "protocol",
+    "latency"
+  ]
+}

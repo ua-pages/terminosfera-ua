@@ -1,0 +1,25 @@
+{
+  "id": "concurrency",
+  "translations": {
+    "en": "Concurrency",
+    "uk": "Конкурентність",
+    "es": "Concurrencia"
+  },
+  "definition": {
+    "en": "The ability of a program to execute multiple tasks simultaneously by interleaving their execution.",
+    "uk": "Здатність програми виконувати кілька завдань одночасно шляхом чергування їх виконання.",
+    "es": "La capacidad de un programa de ejecutar múltiples tareas simultáneamente intercalando su ejecución."
+  },
+  "etymology": {
+    "origin": "Latin",
+    "root": "con + currere",
+    "meaning": "to run together"
+  },
+  "category": "Computer Science",
+  "related": [
+    "thread",
+    "recursion",
+    "algorithm",
+    "abstraction"
+  ]
+}

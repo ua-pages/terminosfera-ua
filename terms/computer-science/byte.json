@@ -1,0 +1,25 @@
+{
+  "id": "byte",
+  "translations": {
+    "en": "Byte",
+    "uk": "Байт",
+    "es": "Byte"
+  },
+  "definition": {
+    "en": "A group of eight bits, commonly used as the basic unit of digital information storage.",
+    "uk": "Група з восьми бітів, що зазвичай використовується як основна одиниця зберігання цифрової інформації.",
+    "es": "Un grupo de ocho bits, comúnmente usado como la unidad básica de almacenamiento de información digital."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "binary + eight",
+    "meaning": "unit of eight bits"
+  },
+  "category": "Computer Science",
+  "related": [
+    "bit",
+    "data-structure",
+    "abstraction",
+    "algorithm"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "artifact",
+  "translations": {
+    "en": "Artifact",
+    "uk": "Артефакт",
+    "es": "Artefacto"
+  },
+  "definition": {
+    "en": "A tangible output produced during the software development process, such as compiled code, documentation, or Docker images.",
+    "uk": "Матеріальний продукт, створений під час процесу розробки програмного забезпечення, наприклад скомпільований код, документація або Docker-образи.",
+    "es": "Un resultado tangible producido durante el proceso de desarrollo de software, como código compilado, documentación o imágenes Docker."
+  },
+  "etymology": {
+    "origin": "Greek",
+    "root": "artifex",
+    "meaning": "craftsman — a crafted product"
+  },
+  "category": "DevOps",
+  "related": [
+    "pipeline",
+    "ci-cd",
+    "deployment",
+    "container"
+  ]
+}

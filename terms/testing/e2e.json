@@ -1,0 +1,25 @@
+{
+  "id": "e2e",
+  "translations": {
+    "en": "E2E Testing",
+    "uk": "E2E тестування",
+    "es": "Pruebas E2E"
+  },
+  "definition": {
+    "en": "End-to-End testing — a methodology that tests the entire application flow from start to finish to ensure it works as expected.",
+    "uk": "End-to-End тестування — методологія, яка тестує весь процес застосунку від початку до кінця для забезпечення очікуваної роботи.",
+    "es": "End-to-End testing — una metodología que prueba todo el flujo de la aplicación de principio a fin para asegurar que funcione como se espera."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "End-to-End",
+    "meaning": "testing the complete journey"
+  },
+  "category": "Testing",
+  "related": [
+    "integration-test",
+    "unit-test",
+    "regression",
+    "mock"
+  ]
+}

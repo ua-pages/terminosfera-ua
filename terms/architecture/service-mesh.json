@@ -1,0 +1,25 @@
+{
+  "id": "service-mesh",
+  "translations": {
+    "en": "Service Mesh",
+    "uk": "Сервісна сітка",
+    "es": "Malla de servicios"
+  },
+  "definition": {
+    "en": "An infrastructure layer that manages service-to-service communication within a microservices architecture.",
+    "uk": "Шар інфраструктури, який керує зв'язком між сервісами в архітектурі мікросервісів.",
+    "es": "Una capa de infraestructura que gestiona la comunicación entre servicios dentro de una arquitectura de microservicios."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "service + mesh",
+    "meaning": "interconnected network of services"
+  },
+  "category": "Architecture",
+  "related": [
+    "microservices",
+    "load-balancer",
+    "proxy",
+    "kubernetes"
+  ]
+}

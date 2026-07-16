@@ -1,0 +1,25 @@
+{
+  "id": "session",
+  "translations": {
+    "en": "Session",
+    "uk": "Сесія",
+    "es": "Sesión"
+  },
+  "definition": {
+    "en": "A temporary data storage mechanism that keeps user state between HTTP requests on the server side.",
+    "uk": "Тимчасовий механізм зберігання даних, який зберігає стан користувача між HTTP-запитами на стороні сервера.",
+    "es": "Un mecanismo temporal de almacenamiento de datos que mantiene el estado del usuario entre solicitudes HTTP del lado del servidor."
+  },
+  "etymology": {
+    "origin": "Latin",
+    "root": "sessio",
+    "meaning": "a sitting — period of activity"
+  },
+  "category": "Backend",
+  "related": [
+    "authentication",
+    "cookie",
+    "jwt",
+    "server"
+  ]
+}

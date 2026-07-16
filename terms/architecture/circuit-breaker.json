@@ -1,0 +1,25 @@
+{
+  "id": "circuit-breaker",
+  "translations": {
+    "en": "Circuit Breaker",
+    "uk": "Захисний вимикач",
+    "es": "Interruptor de circuito"
+  },
+  "definition": {
+    "en": "A design pattern that detects failures and prevents an application from repeatedly trying to execute an operation likely to fail.",
+    "uk": "Патерн проектування, який виявляє помилки та запобігає повторним спробам застосунку виконати операцію, яка, ймовірно, завершиться помилкою.",
+    "es": "Un patrón de diseño que detecta fallos e impide que una aplicación intente repetidamente ejecutar una operación que probablemente falle."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "circuit + breaker",
+    "meaning": "a safety switch that cuts off on failure"
+  },
+  "category": "Architecture",
+  "related": [
+    "microservices",
+    "message-queue",
+    "proxy",
+    "service-mesh"
+  ]
+}

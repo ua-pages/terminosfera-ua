@@ -1,0 +1,25 @@
+{
+  "id": "kotlin",
+  "translations": {
+    "en": "Kotlin",
+    "uk": "Котлін",
+    "es": "Kotlin"
+  },
+  "definition": {
+    "en": "A modern programming language that runs on the JVM, officially supported by Google for Android development.",
+    "uk": "Сучасна мова програмування, що працює на JVM, офіційно підтримувана Google для розробки Android.",
+    "es": "Un lenguaje de programación moderno que ejecuta en la JVM, oficialmente soportado por Google para desarrollo de Android."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "Kotlin Island",
+    "meaning": "named after a Russian island near St. Petersburg"
+  },
+  "category": "Mobile",
+  "related": [
+    "android",
+    "sdk",
+    "swift",
+    "react-native"
+  ]
+}

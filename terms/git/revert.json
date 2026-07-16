@@ -1,0 +1,25 @@
+{
+  "id": "revert",
+  "translations": {
+    "en": "Revert",
+    "uk": "Відкотити",
+    "es": "Revertir"
+  },
+  "definition": {
+    "en": "A Git command that creates a new commit which undoes the changes introduced by a previous commit.",
+    "uk": "Команда Git, яка створює новий коміт, який скасовує зміни, внесені попереднім комітом.",
+    "es": "Un comando de Git que crea un nuevo commit que deshace los cambios introducidos por un commit anterior."
+  },
+  "etymology": {
+    "origin": "Latin",
+    "root": "revertere",
+    "meaning": "to turn back"
+  },
+  "category": "Git",
+  "related": [
+    "commit",
+    "cherry-pick",
+    "merge",
+    "log"
+  ]
+}

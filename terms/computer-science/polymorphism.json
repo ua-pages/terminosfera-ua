@@ -1,0 +1,25 @@
+{
+  "id": "polymorphism",
+  "translations": {
+    "en": "Polymorphism",
+    "uk": "Поліморфізм",
+    "es": "Polimorfismo"
+  },
+  "definition": {
+    "en": "An OOP concept that allows objects of different types to be treated through the same interface.",
+    "uk": "Концепція ООП, яка дозволяє об'єктам різних типів обробляти через той самий інтерфейс.",
+    "es": "Un concepto de POO que permite que objetos de diferentes tipos se traten a través de la misma interfaz."
+  },
+  "etymology": {
+    "origin": "Greek",
+    "root": "poly + morphe",
+    "meaning": "many forms"
+  },
+  "category": "Computer Science",
+  "related": [
+    "inheritance",
+    "abstraction",
+    "algorithm",
+    "data-structure"
+  ]
+}

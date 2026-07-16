@@ -1,0 +1,25 @@
+{
+  "id": "iaas",
+  "translations": {
+    "en": "IaaS",
+    "uk": "IaaS",
+    "es": "IaaS"
+  },
+  "definition": {
+    "en": "Infrastructure as a Service — a cloud computing model that provides virtualized computing resources over the internet.",
+    "uk": "Infrastructure as a Service — модель хмарних обчислень, яка надає віртуалізовані обчислювальні ресурси через інтернет.",
+    "es": "Infrastructure as a Service — un modelo de computación en la nube que proporciona recursos de cómputo virtualizados a través de internet."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "Infrastructure as a Service",
+    "meaning": "rented infrastructure"
+  },
+  "category": "Cloud",
+  "related": [
+    "aws",
+    "azure",
+    "gcp",
+    "paas"
+  ]
+}

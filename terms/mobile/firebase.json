@@ -1,0 +1,25 @@
+{
+  "id": "firebase",
+  "translations": {
+    "en": "Firebase",
+    "uk": "Firebase",
+    "es": "Firebase"
+  },
+  "definition": {
+    "en": "A platform by Google that provides backend services and tools for building web and mobile applications.",
+    "uk": "Платформа від Google, яка надає серверні сервіси та інструменти для створення веб- та мобільних застосунків.",
+    "es": "Una plataforma de Google que proporciona servicios backend e herramientas para construir aplicaciones web y móviles."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "fire + base",
+    "meaning": "a rapid app development backend"
+  },
+  "category": "Mobile",
+  "related": [
+    "sdk",
+    "react-native",
+    "flutter",
+    "server"
+  ]
+}

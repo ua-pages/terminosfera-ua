@@ -1,0 +1,25 @@
+{
+  "id": "jwt",
+  "translations": {
+    "en": "JWT",
+    "uk": "JWT",
+    "es": "JWT"
+  },
+  "definition": {
+    "en": "JSON Web Token — a compact, URL-safe token format for securely transmitting information between parties as a JSON object.",
+    "uk": "JSON Web Token — компактний формат токена, безпечний для URL, для безпечного передавання інформації між сторонами у вигляді JSON-об'єкта.",
+    "es": "JSON Web Token — un formato de token compacto y seguro para URL para transmitir información de forma segura entre partes como un objeto JSON."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "JSON Web Token",
+    "meaning": "a self-contained token with encoded claims"
+  },
+  "category": "Backend",
+  "related": [
+    "authentication",
+    "oauth",
+    "session",
+    "encryption"
+  ]
+}

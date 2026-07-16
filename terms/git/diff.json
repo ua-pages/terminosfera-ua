@@ -1,0 +1,25 @@
+{
+  "id": "diff",
+  "translations": {
+    "en": "Diff",
+    "uk": "Різниця",
+    "es": "Diff"
+  },
+  "definition": {
+    "en": "A Git command that shows the differences between two commits, branches, or files.",
+    "uk": "Команда Git, яка показує різницю між двома комітами, гілками або файлами.",
+    "es": "Un comando de Git que muestra las diferencias entre dos commits, ramas o archivos."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "difference",
+    "meaning": "showing what changed"
+  },
+  "category": "Git",
+  "related": [
+    "commit",
+    "branch",
+    "merge",
+    "log"
+  ]
+}

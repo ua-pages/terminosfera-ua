@@ -1,0 +1,25 @@
+{
+  "id": "transformer",
+  "translations": {
+    "en": "Transformer",
+    "uk": "Трансформер",
+    "es": "Transformador"
+  },
+  "definition": {
+    "en": "A deep learning architecture based on self-attention mechanisms that powers modern large language models.",
+    "uk": "Архітектура глибокого навчання, заснована на механізмах самоуваги, яка забезпечує роботу сучасних великих мовних моделей.",
+    "es": "Una arquitectura de aprendizaje profundo basada en mecanismos de autoatención que alimenta los modernos grandes modelos de lenguaje."
+  },
+  "etymology": {
+    "origin": "Latin",
+    "root": "transformare",
+    "meaning": "to change form"
+  },
+  "category": "AI/ML",
+  "related": [
+    "neural-network",
+    "deep-learning",
+    "llm",
+    "model"
+  ]
+}

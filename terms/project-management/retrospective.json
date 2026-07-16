@@ -1,0 +1,25 @@
+{
+  "id": "retrospective",
+  "translations": {
+    "en": "Retrospective",
+    "uk": "Ретроспектива",
+    "es": "Retrospectiva"
+  },
+  "definition": {
+    "en": "A meeting held at the end of a sprint where the team reflects on what went well and what could be improved.",
+    "uk": "Зустріч, що проводиться наприкінці спринту, де команда аналізує, що пройшло добре і що можна покращити.",
+    "es": "Una reunión celebrada al final de un sprint donde el equipo reflexiona sobre lo que salió bien y lo que se puede mejorar."
+  },
+  "etymology": {
+    "origin": "Latin",
+    "root": "retro + spectare",
+    "meaning": "to look back"
+  },
+  "category": "Project Management",
+  "related": [
+    "sprint",
+    "scrum",
+    "kanban",
+    "backlog"
+  ]
+}

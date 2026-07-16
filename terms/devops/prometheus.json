@@ -1,0 +1,25 @@
+{
+  "id": "prometheus",
+  "translations": {
+    "en": "Prometheus",
+    "uk": "Прометеус",
+    "es": "Prometheus"
+  },
+  "definition": {
+    "en": "An open-source systems monitoring and alerting toolkit that collects and stores metrics as time-series data.",
+    "uk": "Відкритий інструмент моніторингу систем та сповіщень, який збирає та зберігає метрики як дані часових рядів.",
+    "es": "Un kit de monitoreo de sistemas y alertas de código abierto que recopila y almacena métricas como datos de series temporales."
+  },
+  "etymology": {
+    "origin": "Greek",
+    "root": "Prometheus",
+    "meaning": "named after the Titan who brought fire — bringing visibility to systems"
+  },
+  "category": "DevOps",
+  "related": [
+    "monitoring",
+    "logging",
+    "grafana",
+    "pipeline"
+  ]
+}

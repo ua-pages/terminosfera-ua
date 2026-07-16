@@ -1,0 +1,25 @@
+{
+  "id": "tdd",
+  "translations": {
+    "en": "TDD",
+    "uk": "TDD",
+    "es": "TDD"
+  },
+  "definition": {
+    "en": "Test-Driven Development — a software development approach where tests are written before the actual code.",
+    "uk": "Test-Driven Development — підхід до розробки програмного забезпечення, де тести пишуться до фактичного коду.",
+    "es": "Test-Driven Development — un enfoque de desarrollo de software donde las pruebas se escriben antes del código real."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "Test-Driven Development",
+    "meaning": "tests drive the code"
+  },
+  "category": "Testing",
+  "related": [
+    "unit-test",
+    "code-coverage",
+    "regression",
+    "mock"
+  ]
+}

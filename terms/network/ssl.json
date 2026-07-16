@@ -1,0 +1,25 @@
+{
+  "id": "ssl",
+  "translations": {
+    "en": "SSL",
+    "uk": "SSL",
+    "es": "SSL"
+  },
+  "definition": {
+    "en": "Secure Sockets Layer — a cryptographic protocol for establishing authenticated and encrypted connections between networked computers.",
+    "uk": "Secure Sockets Layer — криптографічний протокол для встановлення автентифікованих та зашифрованих з'єднань між мережевими комп'ютерами.",
+    "es": "Secure Sockets Layer — un protocolo criptográfico para establecer conexiones autenticadas y encriptadas entre computadoras en red."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "Secure Sockets Layer",
+    "meaning": "encrypted communication layer"
+  },
+  "category": "Network",
+  "related": [
+    "tls",
+    "encryption",
+    "protocol",
+    "firewall"
+  ]
+}

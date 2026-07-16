@@ -1,0 +1,25 @@
+{
+  "id": "ansible",
+  "translations": {
+    "en": "Ansible",
+    "uk": "Ансібл",
+    "es": "Ansible"
+  },
+  "definition": {
+    "en": "An open-source automation tool for configuration management, application deployment, and task orchestration.",
+    "uk": "Відкритий інструмент автоматизації для керування конфігурацією, розгортання застосунків та оркестрації завдань.",
+    "es": "Una herramienta de automatización de código abierto para gestión de configuración, despliegue de aplicaciones y orquestación de tareas."
+  },
+  "etymology": {
+    "origin": "Science Fiction",
+    "root": "ansible",
+    "meaning": "a fictional instantaneous communication device"
+  },
+  "category": "DevOps",
+  "related": [
+    "configuration",
+    "orchestration",
+    "pipeline",
+    "terraform"
+  ]
+}

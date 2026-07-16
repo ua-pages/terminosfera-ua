@@ -1,0 +1,25 @@
+{
+  "id": "web-component",
+  "translations": {
+    "en": "Web Component",
+    "uk": "Веб-компонент",
+    "es": "Componente web"
+  },
+  "definition": {
+    "en": "A set of web platform APIs that allow you to create new custom, reusable, encapsulated HTML tags for use in web pages and web apps.",
+    "uk": "Набір веб-платформних API, що дозволяють створювати нові користувацькі, багаторазові, інкапсульовані HTML-теги для використання на веб-сторінках та у веб-застосунках.",
+    "es": "Un conjunto de APIs de la plataforma web que permiten crear nuevas etiquetas HTML personalizadas, reutilizables y encapsuladas para usar en páginas y aplicaciones web."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "web + component",
+    "meaning": "building block of the web"
+  },
+  "category": "Frontend",
+  "related": [
+    "component",
+    "dom",
+    "shadow-dom",
+    "framework"
+  ]
+}

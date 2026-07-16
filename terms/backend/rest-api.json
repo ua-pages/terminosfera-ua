@@ -1,0 +1,25 @@
+{
+  "id": "rest-api",
+  "translations": {
+    "en": "REST API",
+    "uk": "REST API",
+    "es": "REST API"
+  },
+  "definition": {
+    "en": "An application programming interface that follows REST architectural constraints, using HTTP methods for communication.",
+    "uk": "API, який дотримується архітектурних обмежень REST, використовуючи HTTP-методи для зв'язку.",
+    "es": "Una interfaz de programación de aplicaciones que sigue las restricciones arquitectónicas de REST, usando métodos HTTP para comunicación."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "REpresentational State Transfer",
+    "meaning": "stateless resource-based API"
+  },
+  "category": "Backend",
+  "related": [
+    "rest",
+    "api",
+    "endpoint",
+    "graphql"
+  ]
+}

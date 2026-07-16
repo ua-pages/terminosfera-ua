@@ -1,0 +1,25 @@
+{
+  "id": "service-worker",
+  "translations": {
+    "en": "Service Worker",
+    "uk": "Сервіс-воркер",
+    "es": "Service Worker"
+  },
+  "definition": {
+    "en": "A script that runs in the background of a browser, enabling features like offline support, background sync, and push notifications.",
+    "uk": "Скрипт, що працює у фоновому режимі браузера, забезпечуючи такі функції як офлайн-підтримка, фонова синхронізація та push-сповіщення.",
+    "es": "Un script que se ejecuta en segundo plano del navegador, habilitando funciones como soporte offline, sincronización en segundo plano y notificaciones push."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "service + worker",
+    "meaning": "a background helper for web apps"
+  },
+  "category": "Frontend",
+  "related": [
+    "javascript",
+    "web-workers",
+    "pwa",
+    "dom"
+  ]
+}

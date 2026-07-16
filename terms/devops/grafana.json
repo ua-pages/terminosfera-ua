@@ -1,0 +1,25 @@
+{
+  "id": "grafana",
+  "translations": {
+    "en": "Grafana",
+    "uk": "Графана",
+    "es": "Grafana"
+  },
+  "definition": {
+    "en": "An open-source analytics and interactive visualization platform for monitoring, alerting, and analyzing metrics.",
+    "uk": "Відкрита платформа аналітики та інтерактивної візуалізації для моніторингу, сповіщень та аналізу метрик.",
+    "es": "Una plataforma de análisis y visualización interactiva de código abierto para monitoreo, alertas y análisis de métricas."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "graph + analytics",
+    "meaning": "graph-based analytics"
+  },
+  "category": "DevOps",
+  "related": [
+    "prometheus",
+    "monitoring",
+    "logging",
+    "scalability"
+  ]
+}

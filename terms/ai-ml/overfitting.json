@@ -1,0 +1,25 @@
+{
+  "id": "overfitting",
+  "translations": {
+    "en": "Overfitting",
+    "uk": "Перенавчання",
+    "es": "Sobreajuste"
+  },
+  "definition": {
+    "en": "A modeling error where a model learns noise in training data instead of the underlying pattern, performing poorly on new data.",
+    "uk": "Помилка моделювання, коли модель вивчає шум у тренувальних даних замість основного закономірності, погано працюючи на нових даних.",
+    "es": "Un error de modelado donde un modelo aprende el ruido en los datos de entrenamiento en lugar del patrón subyacente, funcionando mal con datos nuevos."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "over + fitting",
+    "meaning": "fitting too closely to training data"
+  },
+  "category": "AI/ML",
+  "related": [
+    "model",
+    "deep-learning",
+    "neural-network",
+    "inference"
+  ]
+}

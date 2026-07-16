@@ -1,0 +1,25 @@
+{
+  "id": "swift",
+  "translations": {
+    "en": "Swift",
+    "uk": "Свіфт",
+    "es": "Swift"
+  },
+  "definition": {
+    "en": "A powerful programming language developed by Apple for iOS, macOS, watchOS, and tvOS app development.",
+    "uk": "Потужна мова програмування, розроблена Apple для створення застосунків iOS, macOS, watchOS та tvOS.",
+    "es": "Un potente lenguaje de programación desarrollado por Apple para el desarrollo de aplicaciones iOS, macOS, watchOS y tvOS."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "swift",
+    "meaning": "fast and responsive"
+  },
+  "category": "Mobile",
+  "related": [
+    "xcode",
+    "ipa",
+    "kotlin",
+    "sdk"
+  ]
+}

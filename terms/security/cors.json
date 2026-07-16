@@ -1,0 +1,25 @@
+{
+  "id": "cors",
+  "translations": {
+    "en": "CORS",
+    "uk": "CORS",
+    "es": "CORS"
+  },
+  "definition": {
+    "en": "Cross-Origin Resource Sharing — a mechanism that allows restricted resources on a web page to be requested from another domain.",
+    "uk": "Cross-Origin Resource Sharing — механізм, який дозволяє запитувати обмежені ресурси на веб-сторінці з іншого домену.",
+    "es": "Cross-Origin Resource Sharing — un mecanismo que permite que recursos restringidos en una página web sean solicitados desde otro dominio."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "Cross-Origin Resource Sharing",
+    "meaning": "sharing resources across domains"
+  },
+  "category": "Security",
+  "related": [
+    "xss",
+    "csrf",
+    "http",
+    "encryption"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "thread",
+  "translations": {
+    "en": "Thread",
+    "uk": "Потік",
+    "es": "Hilo"
+  },
+  "definition": {
+    "en": "The smallest sequence of programmed instructions that can be managed independently by a scheduler.",
+    "uk": "Найменша послідовність запрограмованих інструкцій, якою можна керувати самостійно за допомогою планувальника.",
+    "es": "La secuencia más pequeña de instrucciones programadas que puede ser gestionada independientemente por un planificador."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "thread",
+    "meaning": "a single sequential flow of control"
+  },
+  "category": "Computer Science",
+  "related": [
+    "concurrency",
+    "algorithm",
+    "abstraction",
+    "garbage-collection"
+  ]
+}

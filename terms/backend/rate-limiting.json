@@ -1,0 +1,25 @@
+{
+  "id": "rate-limiting",
+  "translations": {
+    "en": "Rate Limiting",
+    "uk": "Обмеження запитів",
+    "es": "Limitación de tasa"
+  },
+  "definition": {
+    "en": "A technique to control the number of requests a client can make to an API within a given time period.",
+    "uk": "Техніка контролю кількості запитів, які клієнт може зробити до API за визначений період часу.",
+    "es": "Una técnica para controlar el número de solicitudes que un cliente puede hacer a una API dentro de un período de tiempo dado."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "rate + limit",
+    "meaning": "capping the speed of requests"
+  },
+  "category": "Backend",
+  "related": [
+    "api",
+    "endpoint",
+    "server",
+    "middleware"
+  ]
+}

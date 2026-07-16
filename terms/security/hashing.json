@@ -1,0 +1,25 @@
+{
+  "id": "hashing",
+  "translations": {
+    "en": "Hashing",
+    "uk": "Хешування",
+    "es": "Hashing"
+  },
+  "definition": {
+    "en": "The process of converting data into a fixed-size string using a mathematical function, commonly used for password storage and data integrity.",
+    "uk": "Процес перетворення даних на рядок фіксованого розміру за допомогою математичної функції, що зазвичай використовується для зберігання паролів та цілісності даних.",
+    "es": "El proceso de convertir datos en una cadena de tamaño fijo usando una función matemática, comúnmente usado para almacenamiento de contraseñas e integridad de datos."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "hash",
+    "meaning": "to chop and mix"
+  },
+  "category": "Security",
+  "related": [
+    "encryption",
+    "authentication",
+    "vulnerability",
+    "mfa"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "color-theory",
+  "translations": {
+    "en": "Color Theory",
+    "uk": "Теорія кольорів",
+    "es": "Teoría del color"
+  },
+  "definition": {
+    "en": "A framework and set of principles used to guide color selection, combination, and visual communication in design.",
+    "uk": "Рамки та набір принципів, що використовуються для керівництва вибором, поєднанням та візуальною комунікацією кольорів у дизайні.",
+    "es": "Un marco y conjunto de principios utilizados para guiar la selección, combinación y comunicación visual del color en el diseño."
+  },
+  "etymology": {
+    "origin": "Greek",
+    "root": "chroma + logos",
+    "meaning": "study of color"
+  },
+  "category": "Design",
+  "related": [
+    "ui",
+    "css",
+    "typography",
+    "responsive"
+  ]
+}

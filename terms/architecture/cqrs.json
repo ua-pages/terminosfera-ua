@@ -1,0 +1,25 @@
+{
+  "id": "cqrs",
+  "translations": {
+    "en": "CQRS",
+    "uk": "CQRS",
+    "es": "CQRS"
+  },
+  "definition": {
+    "en": "Command Query Responsibility Segregation — a pattern that separates read and write operations into different models.",
+    "uk": "Command Query Responsibility Segregation — патерн, який розділяє операції читання та запису на різні моделі.",
+    "es": "Command Query Responsibility Segregation — un patrón que separa las operaciones de lectura y escritura en modelos diferentes."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "Command Query Responsibility Segregation",
+    "meaning": "separating reads from writes"
+  },
+  "category": "Architecture",
+  "related": [
+    "event-sourcing",
+    "database",
+    "microservices",
+    "saga"
+  ]
+}

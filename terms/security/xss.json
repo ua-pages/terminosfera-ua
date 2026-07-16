@@ -1,0 +1,25 @@
+{
+  "id": "xss",
+  "translations": {
+    "en": "XSS",
+    "uk": "XSS",
+    "es": "XSS"
+  },
+  "definition": {
+    "en": "Cross-Site Scripting — a vulnerability that allows attackers to inject malicious scripts into web pages viewed by other users.",
+    "uk": "Cross-Site Scripting — вразливість, яка дозволяє атакувальникам вводити шкідливі скрипти у веб-сторінки, що переглядаються іншими користувачами.",
+    "es": "Cross-Site Scripting — una vulnerabilidad que permite a los atacantes inyectar scripts maliciosos en páginas web vistas por otros usuarios."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "Cross-Site Scripting",
+    "meaning": "script injection across sites"
+  },
+  "category": "Security",
+  "related": [
+    "csrf",
+    "vulnerability",
+    "encryption",
+    "cors"
+  ]
+}

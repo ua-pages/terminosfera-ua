@@ -1,0 +1,25 @@
+{
+  "id": "saga",
+  "translations": {
+    "en": "Saga",
+    "uk": "Сага",
+    "es": "Saga"
+  },
+  "definition": {
+    "en": "A design pattern for managing distributed transactions by breaking them into a sequence of local transactions with compensating actions.",
+    "uk": "Патерн проектування для керування розподіленими транзакціями шляхом розбиття їх на послідовність локальних транзакцій з компенсуючими діями.",
+    "es": "Un patrón de diseño para gestionar transacciones distribuidas dividiéndolas en una secuencia de transacciones locales con acciones compensatorias."
+  },
+  "etymology": {
+    "origin": "Norse",
+    "root": "saga",
+    "meaning": "a long story — a sequence of events"
+  },
+  "category": "Architecture",
+  "related": [
+    "event-sourcing",
+    "transaction",
+    "message-queue",
+    "microservices"
+  ]
+}

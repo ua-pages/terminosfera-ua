@@ -1,0 +1,25 @@
+{
+  "id": "submodule",
+  "translations": {
+    "en": "Submodule",
+    "uk": "Підмодуль",
+    "es": "Submódulo"
+  },
+  "definition": {
+    "en": "A Git repository embedded inside another Git repository as a subdirectory.",
+    "uk": "Репозиторій Git, вбудований всередину іншого репозиторію Git як піддиректорія.",
+    "es": "Un repositorio Git embebido dentro de otro repositorio Git como subdirectorio."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "sub + module",
+    "meaning": "a smaller component within a larger one"
+  },
+  "category": "Git",
+  "related": [
+    "repository",
+    "clone",
+    "remote",
+    "commit"
+  ]
+}

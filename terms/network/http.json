@@ -1,0 +1,25 @@
+{
+  "id": "http",
+  "translations": {
+    "en": "HTTP",
+    "uk": "HTTP",
+    "es": "HTTP"
+  },
+  "definition": {
+    "en": "Hypertext Transfer Protocol — the foundational protocol for transmitting hypermedia documents on the World Wide Web.",
+    "uk": "Hypertext Transfer Protocol — основний протокол для передавання гіпермедіа-документів у Всесвітній павутині.",
+    "es": "Hypertext Transfer Protocol — el protocolo fundamental para transmitir documentos de hipermedia en la World Wide Web."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "Hypertext Transfer Protocol",
+    "meaning": "web document transfer"
+  },
+  "category": "Network",
+  "related": [
+    "protocol",
+    "dns",
+    "rest",
+    "websocket"
+  ]
+}

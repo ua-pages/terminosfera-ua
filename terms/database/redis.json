@@ -1,0 +1,25 @@
+{
+  "id": "redis",
+  "translations": {
+    "en": "Redis",
+    "uk": "Redis",
+    "es": "Redis"
+  },
+  "definition": {
+    "en": "An open-source, in-memory data structure store used as a database, cache, and message broker.",
+    "uk": "Відкритий сховище структур даних в оперативній пам'яті, що використовується як база даних, кеш та брокер повідомлень.",
+    "es": "Un almacén de estructuras de datos en memoria de código abierto que se usa como base de datos, caché y broker de mensajes."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "Remote Dictionary Server",
+    "meaning": "in-memory data store"
+  },
+  "category": "Database",
+  "related": [
+    "database",
+    "cache",
+    "query",
+    "nosql"
+  ]
+}

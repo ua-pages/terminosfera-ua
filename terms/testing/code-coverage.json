@@ -1,0 +1,25 @@
+{
+  "id": "code-coverage",
+  "translations": {
+    "en": "Code Coverage",
+    "uk": "Покриття коду",
+    "es": "Cobertura de código"
+  },
+  "definition": {
+    "en": "A metric that measures the percentage of source code executed by automated tests.",
+    "uk": "Метрика, яка вимірює відсоток вихідного коду, виконаного автоматизованими тестами.",
+    "es": "Una métrica que mide el porcentaje de código fuente ejecutado por pruebas automatizadas."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "code + coverage",
+    "meaning": "how much code is tested"
+  },
+  "category": "Testing",
+  "related": [
+    "unit-test",
+    "integration-test",
+    "regression",
+    "tdd"
+  ]
+}

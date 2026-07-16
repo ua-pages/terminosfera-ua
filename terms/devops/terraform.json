@@ -1,0 +1,25 @@
+{
+  "id": "terraform",
+  "translations": {
+    "en": "Terraform",
+    "uk": "Терраформ",
+    "es": "Terraform"
+  },
+  "definition": {
+    "en": "An infrastructure as code tool that lets you define and manage cloud resources using declarative configuration files.",
+    "uk": "Інструмент інфраструктури як коду, що дозволяє визначати та керувати хмарними ресурсами за допомогою декларативних конфігураційних файлів.",
+    "es": "Una herramienta de infraestructura como código que permite definir y gestionar recursos en la nube mediante archivos de configuración declarativos."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "terra + form",
+    "meaning": "to shape the earth — infrastructure provisioning"
+  },
+  "category": "DevOps",
+  "related": [
+    "infrastructure",
+    "configuration",
+    "deployment",
+    "container"
+  ]
+}

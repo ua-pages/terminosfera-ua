@@ -1,0 +1,25 @@
+{
+  "id": "sketch",
+  "translations": {
+    "en": "Sketch",
+    "uk": "Sketch",
+    "es": "Sketch"
+  },
+  "definition": {
+    "en": "A vector graphics editor for macOS used primarily for designing user interfaces and icons.",
+    "uk": "Векторний графічний редактор для macOS, що використовується переважно для проектування інтерфейсів користувача та іконок.",
+    "es": "Un editor de gráficos vectoriales para macOS usado principalmente para diseñar interfaces de usuario e iconos."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "sketch",
+    "meaning": "a rough drawing"
+  },
+  "category": "Design",
+  "related": [
+    "figma",
+    "prototype",
+    "wireframe",
+    "ui"
+  ]
+}

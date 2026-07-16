@@ -1,0 +1,25 @@
+{
+  "id": "garbage-collection",
+  "translations": {
+    "en": "Garbage Collection",
+    "uk": "Збір сміття",
+    "es": "Recolección de basura"
+  },
+  "definition": {
+    "en": "An automatic memory management mechanism that reclaims memory no longer in use by the program.",
+    "uk": "Автоматичний механізм керування пам'яттю, який повертає пам'ять, що більше не використовується програмою.",
+    "es": "Un mecanismo automático de gestión de memoria que recupera memoria ya no utilizada por el programa."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "garbage + collection",
+    "meaning": "automatic cleanup of unused objects"
+  },
+  "category": "Computer Science",
+  "related": [
+    "memory",
+    "abstraction",
+    "algorithm",
+    "thread"
+  ]
+}

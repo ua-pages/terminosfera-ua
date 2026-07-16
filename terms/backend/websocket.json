@@ -1,0 +1,25 @@
+{
+  "id": "websocket",
+  "translations": {
+    "en": "WebSocket",
+    "uk": "WebSocket",
+    "es": "WebSocket"
+  },
+  "definition": {
+    "en": "A communication protocol that provides full-duplex, persistent connections over a single TCP connection.",
+    "uk": "Протокол зв'язку, який забезпечує повнодуплексні, постійні з'єднання через одне TCP-з'єднання.",
+    "es": "Un protocolo de comunicación que proporciona conexiones persistentes de doble vía sobre una conexión TCP única."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "web + socket",
+    "meaning": "a persistent web connection channel"
+  },
+  "category": "Backend",
+  "related": [
+    "server",
+    "protocol",
+    "tcp",
+    "api"
+  ]
+}

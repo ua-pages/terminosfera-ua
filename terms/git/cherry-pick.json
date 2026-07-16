@@ -1,0 +1,25 @@
+{
+  "id": "cherry-pick",
+  "translations": {
+    "en": "Cherry-pick",
+    "uk": "Чері-пік",
+    "es": "Cherry-pick"
+  },
+  "definition": {
+    "en": "The act of picking a commit from a branch and applying it to another branch.",
+    "uk": "Дія вибору коміту з гілки та застосування його до іншої гілки.",
+    "es": "El acto de seleccionar un commit de una rama y aplicarlo a otra rama."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "cherry + pick",
+    "meaning": "to pick the best — selecting specific commits"
+  },
+  "category": "Git",
+  "related": [
+    "commit",
+    "branch",
+    "merge",
+    "rebase"
+  ]
+}

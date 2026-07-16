@@ -1,0 +1,25 @@
+{
+  "id": "graphql",
+  "translations": {
+    "en": "GraphQL",
+    "uk": "GraphQL",
+    "es": "GraphQL"
+  },
+  "definition": {
+    "en": "A query language and runtime for APIs that allows clients to request exactly the data they need.",
+    "uk": "Мова запитів та середовище виконання для API, яке дозволяє клієнтам запитувати саме ті дані, які їм потрібні.",
+    "es": "Un lenguaje de consultas y runtime para APIs que permite a los clientes solicitar exactamente los datos que necesitan."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "graph + query",
+    "meaning": "graph-based data querying"
+  },
+  "category": "Backend",
+  "related": [
+    "api",
+    "endpoint",
+    "rest",
+    "server"
+  ]
+}

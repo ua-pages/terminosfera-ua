@@ -1,0 +1,25 @@
+{
+  "id": "cdn",
+  "translations": {
+    "en": "CDN",
+    "uk": "CDN",
+    "es": "CDN"
+  },
+  "definition": {
+    "en": "Content Delivery Network — a geographically distributed network of servers that delivers cached content to users based on proximity.",
+    "uk": "Content Delivery Network — географічно розподілена мережа серверів, яка доставляє кешований контент користувачам на основі близькості.",
+    "es": "Content Delivery Network — una red de servidores distribuida geográficamente que entrega contenido en caché a los usuarios según proximidad."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "Content Delivery Network",
+    "meaning": "distributed content distribution"
+  },
+  "category": "Architecture",
+  "related": [
+    "cache",
+    "proxy",
+    "scalability",
+    "dns"
+  ]
+}

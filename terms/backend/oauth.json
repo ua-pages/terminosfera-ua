@@ -1,0 +1,25 @@
+{
+  "id": "oauth",
+  "translations": {
+    "en": "OAuth",
+    "uk": "OAuth",
+    "es": "OAuth"
+  },
+  "definition": {
+    "en": "An open standard for token-based authorization that allows third-party services to access user data without exposing credentials.",
+    "uk": "Відкритий стандарт для авторизації на основі токенів, який дозволяє стороннім сервісам отримувати доступ до даних користувача без розкриття облікових даних.",
+    "es": "Un estándar abierto de autorización basado en tokens que permite a servicios de terceros acceder a datos de usuarios sin exponer credenciales."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "Open Authorization",
+    "meaning": "open standard for access delegation"
+  },
+  "category": "Backend",
+  "related": [
+    "authentication",
+    "jwt",
+    "authorization",
+    "endpoint"
+  ]
+}

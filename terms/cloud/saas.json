@@ -1,0 +1,25 @@
+{
+  "id": "saas",
+  "translations": {
+    "en": "SaaS",
+    "uk": "SaaS",
+    "es": "SaaS"
+  },
+  "definition": {
+    "en": "Software as a Service — a software distribution model where applications are hosted by a provider and accessed via the internet.",
+    "uk": "Software as a Service — модель розповсюдження програмного забезпечення, де застосунки розміщуються провайдером та доступні через інтернет.",
+    "es": "Software as a Service — un modelo de distribución de software donde las aplicaciones son alojadas por un proveedor y accesibles vía internet."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "Software as a Service",
+    "meaning": "delivered software"
+  },
+  "category": "Cloud",
+  "related": [
+    "paas",
+    "iaas",
+    "aws",
+    "deployment"
+  ]
+}

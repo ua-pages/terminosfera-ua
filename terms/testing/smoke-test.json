@@ -1,0 +1,25 @@
+{
+  "id": "smoke-test",
+  "translations": {
+    "en": "Smoke Test",
+    "uk": "Димове тестування",
+    "es": "Prueba de humo"
+  },
+  "definition": {
+    "en": "A preliminary test to check whether the most critical functions of a software build work before further testing.",
+    "uk": "Попередній тест для перевірки, чи працюють найважливіші функції збірки програмного забезпечення перед подальшим тестуванням.",
+    "es": "Una prueba preliminar para verificar si las funciones más críticas de una compilación de software funcionan antes de pruebas adicionales."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "smoke + test",
+    "meaning": "check if it catches fire — basic functionality"
+  },
+  "category": "Testing",
+  "related": [
+    "unit-test",
+    "integration-test",
+    "regression",
+    "e2e"
+  ]
+}

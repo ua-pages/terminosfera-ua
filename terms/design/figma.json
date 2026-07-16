@@ -1,0 +1,25 @@
+{
+  "id": "figma",
+  "translations": {
+    "en": "Figma",
+    "uk": "Figma",
+    "es": "Figma"
+  },
+  "definition": {
+    "en": "A collaborative web-based interface design tool used for prototyping, wireframing, and UI design.",
+    "uk": "Спільний веб-інструмент для проектування інтерфейсів, що використовується для створення прототипів, каркасів та UI-дизайну.",
+    "es": "Una herramienta colaborativa basada en web para diseño de interfaces, usada para prototipado, wireframes y diseño de UI."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "figma (figure)",
+    "meaning": "a design tool for creating figures"
+  },
+  "category": "Design",
+  "related": [
+    "prototype",
+    "wireframe",
+    "ui",
+    "sketch"
+  ]
+}

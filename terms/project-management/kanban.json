@@ -1,0 +1,25 @@
+{
+  "id": "kanban",
+  "translations": {
+    "en": "Kanban",
+    "uk": "Канбан",
+    "es": "Kanban"
+  },
+  "definition": {
+    "en": "A visual workflow management method that uses boards and cards to track work items through stages.",
+    "uk": "Візуальний метод керування робочим процесом, який використовує дошки та картки для відстеження робочих етапів.",
+    "es": "Un método visual de gestión del flujo de trabajo que usa tableros y tarjetas para rastrear elementos de trabajo a través de etapas."
+  },
+  "etymology": {
+    "origin": "Japanese",
+    "root": "看板",
+    "meaning": "visual signal or card"
+  },
+  "category": "Project Management",
+  "related": [
+    "sprint",
+    "backlog",
+    "scrum",
+    "story"
+  ]
+}

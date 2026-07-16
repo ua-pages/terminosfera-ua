@@ -1,0 +1,25 @@
+{
+  "id": "stub",
+  "translations": {
+    "en": "Stub",
+    "uk": "Стаб",
+    "es": "Stub"
+  },
+  "definition": {
+    "en": "A short program routine that substitutes for a longer program, used in testing to return predefined responses.",
+    "uk": "Коротка програмна процедура, яка замінює довшу програму, що використовується в тестуванні для повернення попередньо визначених відповідей.",
+    "es": "Un programa corto que sustituye un programa más largo, usado en pruebas para retornar respuestas predefinidas."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "stub",
+    "meaning": "a short remaining piece"
+  },
+  "category": "Testing",
+  "related": [
+    "mock",
+    "unit-test",
+    "integration-test",
+    "code-coverage"
+  ]
+}

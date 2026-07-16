@@ -1,0 +1,25 @@
+{
+  "id": "scrum",
+  "translations": {
+    "en": "Scrum",
+    "uk": "Скрам",
+    "es": "Scrum"
+  },
+  "definition": {
+    "en": "An agile framework for managing and completing complex projects, emphasizing iterative development in short cycles.",
+    "uk": "Гнучка методологія для керування та завершення складних проєктів з акцентом на ітеративну розробку в коротких циклах.",
+    "es": "Un marco ágil para gestionar y completar proyectos complejos, enfatizando el desarrollo iterativo en ciclos cortos."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "scrum (rugby)",
+    "meaning": "a team working together toward a goal"
+  },
+  "category": "Project Management",
+  "related": [
+    "sprint",
+    "backlog",
+    "kanban",
+    "retrospective"
+  ]
+}

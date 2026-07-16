@@ -1,0 +1,25 @@
+{
+  "id": "ui",
+  "translations": {
+    "en": "UI",
+    "uk": "UI",
+    "es": "UI"
+  },
+  "definition": {
+    "en": "User Interface — the visual elements through which a user interacts with a system, such as buttons, menus, and screens.",
+    "uk": "User Interface — візуальні елементи, через які користувач взаємодіє з системою, такі як кнопки, меню та екрани.",
+    "es": "User Interface — los elementos visuales a través de los cuales un usuario interactúa con un sistema, como botones, menús y pantallas."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "User Interface",
+    "meaning": "the point of interaction"
+  },
+  "category": "Design",
+  "related": [
+    "ux",
+    "component",
+    "css",
+    "prototype"
+  ]
+}

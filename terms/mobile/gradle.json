@@ -1,0 +1,25 @@
+{
+  "id": "gradle",
+  "translations": {
+    "en": "Gradle",
+    "uk": "Gradle",
+    "es": "Gradle"
+  },
+  "definition": {
+    "en": "A build automation tool used primarily for Java and Android projects, supporting declarative build configurations.",
+    "uk": "Інструмент автоматизації збірки, що використовується переважно для проєктів Java та Android з підтримкою декларативних конфігурацій збірки.",
+    "es": "Una herramienta de automatización de compilación usada principalmente para proyectos Java y Android, con soporte para configuraciones de compilación declarativas."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "gradient + build",
+    "meaning": "incremental build tool"
+  },
+  "category": "Mobile",
+  "related": [
+    "android",
+    "kotlin",
+    "sdk",
+    "deployment"
+  ]
+}

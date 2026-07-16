@@ -1,0 +1,25 @@
+{
+  "id": "bit",
+  "translations": {
+    "en": "Bit",
+    "uk": "Біт",
+    "es": "Bit"
+  },
+  "definition": {
+    "en": "The smallest unit of data in computing, representing a single binary value of 0 or 1.",
+    "uk": "Найменша одиниця даних у обчисленнях, що представляє одне двійкове значення 0 або 1.",
+    "es": "La unidad más pequeña de datos en computación, que representa un valor binario único de 0 o 1."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "binary digit",
+    "meaning": "binary unit of information"
+  },
+  "category": "Computer Science",
+  "related": [
+    "byte",
+    "data-structure",
+    "abstraction",
+    "algorithm"
+  ]
+}

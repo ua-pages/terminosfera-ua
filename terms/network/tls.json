@@ -1,0 +1,25 @@
+{
+  "id": "tls",
+  "translations": {
+    "en": "TLS",
+    "uk": "TLS",
+    "es": "TLS"
+  },
+  "definition": {
+    "en": "Transport Layer Security — the successor to SSL, providing encryption and authentication for data transmitted over networks.",
+    "uk": "Transport Layer Security — наступник SSL, який забезпечує шифрування та автентифікацію даних, що передаються мережами.",
+    "es": "Transport Layer Security — el sucesor de SSL, que proporciona encriptación y autenticación para datos transmitidos por redes."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "Transport Layer Security",
+    "meaning": "secure transport channel"
+  },
+  "category": "Network",
+  "related": [
+    "ssl",
+    "encryption",
+    "protocol",
+    "vpn"
+  ]
+}

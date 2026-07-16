@@ -1,0 +1,25 @@
+{
+  "id": "web-workers",
+  "translations": {
+    "en": "Web Workers",
+    "uk": "Веб-воркери",
+    "es": "Web Workers"
+  },
+  "definition": {
+    "en": "A JavaScript API that allows running scripts in background threads, enabling parallel computation without blocking the main thread.",
+    "uk": "API JavaScript, який дозволяє виконувати скрипти у фонових потоках, забезпечуючи паралельні обчислення без блокування основного потоку.",
+    "es": "Una API de JavaScript que permite ejecutar scripts en hilos de fondo, habilitando cálculos paralelos sin bloquear el hilo principal."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "web + workers",
+    "meaning": "background processing threads"
+  },
+  "category": "Frontend",
+  "related": [
+    "javascript",
+    "thread",
+    "concurrency",
+    "dom"
+  ]
+}

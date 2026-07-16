@@ -1,0 +1,25 @@
+{
+  "id": "zero-trust",
+  "translations": {
+    "en": "Zero Trust",
+    "uk": "Нульова довіра",
+    "es": "Confianza cero"
+  },
+  "definition": {
+    "en": "A security model that requires strict identity verification for every person and device, regardless of their location.",
+    "uk": "Модель безпеки, яка вимагає суворої перевірки особистості для кожної людини та пристрою, незалежно від їх місцезнаходження.",
+    "es": "Un modelo de seguridad que requiere verificación de identidad estricta para cada persona y dispositivo, independientemente de su ubicación."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "zero + trust",
+    "meaning": "never trust, always verify"
+  },
+  "category": "Security",
+  "related": [
+    "authentication",
+    "encryption",
+    "firewall",
+    "vpn"
+  ]
+}

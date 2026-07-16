@@ -1,0 +1,25 @@
+{
+  "id": "xcode",
+  "translations": {
+    "en": "Xcode",
+    "uk": "Xcode",
+    "es": "Xcode"
+  },
+  "definition": {
+    "en": "Apple's integrated development environment for building apps on macOS, iOS, watchOS, and tvOS.",
+    "uk": "Інтегроване середовище розробки Apple для створення застосунків на macOS, iOS, watchOS та tvOS.",
+    "es": "El entorno de desarrollo integrado de Apple para crear aplicaciones en macOS, iOS, watchOS y tvOS."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "X + code",
+    "meaning": "Apple's development tool for its platforms"
+  },
+  "category": "Mobile",
+  "related": [
+    "swift",
+    "ipa",
+    "sdk",
+    "flutter"
+  ]
+}

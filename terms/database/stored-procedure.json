@@ -1,0 +1,25 @@
+{
+  "id": "stored-procedure",
+  "translations": {
+    "en": "Stored Procedure",
+    "uk": "Збережена процедура",
+    "es": "Procedimiento almacenado"
+  },
+  "definition": {
+    "en": "A set of SQL statements with an assigned name, stored in a database, and can be invoked by a program.",
+    "uk": "Набір SQL-інструкцій з призначеною назвою, що зберігається в базі даних і може викликатися програмою.",
+    "es": "Un conjunto de sentencias SQL con un nombre asignado, almacenado en una base de datos, y que puede ser invocado por un programa."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "stored + procedure",
+    "meaning": "pre-saved database routine"
+  },
+  "category": "Database",
+  "related": [
+    "query",
+    "schema",
+    "transaction",
+    "migration"
+  ]
+}

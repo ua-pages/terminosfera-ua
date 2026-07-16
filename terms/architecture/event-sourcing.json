@@ -1,0 +1,25 @@
+{
+  "id": "event-sourcing",
+  "translations": {
+    "en": "Event Sourcing",
+    "uk": "Джерело подій",
+    "es": "Sourcing de eventos"
+  },
+  "definition": {
+    "en": "An architectural pattern where state changes are stored as an immutable sequence of events rather than current state.",
+    "uk": "Архітектурний патерн, де зміни стану зберігаються як незмінна послідовність подій, а не поточний стан.",
+    "es": "Un patrón arquitectónico donde los cambios de estado se almacenan como una secuencia inmutable de eventos en lugar del estado actual."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "event + sourcing",
+    "meaning": "deriving state from events"
+  },
+  "category": "Architecture",
+  "related": [
+    "message-queue",
+    "database",
+    "microservices",
+    "cqrs"
+  ]
+}

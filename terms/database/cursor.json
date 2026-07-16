@@ -1,0 +1,25 @@
+{
+  "id": "cursor",
+  "translations": {
+    "en": "Cursor",
+    "uk": "Курсор",
+    "es": "Cursor"
+  },
+  "definition": {
+    "en": "A database object used to retrieve and iterate over rows from a result set one at a time.",
+    "uk": "Об'єкт бази даних, що використовується для отримання та ітерації по рядках з набору результатів по одному за раз.",
+    "es": "Un objeto de base de datos usado para recuperar e iterar sobre filas de un conjunto de resultados una a la vez."
+  },
+  "etymology": {
+    "origin": "Latin",
+    "root": "cursor",
+    "meaning": "runner"
+  },
+  "category": "Database",
+  "related": [
+    "query",
+    "transaction",
+    "schema",
+    "index"
+  ]
+}

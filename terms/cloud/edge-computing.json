@@ -1,0 +1,25 @@
+{
+  "id": "edge-computing",
+  "translations": {
+    "en": "Edge Computing",
+    "uk": "Обчислення на краю",
+    "es": "Computación en el borde"
+  },
+  "definition": {
+    "en": "A distributed computing paradigm that brings computation and data storage closer to the sources of data.",
+    "uk": "Парадигма розподілених обчислень, яка наближає обчислення та зберігання даних до джерел даних.",
+    "es": "Un paradigma de computación distribuida que acerca el cómputo y el almacenamiento de datos a las fuentes de datos."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "edge + computing",
+    "meaning": "processing at the network boundary"
+  },
+  "category": "Cloud",
+  "related": [
+    "region",
+    "latency",
+    "cdn",
+    "availability-zone"
+  ]
+}

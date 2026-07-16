@@ -1,0 +1,25 @@
+{
+  "id": "shadow-dom",
+  "translations": {
+    "en": "Shadow DOM",
+    "uk": "Тіньовий DOM",
+    "es": "DOM de sombra"
+  },
+  "definition": {
+    "en": "A web API that allows you to attach an isolated DOM tree to an element, providing encapsulation for styles and markup.",
+    "uk": "Веб-API, що дозволяє приєднувати ізольоване дерево DOM до елементу, забезпечуючи інкапсуляцію стилів та розмітки.",
+    "es": "Una API web que permite adjuntar un árbol DOM aislado a un elemento, proporcionando encapsulación para estilos y marcado."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "shadow + DOM",
+    "meaning": "hidden document tree"
+  },
+  "category": "Frontend",
+  "related": [
+    "dom",
+    "web-component",
+    "component",
+    "css"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "idempotency",
+  "translations": {
+    "en": "Idempotency",
+    "uk": "Ідемпотентність",
+    "es": "Idempotencia"
+  },
+  "definition": {
+    "en": "A property where performing an operation multiple times has the same effect as performing it once.",
+    "uk": "Властивість, за якої виконання операції кілька разів має той самий ефект, що й виконання один раз.",
+    "es": "Una propiedad donde realizar una operación múltiples veces tiene el mismo efecto que realizarla una sola vez."
+  },
+  "etymology": {
+    "origin": "Latin",
+    "root": "idem + potentia",
+    "meaning": "same power"
+  },
+  "category": "Architecture",
+  "related": [
+    "rest",
+    "api",
+    "endpoint",
+    "message-queue"
+  ]
+}

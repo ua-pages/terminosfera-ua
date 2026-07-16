@@ -1,0 +1,25 @@
+{
+  "id": "helm",
+  "translations": {
+    "en": "Helm",
+    "uk": "Хелм",
+    "es": "Helm"
+  },
+  "definition": {
+    "en": "A package manager for Kubernetes that simplifies defining, installing, and upgrading applications.",
+    "uk": "Менеджер пакетів для Kubernetes, який спрощує визначення, встановлення та оновлення застосунків.",
+    "es": "Un gestor de paquetes para Kubernetes que simplifica definir, instalar y actualizar aplicaciones."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "helm",
+    "meaning": "steering wheel of a ship — controlling Kubernetes"
+  },
+  "category": "DevOps",
+  "related": [
+    "kubernetes",
+    "orchestration",
+    "deployment",
+    "container"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "serverless",
+  "translations": {
+    "en": "Serverless",
+    "uk": "Серверлес",
+    "es": "Sin servidor"
+  },
+  "definition": {
+    "en": "A cloud computing model where the cloud provider dynamically manages the allocation of machine resources.",
+    "uk": "Модель хмарних обчислень, де провайдер хмари динамічно керує розподілом ресурсів машин.",
+    "es": "Un modelo de computación en la nube donde el proveedor gestiona dinámicamente la asignación de recursos de máquina."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "server + less",
+    "meaning": "without managing servers"
+  },
+  "category": "Backend",
+  "related": [
+    "cloud",
+    "endpoint",
+    "deployment",
+    "microservices"
+  ]
+}

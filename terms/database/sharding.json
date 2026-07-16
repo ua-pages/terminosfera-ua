@@ -1,0 +1,25 @@
+{
+  "id": "sharding",
+  "translations": {
+    "en": "Sharding",
+    "uk": "Шардінг",
+    "es": "Sharding"
+  },
+  "definition": {
+    "en": "A database partitioning technique that splits data across multiple database instances for improved scalability.",
+    "uk": "Техніка розбиття бази даних, яка розділяє дані між кількома екземплярами бази даних для покращеної масштабованості.",
+    "es": "Una técnica de partición de base de datos que divide los datos entre múltiples instancias para mejorar la escalabilidad."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "shard",
+    "meaning": "a fragment or piece"
+  },
+  "category": "Database",
+  "related": [
+    "database",
+    "replication",
+    "scalability",
+    "partition"
+  ]
+}

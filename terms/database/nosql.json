@@ -1,0 +1,25 @@
+{
+  "id": "nosql",
+  "translations": {
+    "en": "NoSQL",
+    "uk": "NoSQL",
+    "es": "NoSQL"
+  },
+  "definition": {
+    "en": "A class of database management systems that do not use the traditional relational table model.",
+    "uk": "Клас систем керування базами даних, які не використовують традиційну реляційну табличну модель.",
+    "es": "Una clase de sistemas de gestión de bases de datos que no utilizan el modelo relacional tradicional de tablas."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "Not Only SQL",
+    "meaning": "databases beyond traditional SQL"
+  },
+  "category": "Database",
+  "related": [
+    "database",
+    "schema",
+    "query",
+    "sharding"
+  ]
+}

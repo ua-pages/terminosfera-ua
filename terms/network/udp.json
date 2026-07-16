@@ -1,0 +1,25 @@
+{
+  "id": "udp",
+  "translations": {
+    "en": "UDP",
+    "uk": "UDP",
+    "es": "UDP"
+  },
+  "definition": {
+    "en": "User Datagram Protocol — a connectionless protocol that sends messages without establishing a connection, prioritizing speed over reliability.",
+    "uk": "User Datagram Protocol — безз'єднувальний протокол, який надсилає повідомлення без встановлення з'єднання, надаючи пріоритет швидкості над надійністю.",
+    "es": "User Datagram Protocol — un protocolo sin conexión que envía mensajes sin establecer conexión, priorizando velocidad sobre fiabilidad."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "User Datagram Protocol",
+    "meaning": "fast, lightweight messaging"
+  },
+  "category": "Network",
+  "related": [
+    "tcp",
+    "protocol",
+    "latency",
+    "websocket"
+  ]
+}

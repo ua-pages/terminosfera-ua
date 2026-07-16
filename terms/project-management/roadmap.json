@@ -1,0 +1,25 @@
+{
+  "id": "roadmap",
+  "translations": {
+    "en": "Roadmap",
+    "uk": "Дорожня карта",
+    "es": "Hoja de ruta"
+  },
+  "definition": {
+    "en": "A high-level visual summary that maps out the vision and direction of a product over time.",
+    "uk": "Загальний візуальний опис, який відображає бачення та напрямок продукту в часі.",
+    "es": "Un resumen visual de alto nivel que traza la visión y dirección de un producto a lo largo del tiempo."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "road + map",
+    "meaning": "a plan for the journey ahead"
+  },
+  "category": "Project Management",
+  "related": [
+    "epic",
+    "backlog",
+    "stakeholder",
+    "sprint"
+  ]
+}

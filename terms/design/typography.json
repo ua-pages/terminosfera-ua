@@ -1,0 +1,25 @@
+{
+  "id": "typography",
+  "translations": {
+    "en": "Typography",
+    "uk": "Типографіка",
+    "es": "Tipografía"
+  },
+  "definition": {
+    "en": "The art and technique of arranging type to make written language legible, readable, and visually appealing.",
+    "uk": "Мистецтво та техніка розташування шрифтів для забезпечення читабельності та візуальної привабливості тексту.",
+    "es": "El arte y la técnica de disponer tipografía para hacer el lenguaje escrito legible, legible y visualmente atractivo."
+  },
+  "etymology": {
+    "origin": "Greek",
+    "root": "typos + graphia",
+    "meaning": "writing with impressions"
+  },
+  "category": "Design",
+  "related": [
+    "css",
+    "ui",
+    "responsive",
+    "accessibility"
+  ]
+}

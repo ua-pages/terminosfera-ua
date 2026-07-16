@@ -1,0 +1,25 @@
+{
+  "id": "cron",
+  "translations": {
+    "en": "Cron",
+    "uk": "Крон",
+    "es": "Cron"
+  },
+  "definition": {
+    "en": "A time-based job scheduler in Unix-like operating systems that runs commands or scripts at specified intervals.",
+    "uk": "Планувальник завдань на основі часу в Unix-подібних операційних системах, який виконує команди або скрипти за вказаними інтервалами.",
+    "es": "Un programador de trabajos basado en tiempo en sistemas operativos tipo Unix que ejecuta comandos o scripts en intervalos especificados."
+  },
+  "etymology": {
+    "origin": "Greek",
+    "root": "chronos",
+    "meaning": "time"
+  },
+  "category": "Backend",
+  "related": [
+    "server",
+    "pipeline",
+    "deployment",
+    "monitoring"
+  ]
+}

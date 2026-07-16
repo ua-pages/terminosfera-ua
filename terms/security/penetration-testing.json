@@ -1,0 +1,25 @@
+{
+  "id": "penetration-testing",
+  "translations": {
+    "en": "Penetration Testing",
+    "uk": "Тестування на проникнення",
+    "es": "Prueba de penetración"
+  },
+  "definition": {
+    "en": "An authorized simulated cyberattack on a computer system to evaluate its security by identifying vulnerabilities.",
+    "uk": "Авторизована імітована кібератака на комп'ютерну систему для оцінки її безпеки шляхом виявлення вразливостей.",
+    "es": "Un ciberataque simulado autorizado en un sistema informático para evaluar su seguridad identificando vulnerabilidades."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "penetration + testing",
+    "meaning": "testing by breaking in"
+  },
+  "category": "Security",
+  "related": [
+    "vulnerability",
+    "encryption",
+    "firewall",
+    "zero-trust"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "soap",
+  "translations": {
+    "en": "SOAP",
+    "uk": "SOAP",
+    "es": "SOAP"
+  },
+  "definition": {
+    "en": "Simple Object Access Protocol — a messaging protocol for exchanging structured information in web services.",
+    "uk": "Simple Object Access Protocol — протокол обміну повідомленнями для структурованого обміну інформацією у веб-сервісах.",
+    "es": "Simple Object Access Protocol — un protocolo de mensajería para intercambiar información estructurada en servicios web."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "Simple Object Access Protocol",
+    "meaning": "structured web service messaging"
+  },
+  "category": "Backend",
+  "related": [
+    "rest-api",
+    "api",
+    "endpoint",
+    "xml"
+  ]
+}

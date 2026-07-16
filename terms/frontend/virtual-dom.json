@@ -1,0 +1,25 @@
+{
+  "id": "virtual-dom",
+  "translations": {
+    "en": "Virtual DOM",
+    "uk": "Віртуальний DOM",
+    "es": "DOM virtual"
+  },
+  "definition": {
+    "en": "A lightweight in-memory representation of the real DOM, used to improve performance by minimizing direct DOM manipulations.",
+    "uk": "Легке оперативне подання реального DOM, що використовується для підвищення продуктивності шляхом мінімізації безпосередніх маніпуляцій з DOM.",
+    "es": "Una representación ligera en memoria del DOM real, utilizada para mejorar el rendimiento minimizando las manipulaciones directas del DOM."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "virtual + DOM",
+    "meaning": "a simulated document object model"
+  },
+  "category": "Frontend",
+  "related": [
+    "dom",
+    "component",
+    "framework",
+    "javascript"
+  ]
+}

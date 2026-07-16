@@ -1,0 +1,25 @@
+{
+  "id": "grpc",
+  "translations": {
+    "en": "gRPC",
+    "uk": "gRPC",
+    "es": "gRPC"
+  },
+  "definition": {
+    "en": "A high-performance, open-source remote procedure call framework developed by Google.",
+    "uk": "Високопродуктивний відкритий фреймворк віддалених викликів процедур, розроблений Google.",
+    "es": "Un framework de llamadas a procedimientos remotos de alto rendimiento y código abierto desarrollado por Google."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "gRPC (Google Remote Procedure Call)",
+    "meaning": "remote procedure invocation"
+  },
+  "category": "Backend",
+  "related": [
+    "api",
+    "endpoint",
+    "server",
+    "protobuf"
+  ]
+}

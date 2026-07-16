@@ -1,0 +1,25 @@
+{
+  "id": "vpn",
+  "translations": {
+    "en": "VPN",
+    "uk": "VPN",
+    "es": "VPN"
+  },
+  "definition": {
+    "en": "Virtual Private Network — a technology that creates a secure, encrypted connection over a less secure network like the internet.",
+    "uk": "Virtual Private Network — технологія, яка створює безпечне зашифроване з'єднання через менш безпечну мережу, як-от інтернет.",
+    "es": "Virtual Private Network — una tecnología que crea una conexión segura y encriptada a través de una red menos segura como internet."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "Virtual Private Network",
+    "meaning": "private tunnel over public network"
+  },
+  "category": "Network",
+  "related": [
+    "encryption",
+    "firewall",
+    "protocol",
+    "tls"
+  ]
+}

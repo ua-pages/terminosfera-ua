@@ -1,0 +1,25 @@
+{
+  "id": "fine-tuning",
+  "translations": {
+    "en": "Fine-tuning",
+    "uk": "Тонке налаштування",
+    "es": "Ajuste fino"
+  },
+  "definition": {
+    "en": "The process of further training a pre-trained model on a specific dataset to adapt it for a particular task.",
+    "uk": "Процес подальшого навчання попередньо навченої моделі на конкретному наборі даних для адаптації до певного завдання.",
+    "es": "El proceso de entrenar más un modelo preentrenado en un conjunto de datos específico para adaptarlo a una tarea particular."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "fine + tuning",
+    "meaning": "precise adjustment"
+  },
+  "category": "AI/ML",
+  "related": [
+    "model",
+    "transformer",
+    "llm",
+    "deep-learning"
+  ]
+}

@@ -6,6 +6,7 @@ import { renderStatusCodesListPage } from './pages/status-codes-list-page.js'
 import { renderStatusCodePage } from './pages/status-code-page.js'
 import { renderLanguageSwitcher } from './components/language-switcher.js'
 import { loadAllTerms, loadStatusCodes } from './loader.js'
+import { initKnowledgeGraph, destroyKnowledgeGraph } from './graph/knowledge-graph.js'
 
 const app = document.getElementById('app')
 
@@ -18,8 +19,14 @@ renderNavigation()
 
 document.getElementById('theme-toggle').addEventListener('click', toggleTheme)
 
-router.on('/', () => renderHomePage(app))
+router.on('/', () => { destroyKnowledgeGraph(); renderHomePage(app) })
+router.on('/graph', () => {
+  destroyKnowledgeGraph()
+  app.innerHTML = ''
+  initKnowledgeGraph(app)
+})
 router.on('/term/:id', (params) => {
+  destroyKnowledgeGraph()
   const state = appStore.state
   const term = state.terms.find((t) => t.id === params.id)
   if (term) {
@@ -28,8 +35,9 @@ router.on('/term/:id', (params) => {
     router.navigate('/')
   }
 })
-router.on('/http-status-codes', () => renderStatusCodesListPage(app))
+router.on('/http-status-codes', () => { destroyKnowledgeGraph(); renderStatusCodesListPage(app) })
 router.on('/http-status-codes/:code', (params) => {
+  destroyKnowledgeGraph()
   const state = appStore.state
   const code = parseInt(params.code, 10)
   const statusCode = state.statusCodes.find((s) => s.code === code)
@@ -95,6 +103,7 @@ function renderNavigation() {
 
   const items = [
     { label: 'Терміни', path: '/' },
+    { label: 'Граф', path: '/graph' },
     { label: 'HTTP Статуси', path: '/http-status-codes' },
   ]
 

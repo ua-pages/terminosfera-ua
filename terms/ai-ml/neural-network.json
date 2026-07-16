@@ -1,0 +1,25 @@
+{
+  "id": "neural-network",
+  "translations": {
+    "en": "Neural Network",
+    "uk": "Нейронна мережа",
+    "es": "Red neuronal"
+  },
+  "definition": {
+    "en": "A computing system inspired by biological neural networks, consisting of layers of interconnected nodes that process information.",
+    "uk": "Обчислювальна система, натхненна біологічними нейронними мережами, що складається з шарів взаємопов'язаних вузлів, які обробляють інформацію.",
+    "es": "Un sistema de cómputo inspirado en las redes neuronales biológicas, que consta de capas de nodos interconectados que procesan información."
+  },
+  "etymology": {
+    "origin": "Greek",
+    "root": "neuron + network",
+    "meaning": "brain-inspired computation"
+  },
+  "category": "AI/ML",
+  "related": [
+    "deep-learning",
+    "transformer",
+    "model",
+    "inference"
+  ]
+}

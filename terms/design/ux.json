@@ -1,0 +1,25 @@
+{
+  "id": "ux",
+  "translations": {
+    "en": "UX",
+    "uk": "UX",
+    "es": "UX"
+  },
+  "definition": {
+    "en": "User Experience — the overall experience a person has when interacting with a product, especially in terms of how easy and pleasant it is.",
+    "uk": "User Experience — загальний досвід, який отримує людина при взаємодії з продуктом, особливо щодо зручності та приємності.",
+    "es": "User Experience — la experiencia general que tiene una persona al interactuar con un producto, especialmente en términos de facilidad y agrado."
+  },
+  "etymology": {
+    "origin": "English",
+    "root": "User Experience",
+    "meaning": "how a user feels using a product"
+  },
+  "category": "Design",
+  "related": [
+    "ui",
+    "accessibility",
+    "prototype",
+    "wireframe"
+  ]
+}
