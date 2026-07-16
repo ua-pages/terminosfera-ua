@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "terminosfera-graph": {
+      "command": "node",
+      "args": ["server.js"],
+      "cwd": "mcp"
+    }
+  }
+}
