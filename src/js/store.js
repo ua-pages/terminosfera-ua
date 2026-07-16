@@ -60,6 +60,7 @@ export const appStore = new Store({
   lang: 'en',
   theme: 'light',
   terms: [],
+  termsError: null,
   searchQuery: '',
   categoryFilter: '',
   learned: loadLearned('terminosfera-learned'),

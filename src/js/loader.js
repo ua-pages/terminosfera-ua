@@ -33,10 +33,11 @@ export async function loadAllTerms() {
     const terms = await Promise.all(index.map((entry) => loadTermFile(entry.id, entry.category)))
     const valid = terms.filter(Boolean)
 
-    appStore.setState({ terms: valid })
+    appStore.setState({ terms: valid, termsError: null })
     console.log(`Loaded ${valid.length} terms`)
   } catch (err) {
     console.error('Failed to load terms:', err)
+    appStore.setState({ termsError: err.message })
     showError('Failed to load terms: ' + err.message)
   }
 }

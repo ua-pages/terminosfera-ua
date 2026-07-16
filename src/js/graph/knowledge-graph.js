@@ -1,4 +1,5 @@
 import { appStore } from '../store.js'
+import { loadAllTerms } from '../loader.js'
 import { buildGraph } from './graph-builder.js'
 import { GraphState } from './graph-state.js'
 import { GraphRenderer } from './graph-renderer.js'
@@ -21,21 +22,53 @@ let renderer = null
 /** @type {import('./graph-builder.js').Graph|null} */
 let graph = null
 
+/** @type {(() => void)|null} */
+let unsubscribe = null
+
 /**
  * Ініціалізує та показує граф у контейнері.
+ *
+ * Якщо терміни ще не завантажились — показує лоадер і підписується на store,
+ * щоб перемалювати граф одразу, коли дані з'являться.
  *
  * @param {HTMLElement} container
  */
 export function initKnowledgeGraph(container) {
   destroyKnowledgeGraph()
 
-  const terms = appStore.state.terms
-  const lang = appStore.state.lang
+  const { terms, termsError } = appStore.state
 
-  if (!terms || terms.length === 0) {
-    container.innerHTML = '<p style="color:var(--color-text-muted); text-align:center; padding:48px;">Завантаження даних...</p>'
+  if (terms && terms.length > 0) {
+    renderGraph(container)
     return
   }
+
+  if (termsError) {
+    renderError(container)
+    return
+  }
+
+  renderLoader(container)
+
+  unsubscribe = appStore.subscribe((s) => {
+    if (s.termsError) {
+      renderError(container)
+      return
+    }
+    if (s.terms && s.terms.length > 0) {
+      if (unsubscribe) {
+        unsubscribe()
+        unsubscribe = null
+      }
+      renderGraph(container)
+    }
+  })
+}
+
+/** Будує та малює граф (терміни вже доступні) */
+function renderGraph(container) {
+  const terms = appStore.state.terms
+  const lang = appStore.state.lang
 
   // 1. Побудова граф-моделі
   graph = buildGraph(terms, lang)
@@ -51,8 +84,39 @@ export function initKnowledgeGraph(container) {
   renderer.init(container, state, graph.adjacencyMap, graph.nodes, graph.edges, positions)
 }
 
+/** Показує лоадер зі спіннером */
+function renderLoader(container) {
+  container.innerHTML = `
+    <div class="graph-loader">
+      <div class="graph-loader__spinner" aria-hidden="true"></div>
+      <p class="graph-loader__text">Завантаження даних…</p>
+    </div>`
+}
+
+/** Показує повідомлення про помилку з кнопкою "Спробувати знову" */
+function renderError(container) {
+  container.innerHTML = `
+    <div class="graph-loader graph-loader--error">
+      <p class="graph-loader__text">Не вдалося завантажити дані.</p>
+      <button class="graph-loader__retry" type="button">Спробувати знову</button>
+    </div>`
+
+  const btn = container.querySelector('.graph-loader__retry')
+  if (btn) {
+    btn.addEventListener('click', () => {
+      appStore.setState({ termsError: null })
+      loadAllTerms()
+      renderLoader(container)
+    })
+  }
+}
+
 /** Знищує граф та очищає контейнер */
 export function destroyKnowledgeGraph() {
+  if (unsubscribe) {
+    unsubscribe()
+    unsubscribe = null
+  }
   if (renderer) {
     renderer.destroy()
     renderer = null
