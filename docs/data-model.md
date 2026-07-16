@@ -1,8 +1,8 @@
 # Data Model
 
-> **Schema Version:** 1.0  
-> **Status:** frozen  
-> **Обґрунтування:** 77 термінів, 11 категорій — схема стабільна. Зміни лише через механізм міграції.
+> **Schema Version:** 1.1  
+> **Status:** active  
+> **Обґрунтування:** Додано поля `examples`, `ukContext`, `relatedReasons` для збагачення картки терміна. Всі нові поля — опціональні, зворотна сумісність з 1.0 збережена.
 
 Опис структури запису терміна у файлі `src/data/terms.json` або в окремих файлах `terms/*/*.json`.
 
@@ -12,6 +12,7 @@
 
 | Версія | Дата | Зміни |
 |--------|------|-------|
+| 1.1 | 2026-07-16 | Додано `examples` (code/life приклади), `ukContext` (український контекст), `relatedReasons` (причина зв'язку між термінами). Усі нові поля опціональні. |
 | 1.0 | 2026-07-15 | Перша стабільна версія. Зафіксовано на 77 термінах. |
 
 ---
@@ -39,7 +40,27 @@
   "category": "Git",
   "related": ["commit"],
   "tags": [],
-  "recommended": {}
+  "recommended": {},
+  "examples": {
+    "code": {
+      "en": "const promise = fetch('/api/users');",
+      "uk": "const promise = fetch('/api/users');",
+      "es": "const promise = fetch('/api/users');"
+    },
+    "life": {
+      "en": "When you click Sign In, the browser sends a request and waits for a Promise.",
+      "uk": "Коли ви натискаєте Увійти, браузер надсилає запит і чекає на Promise.",
+      "es": "Al hacer clic en Iniciar sesión, el navegador envía una solicitud y espera una Promise."
+    }
+  },
+  "ukContext": {
+    "en": "Ukrainian context explanation in English.",
+    "uk": "Пояснення українського контексту.",
+    "es": "Explicación del contexto ucraniano en español."
+  },
+  "relatedReasons": {
+    "commit": { "en": "Reason in EN", "uk": "Причина UK", "es": "Razón ES" }
+  }
 }
 ```
 
@@ -280,6 +301,89 @@ JSON-схема перевіряє:
 5. **Категорія** — значення з дозволеного списку
 6. **Етимологія** — або повна (`origin` + `root` + `meaning`), або порожня (`{}`)
 7. **Переклади** — усі три мови (`en`, `uk`, `es`) присутні у `translations` та `definition`
+
+---
+
+### `examples`
+
+| Тип | Обов'язкове | Значення за замовчуванням |
+|-----|-------------|--------------------------|
+| `object` | ні | `{}` |
+
+Приклади використання терміна.
+
+```json
+"examples": {
+  "code": {
+    "en": "const promise = fetch('/api/users');",
+    "uk": "const promise = fetch('/api/users');",
+    "es": "const promise = fetch('/api/users');"
+  },
+  "life": {
+    "en": "When you click Sign In, the browser sends a request and waits for a Promise.",
+    "uk": "Коли ви натискаєте Увійти, браузер надсилає запит і чекає на Promise.",
+    "es": "Al hacer clic en Iniciar sesión, el navegador envía una solicitud y espera una Promise."
+  }
+}
+```
+
+Підполя:
+
+| Поле | Тип | Опис |
+|------|-----|------|
+| `code` | `object<en,uk,es>` | Приклад коду трьома мовами. Для мов, де код не відрізняється, значення можна копіювати. |
+| `life` | `object<en,uk,es>` | Життєвий приклад — аналогія з реального світу. |
+
+Вимоги:
+- Якщо поле присутнє, має містити хоча б одне з підполів (`code` або `life`)
+- Кожне підполе має містити всі три мови
+- Відсутнє або `{}`, якщо прикладів немає
+
+---
+
+### `ukContext`
+
+| Тип | Обов'язкове | Значення за замовчуванням |
+|-----|-------------|--------------------------|
+| `object` | ні | `{}` |
+
+Український контекст — пояснення особливостей перекладу, вживання, варіантів.
+
+```json
+"ukContext": {
+  "en": "In Ukrainian tech literature, the term 'проміс' is used as a direct transliteration.",
+  "uk": "В українській технічній літературі вживається калька 'проміс'.",
+  "es": "En la literatura técnica ucraniana se usa la transliteración 'проміс'."
+}
+```
+
+- Три мови: EN пояснює український контекст англійською (для іноземців), UK — основна, ES — іспанською
+- Відсутнє або `{}`, якщо контекст не потрібен
+
+---
+
+### `relatedReasons`
+
+| Тип | Обов'язкове | Значення за замовчуванням |
+|-----|-------------|--------------------------|
+| `object` | ні | `{}` |
+
+Причини зв'язку між термінами. Ключ — `id` пов'язаного терміна, значення — пояснення.
+
+```json
+"relatedReasons": {
+  "commit": {
+    "en": "Use commit to create a repository snapshot.",
+    "uk": "Commit створює знімок репозиторію.",
+    "es": "Usa commit para crear una instantánea del repositorio."
+  }
+}
+```
+
+Вимоги:
+- Ключі мають збігатися зі значеннями в `related`
+- Кожне значення — об'єкт з трьома мовами
+- Відсутнє або `{}`, якщо пояснення не потрібне
 
 ---
 

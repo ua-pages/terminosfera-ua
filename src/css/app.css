@@ -438,33 +438,72 @@ body {
   color: var(--color-text);
 }
 
-.term-page__etymology-origin {
-  font-family: var(--font-serif);
-  font-weight: 600;
-  margin-bottom: var(--space-xs);
-}
-
-.term-page__etymology-detail {
-  font-family: var(--font-serif);
-  color: var(--color-text-secondary);
-  line-height: 1.7;
-}
-
 .term-page__related {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: var(--space-md);
 }
 
 .term-page__related-link {
+  display: block;
   font-family: var(--font-serif);
   font-size: 0.95rem;
   color: var(--color-primary);
   text-decoration: none;
+  line-height: 1.6;
 }
 
 .term-page__related-link:hover {
   text-decoration: underline;
+}
+
+.term-page__related-reason {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-top: 1px;
+}
+
+.term-page__label {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.term-page__label + .term-page__label {
+  margin-top: var(--space-md);
+}
+
+.term-page__code-example {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  padding: var(--space-md);
+  overflow-x: auto;
+  white-space: pre;
+  margin: 0 0 var(--space-md) 0;
+}
+
+.term-page__life-example {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  font-style: italic;
+}
+
+.term-page__section-content p {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
 }
 
 /* Language switcher */

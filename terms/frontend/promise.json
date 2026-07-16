@@ -6,7 +6,45 @@
     "uk": "Об'єкт, що представляє майбутнє завершення або помилку асинхронної операції.",
     "es": "Objeto que representa la finalización o fallo eventual de una operación asíncrona."
   },
-  "etymology": { "origin": "Latin", "root": "promittere", "meaning": "to send forth, promise" },
+  "etymology": {
+    "origin": "Latin",
+    "root": "promittere",
+    "meaning": "to send forth, to promise"
+  },
   "category": "Frontend",
-  "related": ["javascript", "callback", "async"]
+  "related": ["javascript", "callback", "async"],
+  "examples": {
+    "code": {
+      "en": "const promise = fetch('/api/users');\npromise.then(console.log);",
+      "uk": "const promise = fetch('/api/users');\npromise.then(console.log);",
+      "es": "const promise = fetch('/api/users');\npromise.then(console.log);"
+    },
+    "life": {
+      "en": "When you click the 'Sign in' button, the browser sends an HTTP request and waits for a Promise with the server response.",
+      "uk": "Коли ви натискаєте кнопку 'Увійти', браузер відправляє HTTP-запит і очікує Promise з відповіддю сервера.",
+      "es": "Cuando haces clic en 'Iniciar sesión', el navegador envía una solicitud HTTP y espera una Promise con la respuesta del servidor."
+    }
+  },
+  "ukContext": {
+    "en": "In Ukrainian tech literature, the term 'проміс' (transliteration) and 'обіцянка' (native) are both used. 'Проміс' dominates in technical writing; 'обіцянка' appears in informal contexts and some educational materials.",
+    "uk": "В українській технічній літературі вживається калька 'проміс' (transliteration). У неформальному спілкуванні та деяких освітніх матеріалах набирає обертів варіант 'обіцянка'. В офіційних перекладах документації Microsoft фіксується варіант 'зобов'язання'. Жоден з варіантів не став загальноприйнятим стандартом.",
+    "es": "En la literatura técnica ucraniana se usan tanto 'проміс' (transliteración) como 'обіцянка' (nativa). 'Проміс' domina en escritos técnicos; 'обіцянка' aparece en contextos informales y materiales educativos."
+  },
+  "relatedReasons": {
+    "javascript": {
+      "en": "Promises are a native feature of JavaScript since ES6.",
+      "uk": "Promise — це нативна можливість JavaScript, починаючи з ES6.",
+      "es": "Las Promises son una característica nativa de JavaScript desde ES6."
+    },
+    "callback": {
+      "en": "Callbacks were the predecessor to Promises; Promises solve 'callback hell' by providing a cleaner chaining mechanism.",
+      "uk": "Callback-функції були попередниками Promise. Promise вирішують проблему 'callback hell' завдяки ланцюжковому виклику.",
+      "es": "Los callbacks fueron los predecesores de las Promises; las Promises resuelven el 'callback hell' con un mecanismo de encadenamiento más limpio."
+    },
+    "async": {
+      "en": "async/await is syntactic sugar over Promises — understanding Promise is essential before mastering async/await.",
+      "uk": "async/await — це синтаксичний цукор над Promise. Щоб опанувати async/await, спершу треба зрозуміти Promise.",
+      "es": "async/await es azúcar sintáctico sobre Promises — comprender Promise es esencial antes de dominar async/await."
+    }
+  }
 }

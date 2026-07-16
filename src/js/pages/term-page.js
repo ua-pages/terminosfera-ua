@@ -4,11 +4,6 @@ import { router } from '../router.js'
 const FLAGS = { en: '🇬🇧', uk: '🇺🇦', es: '🇪🇸' }
 const LANG_CODES = ['en', 'uk', 'es']
 
-/**
- * Renders the term detail page.
- * @param {import('../types.js').Term} term
- * @param {HTMLElement} container
- */
 export function renderTermPage(term, container) {
   const state = appStore.state
   const lang = state.lang
@@ -42,14 +37,26 @@ export function renderTermPage(term, container) {
   const content = document.getElementById('term-content')
   content.innerHTML = ''
 
-  appendSection(content, 'Визначення', term.definition[lang])
+  appendSection(content, 'Визначення', `<p>${term.definition[lang]}</p>`)
 
   if (term.etymology && term.etymology.origin) {
-    const html = `
-      <div class="term-page__etymology-origin">${term.etymology.origin}</div>
-      <div class="term-page__etymology-detail"><em>${term.etymology.root}</em> — ${term.etymology.meaning}</div>
-    `
-    appendSection(content, 'Етимологія', html)
+    const story = etymologyStory(term, lang)
+    appendSection(content, 'Походження', story)
+  }
+
+  if (term.examples && (term.examples.code || term.examples.life)) {
+    const parts = []
+    if (term.examples.code && term.examples.code[lang]) {
+      parts.push(`<div class="term-page__label">Приклад у коді</div><pre class="term-page__code-example"><code>${escapeHtml(term.examples.code[lang])}</code></pre>`)
+    }
+    if (term.examples.life && term.examples.life[lang]) {
+      parts.push(`<div class="term-page__label">Приклад із життя</div><p class="term-page__life-example">${term.examples.life[lang]}</p>`)
+    }
+    appendSection(content, 'Приклад', parts.join(''))
+  }
+
+  if (term.ukContext && term.ukContext[lang]) {
+    appendSection(content, 'Український контекст', `<p>${term.ukContext[lang]}</p>`)
   }
 
   if (term.related && term.related.length > 0) {
@@ -57,11 +64,37 @@ export function renderTermPage(term, container) {
       .map((id) => {
         const t = state.terms.find((t) => t.id === id)
         const label = t ? t.translations[lang] : id
-        return `<a href="#/term/${id}" class="term-page__related-link">${label}</a>`
+        const reason = term.relatedReasons && term.relatedReasons[id] ? term.relatedReasons[id][lang] : null
+        const reasonHtml = reason ? `<span class="term-page__related-reason">${reason}</span>` : ''
+        return `<a href="#/term/${id}" class="term-page__related-link">${label}${reasonHtml}</a>`
       })
       .join('')
     appendSection(content, 'Пов\'язані терміни', `<div class="term-page__related">${links}</div>`)
   }
+}
+
+function etymologyStory(term, lang) {
+  const originLang = term.etymology.origin || ''
+  const root = term.etymology.root || ''
+  const meaning = term.etymology.meaning || ''
+
+  if (lang === 'uk') {
+    const origins = { Latin: 'латини', Greek: 'грецької', French: 'французької', Arabic: 'арабської', English: 'англійської' }
+    const originUk = origins[originLang] || originLang
+    return `<p>Походить від ${originUk} <em>${root}</em> — «${meaning}».</p>`
+  }
+
+  if (lang === 'es') {
+    const origins = { Latin: 'latín', Greek: 'griego', French: 'francés', Arabic: 'árabe', English: 'inglés' }
+    const originEs = origins[originLang] || originLang
+    return `<p>Proviene del ${originEs} <em>${root}</em> — «${meaning}».</p>`
+  }
+
+  return `<p>From ${originLang} <em>${root}</em> — «${meaning}».</p>`
+}
+
+function escapeHtml(str) {
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 }
 
 function updateLearnBtn(btn, id) {
@@ -72,11 +105,6 @@ function updateLearnBtn(btn, id) {
   btn.setAttribute('aria-label', isLearned ? 'Mark as unlearned' : 'Mark as learned')
 }
 
-/**
- * @param {HTMLElement} container
- * @param {string} title
- * @param {string} html
- */
 function appendSection(container, title, html) {
   const template = document.getElementById('term-section')
   const clone = template.content.cloneNode(true)
