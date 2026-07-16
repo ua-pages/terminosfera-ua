@@ -42,6 +42,13 @@ router.on('/http-status-codes/:code', (params) => {
 
 router.init()
 
+setTimeout(restoreSavedRoute, 0)
+
+document.querySelector('.header__brand').addEventListener('click', (e) => {
+  e.preventDefault()
+  router.navigate('/')
+})
+
 function toggleTheme() {
   const next = appStore.state.theme === 'light' ? 'dark' : 'light'
   appStore.setState({ theme: next })
@@ -60,6 +67,17 @@ function loadTheme() {
   const theme = saved === 'dark' ? 'dark' : 'light'
   appStore.setState({ theme })
   applyTheme(theme)
+}
+
+function restoreSavedRoute() {
+  const saved = sessionStorage.getItem('redirect')
+  if (saved) {
+    sessionStorage.removeItem('redirect')
+    const hash = saved.includes('#') ? saved.split('#')[1] : ''
+    if (hash) {
+      window.location.hash = '#' + hash
+    }
+  }
 }
 
 function renderNavigation() {

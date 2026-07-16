@@ -1,8 +1,5 @@
 import { appStore } from './store.js'
 
-/**
- * Maps category name to directory path in terms/.
- */
 const CATEGORY_DIRS = {
   'Git': 'git',
   'Frontend': 'frontend',
@@ -21,13 +18,17 @@ const CATEGORY_DIRS = {
   'Project Management': 'project-management',
 }
 
-/**
- * Loads all terms into the store.
- * First fetches the index, then loads each term file individually.
- */
+function url(path) {
+  if (path.startsWith('/')) return path
+  const s = import.meta.url
+  const root = s.substring(0, s.lastIndexOf('/js/'))
+  const up = root.substring(0, root.lastIndexOf('/'))
+  return `${up}/${path}`
+}
+
 export async function loadAllTerms() {
   try {
-    const indexRes = await fetch('terms/index.json')
+    const indexRes = await fetch(url('terms/index.json'))
     if (!indexRes.ok) throw new Error('Failed to load index')
     const index = await indexRes.json()
 
@@ -41,12 +42,6 @@ export async function loadAllTerms() {
   }
 }
 
-/**
- * Loads a single term file by its ID and category.
- * @param {string} id
- * @param {string} category
- * @returns {Promise<object|null>}
- */
 async function loadTermFile(id, category) {
   const dir = CATEGORY_DIRS[category]
   if (!dir) {
@@ -55,7 +50,7 @@ async function loadTermFile(id, category) {
   }
 
   try {
-    const res = await fetch(`terms/${dir}/${id}.json`)
+    const res = await fetch(url(`terms/${dir}/${id}.json`))
     if (!res.ok) throw new Error(`Failed to load ${id}`)
     return res.json()
   } catch (err) {
@@ -64,12 +59,9 @@ async function loadTermFile(id, category) {
   }
 }
 
-/**
- * Loads all HTTP status codes into the store.
- */
 export async function loadStatusCodes() {
   try {
-    const indexRes = await fetch('src/data/http-status-codes/index.json')
+    const indexRes = await fetch(url('src/data/http-status-codes/index.json'))
     if (!indexRes.ok) throw new Error('Failed to load status index')
     const index = await indexRes.json()
 
@@ -85,7 +77,7 @@ export async function loadStatusCodes() {
 
 async function loadStatusCodeFile(code) {
   try {
-    const res = await fetch(`src/data/http-status-codes/${code}.json`)
+    const res = await fetch(url(`src/data/http-status-codes/${code}.json`))
     if (!res.ok) throw new Error(`Failed to load status ${code}`)
     return res.json()
   } catch (err) {
