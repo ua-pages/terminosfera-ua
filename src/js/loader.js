@@ -18,11 +18,13 @@ const CATEGORY_DIRS = {
   'Project Management': 'project-management',
 }
 
-const BASE = new URL('.', document.baseURI).href
+function url(relativePath) {
+  return new URL(relativePath, import.meta.url).href
+}
 
 export async function loadAllTerms() {
   try {
-    const indexRes = await fetch(`${BASE}terms/index.json`)
+    const indexRes = await fetch(url('../../terms/index.json'))
     if (!indexRes.ok) throw new Error('Failed to load index')
     const index = await indexRes.json()
 
@@ -44,7 +46,7 @@ async function loadTermFile(id, category) {
   }
 
   try {
-    const res = await fetch(`${BASE}terms/${dir}/${id}.json`)
+    const res = await fetch(url(`../../terms/${dir}/${id}.json`))
     if (!res.ok) throw new Error(`Failed to load ${id}`)
     return res.json()
   } catch (err) {
@@ -55,7 +57,7 @@ async function loadTermFile(id, category) {
 
 export async function loadStatusCodes() {
   try {
-    const indexRes = await fetch(`${BASE}src/data/http-status-codes/index.json`)
+    const indexRes = await fetch(url('../data/http-status-codes/index.json'))
     if (!indexRes.ok) throw new Error('Failed to load status index')
     const index = await indexRes.json()
 
@@ -71,7 +73,7 @@ export async function loadStatusCodes() {
 
 async function loadStatusCodeFile(code) {
   try {
-    const res = await fetch(`${BASE}src/data/http-status-codes/${code}.json`)
+    const res = await fetch(url(`../data/http-status-codes/${code}.json`))
     if (!res.ok) throw new Error(`Failed to load status ${code}`)
     return res.json()
   } catch (err) {
