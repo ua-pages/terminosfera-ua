@@ -193,9 +193,12 @@ export class GraphRenderer {
         transform: `translate(${data.x}, ${data.y})`,
       })
 
+      const isContext = node.isContext
+      const r = isContext ? 4 : this.#nodeRadius(node)
+
       const circle = createSVGElement('circle', {
-        class: 'graph-node__circle',
-        r: this.#nodeRadius(node),
+        class: 'graph-node__circle' + (isContext ? ' graph-node__circle--context' : ''),
+        r,
         'data-category': node.category,
       })
       // Колір за категорією (inline style має пріоритет над CSS fill)
@@ -203,7 +206,7 @@ export class GraphRenderer {
 
       const text = createSVGElement('text', {
         class: 'graph-node__label',
-        dy: this.#nodeRadius(node) + 14,
+        dy: r + 12,
         'text-anchor': 'middle',
       })
       text.textContent = node.label
@@ -341,8 +344,8 @@ export class GraphRenderer {
     const label = this.#labelEls.get(id)
     const data = this.#nodeData.get(id)
     if (!label || !data) return
-    const r = this.#nodeRadius(data)
-    label.setAttribute('dy', isHovered ? r + 18 : r + 14)
+    const r = data.isContext ? 4 : this.#nodeRadius(data)
+    label.setAttribute('dy', isHovered ? r + 16 : r + 12)
   }
 
   // ─── Обробники подій ─────────────────────────────────────

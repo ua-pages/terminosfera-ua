@@ -3,7 +3,7 @@ import { loadAllTerms } from '../loader.js'
 import { buildGraph } from './graph-builder.js'
 import { GraphState } from './graph-state.js'
 import { GraphRenderer } from './graph-renderer.js'
-import { mulberry32, CATEGORY_COLORS } from './graph-utils.js'
+import { mulberry32, CATEGORY_COLORS, buildAdjacencyMap } from './graph-utils.js'
 
 /**
  * Orchestrator for the knowledge graph.
@@ -20,8 +20,17 @@ let state = null
 /** @type {GraphRenderer|null} */
 let renderer = null
 
-/** @type {import('./graph-builder.js').Graph|null} */
+/** @type {import('./graph-builder.js').Graph|null} повний граф (для фільтрації) */
 let graph = null
+
+/** @type {HTMLElement|null} */
+let toolbarEl = null
+
+/** @type {HTMLElement|null} */
+let stageEl = null
+
+/** @type {string|null} активна категорія (null = усі) */
+let currentCategory = null
 
 /** @type {(() => void)|null} */
 let unsubscribe = null
@@ -66,29 +75,107 @@ export function initKnowledgeGraph(container) {
   })
 }
 
-/** Будує та малює граф (терміни вже доступні) */
+/** Будує панель категорій + сцену і малює граф (терміни вже доступні) */
 function renderGraph(container) {
   // Прибираємо лоадер/попередній вміст (актуально на шляху підписки)
   container.innerHTML = ''
 
   const terms = appStore.state.terms
   const lang = appStore.state.lang
-
-  // 1. Побудова граф-моделі
   graph = buildGraph(terms, lang)
+  currentCategory = null
 
-  // 2. Force-directed розміщення (рівномірно, мінімум перекриттів)
-  const positions = computeForceLayout(graph.nodes, graph.edges, container)
+  toolbarEl = document.createElement('div')
+  toolbarEl.className = 'graph-toolbar'
+  container.append(toolbarEl)
+  renderToolbar()
 
-  // 3. Стан
+  stageEl = document.createElement('div')
+  stageEl.className = 'graph-stage'
+  container.append(stageEl)
+
+  renderStage()
+}
+
+/** Малює кнопки категорій (перемикач графів) */
+function renderToolbar() {
+  if (!toolbarEl || !graph) return
+  const present = new Set(graph.nodes.map((n) => n.category))
+  const cats = Object.keys(CATEGORY_COLORS).filter((c) => present.has(c))
+
+  const parts = [toolbarButton(null, 'Усі', currentCategory === null)]
+  for (const c of cats) parts.push(toolbarButton(c, c, currentCategory === c))
+  toolbarEl.innerHTML = parts.join('')
+
+  toolbarEl.querySelectorAll('[data-cat]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const v = btn.dataset.cat === '__all__' ? null : btn.dataset.cat
+      if (v === currentCategory) return
+      currentCategory = v
+      renderToolbar()
+      renderStage()
+    })
+  })
+}
+
+function toolbarButton(cat, label, active) {
+  const val = cat === null ? '__all__' : cat
+  return `<button type="button" class="graph-toolbar__btn${active ? ' graph-toolbar__btn--active' : ''}" data-cat="${val}">${label}</button>`
+}
+
+/** Будує відфільтрований граф для поточної категорії і малює його на сцені */
+function renderStage() {
+  if (!stageEl || !graph) return
+
+  if (renderer) {
+    renderer.destroy()
+    renderer = null
+  }
+  stageEl.innerHTML = ''
+
+  const filtered = filterGraph(graph, currentCategory)
+  const positions = computeForceLayout(filtered.nodes, filtered.edges, stageEl)
+
   state = new GraphState()
-
-  // 4. Renderer
   renderer = new GraphRenderer()
-  renderer.init(container, state, graph.adjacencyMap, graph.nodes, graph.edges, positions)
+  renderer.init(stageEl, state, filtered.adjacencyMap, filtered.nodes, filtered.edges, positions)
 
-  // 5. Легенда
-  renderLegend(container, graph)
+  renderLegend(stageEl, filtered)
+}
+
+/**
+ * Фільтрує повний граф під вибрану категорію.
+ * focus — вузли категорії; context — їхні сусіди (1-hop), показані приглушено.
+ * Для null повертає повний граф.
+ *
+ * @param {import('./graph-builder.js').Graph} full
+ * @param {string|null} category
+ */
+function filterGraph(full, category) {
+  if (!category) {
+    return {
+      nodes: full.nodes.map((n) => ({ ...n })),
+      edges: full.edges,
+      adjacencyMap: full.adjacencyMap,
+    }
+  }
+
+  const focus = new Set(
+    full.nodes.filter((n) => n.category === category).map((n) => n.id),
+  )
+  const visible = new Set(focus)
+  for (const id of focus) {
+    for (const nb of full.adjacencyMap.get(id) || []) visible.add(nb)
+  }
+
+  const nodes = full.nodes
+    .filter((n) => visible.has(n.id))
+    .map((n) => ({ ...n, isContext: !focus.has(n.id) }))
+  const edges = full.edges.filter(
+    (e) => visible.has(e.source) && visible.has(e.target),
+  )
+
+  return { nodes, edges, adjacencyMap: buildAdjacencyMap(edges) }
 }
 
 /** Показує лоадер зі спіннером */
@@ -128,6 +215,9 @@ export function destroyKnowledgeGraph() {
     renderer.destroy()
     renderer = null
   }
+  toolbarEl = null
+  stageEl = null
+  currentCategory = null
   state = null
   graph = null
 }
@@ -162,9 +252,13 @@ export function getGraphState() {
  * @returns {Map<string, { x: number, y: number }>}
  */
 function computeForceLayout(nodes, edges, container) {
-  const rect = container.getBoundingClientRect()
-  const w = rect.width || 1000
-  const h = rect.height || 700
+  // Розміри беремо з вікна, бо граф заповнює весь екран (max-width: none,
+  // height: 100vh - header - padding). На момент виклику контейнер може бути
+  // порожнім (innerHTML щойно очищено) і мати спадну висоту — тоді layout
+  // нормалізувався б у плоский прямокутник і граф виглядав би стиснутим.
+  const w = container.clientWidth || window.innerWidth || 1000
+  let h = container.clientHeight
+  if (!h || h < 200) h = (window.innerHeight || 700) - 104
   const n = nodes.length
 
   const rng = mulberry32(0x9e3779b9)
@@ -324,7 +418,7 @@ function renderLegend(container, graph) {
     .filter((cat) => present.has(cat))
     .map(
       (cat) =>
-        `<li class="graph-legend__item"><span class="graph-legend__dot" style="background:${CATEGORY_COLORS[cat]}"></span>${cat}</li>`,
+        `<li class="graph-legend__item${currentCategory === cat ? ' graph-legend__item--active' : ''}"><span class="graph-legend__dot" style="background:${CATEGORY_COLORS[cat]}"></span>${cat}</li>`,
     )
     .join('')
 
