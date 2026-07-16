@@ -4,7 +4,7 @@ import { buildGraph } from './graph-builder.js'
 import { GraphState } from './graph-state.js'
 import { GraphRenderer } from './graph-renderer.js'
 import { mulberry32, CATEGORY_COLORS, buildAdjacencyMap, debounce } from './graph-utils.js'
-import { getSearchSets } from './graph-search.js'
+import { searchTerm, getTerm, getNeighbors } from './graph-api.js'
 
 /**
  * Orchestrator for the knowledge graph.
@@ -188,7 +188,7 @@ function onSearchInput(value) {
   if (wasSearching !== nowSearching) {
     renderStage()
   } else if (nowSearching && renderer) {
-    const { matches, neighbors } = getSearchSets(searchQuery, graph.nodes, graph.adjacencyMap)
+    const { matches, neighbors } = searchTerm(searchQuery, graph, appStore.state.lang)
     renderer.setSearchHighlight(matches, neighbors)
   }
 }
@@ -221,7 +221,7 @@ function renderStage() {
   renderer.init(stageEl, state, base.adjacencyMap, base.nodes, base.edges, positions)
 
   if (searching) {
-    const { matches, neighbors } = getSearchSets(searchQuery, graph.nodes, graph.adjacencyMap)
+    const { matches, neighbors } = searchTerm(searchQuery, graph, appStore.state.lang)
     renderer.setSearchHighlight(matches, neighbors)
   }
 
@@ -550,8 +550,8 @@ function updateDetails(selectedId) {
     detailsEl.innerHTML = ''
     return
   }
-  const node = graph.nodes.find((n) => n.id === selectedId)
-  if (!node) {
+  const term = getTerm(selectedId, graph, appStore.state.lang)
+  if (!term) {
     detailsEl.hidden = true
     detailsEl.innerHTML = ''
     return
@@ -572,14 +572,13 @@ function updateDetails(selectedId) {
 
   const title = document.createElement('div')
   title.className = 'graph-details__title'
-  title.textContent = node.label
+  title.textContent = term.label
   detailsEl.append(title)
 
-  const neighbors = graph.adjacencyMap.get(node.id) || new Set()
   const meta = document.createElement('dl')
   meta.className = 'graph-details__meta'
-  addMeta(meta, 'Категорія', node.category)
-  addMeta(meta, 'Зв’язків', String(neighbors.size))
+  addMeta(meta, 'Категорія', term.category)
+  addMeta(meta, 'Зв’язків', String(term.degree))
   detailsEl.append(meta)
 
   const relTitle = document.createElement('div')
@@ -589,14 +588,14 @@ function updateDetails(selectedId) {
 
   const rel = document.createElement('div')
   rel.className = 'graph-details__related'
-  const labelById = new Map(graph.nodes.map((n) => [n.id, n.label]))
-  for (const nid of neighbors) {
+  const neighbors = getNeighbors(selectedId, graph, appStore.state.lang)
+  for (const nb of neighbors) {
     const chip = document.createElement('button')
     chip.type = 'button'
     chip.className = 'graph-details__chip'
-    chip.textContent = labelById.get(nid) || nid
-    chip.dataset.id = nid
-    chip.addEventListener('click', () => onRelatedClick(nid))
+    chip.textContent = nb.label
+    chip.dataset.id = nb.id
+    chip.addEventListener('click', () => onRelatedClick(nb.id))
     rel.append(chip)
   }
   detailsEl.append(rel)
