@@ -1,0 +1,12 @@
+{
+  "code": 100,
+  "name": "Continue",
+  "group": "1xx",
+  "description": {
+    "en": "The server has received the request headers and the client should continue to send the body.",
+    "uk": "Сервер отримав заголовки запиту, клієнт може продовжити надсилати тіло.",
+    "es": "El servidor ha recibido los encabezados de la solicitud y el cliente debe continuar enviando el cuerpo."
+  },
+  "usage": { "en": ["Expect header present", "Large uploads"], "uk": ["Наявність Expect-заголовка", "Великі завантаження"], "es": ["Encabezado Expect presente", "Subidas grandes"] },
+  "related": [101]
+}

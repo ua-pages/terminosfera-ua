@@ -1,0 +1,12 @@
+{
+  "code": 409,
+  "name": "Conflict",
+  "group": "4xx",
+  "description": {
+    "en": "The request conflicts with the current state of the resource.",
+    "uk": "Запит конфліктує з поточним станом ресурсу.",
+    "es": "La solicitud entra en conflicto con el estado actual del recurso."
+  },
+  "usage": { "en": ["Version conflicts", "Duplicate entries", "State mismatch"], "uk": ["Конфлікти версій", "Дублікати записів", "Невідповідність стану"], "es": ["Conflictos de versión", "Entradas duplicadas", "Desajuste de estado"] },
+  "related": [400, 412, 422]
+}

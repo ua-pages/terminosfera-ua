@@ -1,0 +1,12 @@
+{
+  "code": 422,
+  "name": "Unprocessable Content",
+  "group": "4xx",
+  "description": {
+    "en": "The request body contains semantic errors and cannot be processed.",
+    "uk": "Тіло запиту містить семантичні помилки та не може бути оброблене.",
+    "es": "El cuerpo de la solicitud contiene errores semánticos y no puede procesarse."
+  },
+  "usage": { "en": ["Validation errors", "Invalid data types", "Business logic violations"], "uk": ["Помилки валідації", "Невірні типи даних", "Порушення бізнес-логіки"], "es": ["Errores de validación", "Tipos de datos inválidos", "Violaciones de lógica de negocio"] },
+  "related": [400, 409, 500]
+}

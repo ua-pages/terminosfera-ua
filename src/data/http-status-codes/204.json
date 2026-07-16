@@ -1,0 +1,12 @@
+{
+  "code": 204,
+  "name": "No Content",
+  "group": "2xx",
+  "description": {
+    "en": "The request succeeded but there is no content to send in the response body.",
+    "uk": "Запит виконано успішно, але тіло відповіді порожнє.",
+    "es": "La solicitud tuvo éxito pero no hay contenido que enviar en el cuerpo de la respuesta."
+  },
+  "usage": { "en": ["DELETE operations", "PUT updates without body", "Optimistic responses"], "uk": ["DELETE-операції", "PUT-оновлення без тіла", "Оптимістичні відповіді"], "es": ["Operaciones DELETE", "Actualizaciones PUT sin cuerpo", "Respuestas optimistas"] },
+  "related": [200, 201, 206]
+}

@@ -1,0 +1,12 @@
+{
+  "code": 502,
+  "name": "Bad Gateway",
+  "group": "5xx",
+  "description": {
+    "en": "The server received an invalid response from an upstream server.",
+    "uk": "Сервер отримав некоректну відповідь від вищестоящого сервера.",
+    "es": "El servidor recibió una respuesta no válida de un servidor ascendente."
+  },
+  "usage": { "en": ["Upstream server failure", "Proxy configuration", "Network timeouts"], "uk": ["Помилка вищестоящого сервера", "Конфігурація проксі", "Мережеві таймаути"], "es": ["Fallo del servidor ascendente", "Configuración del proxy", "Tiempos de espera de red"] },
+  "related": [500, 503, 504]
+}

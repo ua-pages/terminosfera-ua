@@ -1,0 +1,12 @@
+{
+  "code": 404,
+  "name": "Not Found",
+  "group": "4xx",
+  "description": {
+    "en": "The server cannot find the requested resource.",
+    "uk": "Сервер не може знайти запитаний ресурс.",
+    "es": "El servidor no puede encontrar el recurso solicitado."
+  },
+  "usage": { "en": ["Resource deleted", "Incorrect URL", "Page does not exist"], "uk": ["Ресурс видалено", "Неправильний URL", "Сторінка не існує"], "es": ["Recurso eliminado", "URL incorrecta", "La página no existe"] },
+  "related": [400, 403, 410]
+}

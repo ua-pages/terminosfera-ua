@@ -1,0 +1,12 @@
+{
+  "code": 308,
+  "name": "Permanent Redirect",
+  "group": "3xx",
+  "description": {
+    "en": "The resource has been permanently moved, preserving the HTTP method.",
+    "uk": "Ресурс назавжди переміщено, метод HTTP зберігається.",
+    "es": "El recurso se ha movido permanentemente, conservando el método HTTP."
+  },
+  "usage": { "en": ["POST to new URL", "API endpoint migration", "Method-safe redirects"], "uk": ["POST на нову URL", "Міграція API-ендпоінтів", "Безпечні редиректи"], "es": ["POST a nueva URL", "Migración de endpoints API", "Redirecciones seguras"] },
+  "related": [301, 302, 307]
+}

@@ -1,0 +1,12 @@
+{
+  "code": 301,
+  "name": "Moved Permanently",
+  "group": "3xx",
+  "description": {
+    "en": "The requested resource has been permanently moved to a new URL.",
+    "uk": "Запрошений ресурс назавжди переміщено на нову URL-адресу.",
+    "es": "El recurso solicitado se ha movido permanentemente a una nueva URL."
+  },
+  "usage": { "en": ["Domain migration", "URL restructuring", "HTTPS redirect"], "uk": ["Міграція домену", "Зміна структури URL", "Редирект на HTTPS"], "es": ["Migración de dominio", "Reestructuración de URL", "Redirección a HTTPS"] },
+  "related": [302, 307, 308]
+}

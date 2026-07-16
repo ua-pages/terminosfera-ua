@@ -63,3 +63,33 @@ async function loadTermFile(id, category) {
     return null
   }
 }
+
+/**
+ * Loads all HTTP status codes into the store.
+ */
+export async function loadStatusCodes() {
+  try {
+    const indexRes = await fetch('src/data/http-status-codes/index.json')
+    if (!indexRes.ok) throw new Error('Failed to load status index')
+    const index = await indexRes.json()
+
+    const codes = await Promise.all(index.map((entry) => loadStatusCodeFile(entry.code)))
+    const valid = codes.filter(Boolean)
+
+    appStore.setState({ statusCodes: valid })
+    console.log(`Loaded ${valid.length} HTTP status codes`)
+  } catch (err) {
+    console.error('Failed to load status codes:', err)
+  }
+}
+
+async function loadStatusCodeFile(code) {
+  try {
+    const res = await fetch(`src/data/http-status-codes/${code}.json`)
+    if (!res.ok) throw new Error(`Failed to load status ${code}`)
+    return res.json()
+  } catch (err) {
+    console.error(`Failed to load status ${code}:`, err)
+    return null
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "code": 200,
+  "name": "OK",
+  "group": "2xx",
+  "description": {
+    "en": "The request has succeeded and the response contains the requested data.",
+    "uk": "Запит виконано успішно, відповідь містить запитані дані.",
+    "es": "La solicitud ha tenido éxito y la respuesta contiene los datos solicitados."
+  },
+  "usage": { "en": ["Successful GET requests", "Successful POST responses"], "uk": ["Успішні GET-запити", "Відповіді на успішні POST"], "es": ["Solicitudes GET exitosas", "Respuestas POST exitosas"] },
+  "related": [201, 204, 206]
+}

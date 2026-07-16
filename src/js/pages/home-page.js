@@ -57,6 +57,24 @@ function renderSuggestions() {
     btn.addEventListener('click', () => router.navigate(`/term/${term.id}`))
     list.appendChild(btn)
   }
+
+  const statusList = document.getElementById('status-suggestions-list')
+  if (!statusList) return
+  statusList.innerHTML = ''
+
+  const { statusCodes, statusCodeLearned } = appStore.state
+  const unlearned = statusCodes.filter((s) => !statusCodeLearned.includes(s.code))
+  const pool = unlearned.length >= SUGGESTION_COUNT ? unlearned : statusCodes
+  const shuffled = [...pool].sort(() => Math.random() - 0.5)
+  const picks = shuffled.slice(0, SUGGESTION_COUNT)
+
+  for (const s of picks) {
+    const btn = document.createElement('button')
+    btn.className = 'suggestions__btn'
+    btn.textContent = `${s.code} ${s.name}`
+    btn.addEventListener('click', () => router.navigate(`/http-status-codes/${s.code}`))
+    statusList.appendChild(btn)
+  }
 }
 
 function getSuggestions() {
@@ -110,10 +128,12 @@ function renderSearchResults() {
   if (!searchQuery.trim()) {
     area.innerHTML = ''
     document.getElementById('suggestions').style.display = ''
+    document.getElementById('status-suggestions').style.display = ''
     return
   }
 
   document.getElementById('suggestions').style.display = 'none'
+  document.getElementById('status-suggestions').style.display = 'none'
 
   const filtered = filterTerms(terms, searchQuery)
   const list = document.createElement('div')

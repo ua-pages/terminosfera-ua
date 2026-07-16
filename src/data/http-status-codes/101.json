@@ -1,0 +1,12 @@
+{
+  "code": 101,
+  "name": "Switching Protocols",
+  "group": "1xx",
+  "description": {
+    "en": "The server agrees to switch protocols as requested by the client.",
+    "uk": "Сервер погоджується змінити протокол на запит клієнта.",
+    "es": "El servidor acepta cambiar de protocolo según lo solicitado por el cliente."
+  },
+  "usage": { "en": ["WebSocket upgrade", "Protocol switch negotiation"], "uk": ["Оновлення до WebSocket", "Узгодження зміни протоколу"], "es": ["Actualización a WebSocket", "Negociación de cambio de protocolo"] },
+  "related": [100]
+}

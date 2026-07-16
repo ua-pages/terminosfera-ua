@@ -1,0 +1,12 @@
+{
+  "code": 202,
+  "name": "Accepted",
+  "group": "2xx",
+  "description": {
+    "en": "The request has been accepted for processing, but the processing is not complete.",
+    "uk": "Запит прийнято до обробки, але обробка ще не завершена.",
+    "es": "La solicitud ha sido aceptada para su procesamiento, pero el procesamiento no está completo."
+  },
+  "usage": { "en": ["Async operations", "Batch jobs", "Queued tasks"], "uk": ["Асинхронні операції", "Пакетні завдання", "Завдання в черзі"], "es": ["Operaciones asíncronas", "Tareas por lotes", "Tareas en cola"] },
+  "related": [200, 201, 204]
+}

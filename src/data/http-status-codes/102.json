@@ -1,0 +1,12 @@
+{
+  "code": 102,
+  "name": "Processing",
+  "group": "1xx",
+  "description": {
+    "en": "The server has received and is processing the request, but no response is available yet.",
+    "uk": "Сервер отримав і обробляє запит, але відповідь ще не готова.",
+    "es": "El servidor ha recibido y está procesando la solicitud, pero aún no hay respuesta."
+  },
+  "usage": { "en": ["Long-running requests", "WebDAV operations"], "uk": ["Довготривалі запити", "Операції WebDAV"], "es": ["Solicitudes de larga duración", "Operaciones WebDAV"] },
+  "related": [100]
+}

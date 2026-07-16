@@ -1,0 +1,12 @@
+{
+  "code": 503,
+  "name": "Service Unavailable",
+  "group": "5xx",
+  "description": {
+    "en": "The server is temporarily unable to handle the request due to overload or maintenance.",
+    "uk": "Сервер тимчасово не може обробити запит через перевантаження або обслуговування.",
+    "es": "El servidor no puede manejar temporalmente la solicitud debido a sobrecarga o mantenimiento."
+  },
+  "usage": { "en": ["Server maintenance", "Traffic spikes", "Resource exhaustion"], "uk": ["Технічне обслуговування", "Спайки трафіку", "Виснаження ресурсів"], "es": ["Mantenimiento del servidor", "Picos de tráfico", "Agotamiento de recursos"] },
+  "related": [429, 500, 502, 504]
+}

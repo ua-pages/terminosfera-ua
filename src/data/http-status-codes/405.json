@@ -1,0 +1,12 @@
+{
+  "code": 405,
+  "name": "Method Not Allowed",
+  "group": "4xx",
+  "description": {
+    "en": "The HTTP method is not supported for the requested resource.",
+    "uk": "Метод HTTP не підтримується для запитаного ресурсу.",
+    "es": "El método HTTP no está soportado para el recurso solicitado."
+  },
+  "usage": { "en": ["POST on read-only endpoint", "GET on write-only endpoint", "Wrong HTTP verb"], "uk": ["POST на read-only ендпоінт", "GET на write-only ендпоінт", "Неправильний HTTP-метод"], "es": ["POST en endpoint de solo lectura", "GET en endpoint de solo escritura", "Verbo HTTP incorrecto"] },
+  "related": [400, 403, 404]
+}

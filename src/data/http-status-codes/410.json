@@ -1,0 +1,12 @@
+{
+  "code": 410,
+  "name": "Gone",
+  "group": "4xx",
+  "description": {
+    "en": "The requested resource is no longer available with no forwarding address.",
+    "uk": "Запрошений ресурс більше не доступний без адреси перенаправлення.",
+    "es": "El recurso solicitado ya no está disponible sin una dirección de reenvío."
+  },
+  "usage": { "en": ["Deleted content", "Removed API endpoints", "Deprecated features"], "uk": ["Видалений контент", "Видалені API-ендпоінти", "Застарілі функції"], "es": ["Contenido eliminado", "Endpoints API eliminados", "Funciones obsoletas"] },
+  "related": [404, 301, 308]
+}

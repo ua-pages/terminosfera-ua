@@ -1,0 +1,12 @@
+{
+  "code": 501,
+  "name": "Not Implemented",
+  "group": "5xx",
+  "description": {
+    "en": "The server does not support the functionality required to fulfill the request.",
+    "uk": "Сервер не підтримує функціональність, необхідну для виконання запиту.",
+    "es": "El servidor no admite la funcionalidad necesaria para cumplir con la solicitud."
+  },
+  "usage": { "en": ["Unsupported HTTP methods", "Missing feature", "Not yet implemented"], "uk": ["Непідтримувані HTTP-методи", "Відсутня функція", "Ще не реалізовано"], "es": ["Métodos HTTP no admitidos", "Función faltante", "Aún no implementado"] },
+  "related": [500, 502, 504]
+}

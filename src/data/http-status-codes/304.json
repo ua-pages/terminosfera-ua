@@ -1,0 +1,12 @@
+{
+  "code": 304,
+  "name": "Not Modified",
+  "group": "3xx",
+  "description": {
+    "en": "The resource has not been modified since the last request, use cached version.",
+    "uk": "Ресурс не змінювався з моменту останнього запиту, використовуйте кешовану версію.",
+    "es": "El recurso no ha sido modificado desde la última solicitud, use la versión en caché."
+  },
+  "usage": { "en": ["Conditional GET requests", "Browser caching", "ETag validation"], "uk": ["Умовні GET-запити", "Кешування браузера", "Валідація ETag"], "es": ["Solicitudes GET condicionales", "Caché del navegador", "Validación ETag"] },
+  "related": [200, 301, 307]
+}

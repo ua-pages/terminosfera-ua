@@ -1,0 +1,12 @@
+{
+  "code": 429,
+  "name": "Too Many Requests",
+  "group": "4xx",
+  "description": {
+    "en": "The client has sent too many requests in a given amount of time.",
+    "uk": "Клієнт надіслав забагато запитів за певний проміжок часу.",
+    "es": "El cliente ha enviado demasiadas solicitudes en un período de tiempo determinado."
+  },
+  "usage": { "en": ["Rate limiting", "API throttling", "DDoS protection"], "uk": ["Лімітування запитів", "Тротлінг API", "Захист від DDoS"], "es": ["Límite de velocidad", "Limitación de API", "Protección DDoS"] },
+  "related": [503, 401, 403]
+}

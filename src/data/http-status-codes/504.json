@@ -1,0 +1,12 @@
+{
+  "code": 504,
+  "name": "Gateway Timeout",
+  "group": "5xx",
+  "description": {
+    "en": "The server did not receive a timely response from an upstream server.",
+    "uk": "Сервер не отримав своєчасної відповіді від вищестоящого сервера.",
+    "es": "El servidor no recibió una respuesta oportuna de un servidor ascendente."
+  },
+  "usage": { "en": ["Upstream timeout", "Slow database queries", "External API delays"], "uk": ["Таймаут вищестоящого сервера", "Повільні запити до БД", "Затримки зовнішніх API"], "es": ["Tiempo de espera del servidor ascendente", "Consultas lentas a la BD", "Demoras de API externas"] },
+  "related": [500, 502, 503]
+}

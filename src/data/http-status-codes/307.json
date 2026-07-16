@@ -1,0 +1,12 @@
+{
+  "code": 307,
+  "name": "Temporary Redirect",
+  "group": "3xx",
+  "description": {
+    "en": "The resource is temporarily at another URL, preserving the HTTP method.",
+    "uk": "Ресурс тимчасово доступний за іншою URL-адресою, метод HTTP зберігається.",
+    "es": "El recurso está temporalmente en otra URL, conservando el método HTTP."
+  },
+  "usage": { "en": ["POST redirect preservation", "Maintenance pages", "Load balancing"], "uk": ["Збереження POST-редиректу", "Сторінки обслуговування", "Балансування навантаження"], "es": ["Preservación de redirección POST", "Páginas de mantenimiento", "Balanceo de carga"] },
+  "related": [301, 302, 308]
+}

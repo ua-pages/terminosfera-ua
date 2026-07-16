@@ -1,0 +1,12 @@
+{
+  "code": 500,
+  "name": "Internal Server Error",
+  "group": "5xx",
+  "description": {
+    "en": "The server encountered an unexpected condition that prevented it from fulfilling the request.",
+    "uk": "На сервері сталася непередбачувана помилка, яка завадила виконати запит.",
+    "es": "El servidor encontró una condición inesperada que le impidió cumplir con la solicitud."
+  },
+  "usage": { "en": ["Unhandled exceptions", "Server crashes", "Configuration errors"], "uk": ["Необроблені винятки", "Збої сервера", "Помилки конфігурації"], "es": ["Excepciones no controladas", "Fallos del servidor", "Errores de configuración"] },
+  "related": [502, 503, 504]
+}

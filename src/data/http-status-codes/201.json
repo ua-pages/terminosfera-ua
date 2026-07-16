@@ -1,0 +1,12 @@
+{
+  "code": 201,
+  "name": "Created",
+  "group": "2xx",
+  "description": {
+    "en": "The request has succeeded and a new resource has been created.",
+    "uk": "Запит виконано, створено новий ресурс.",
+    "es": "La solicitud ha tenido éxito y se ha creado un nuevo recurso."
+  },
+  "usage": { "en": ["Resource creation via POST", "REST API responses"], "uk": ["Створення ресурсу через POST", "Відповіді REST API"], "es": ["Creación de recursos mediante POST", "Respuestas de API REST"] },
+  "related": [200, 202, 204]
+}

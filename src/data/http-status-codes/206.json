@@ -1,0 +1,12 @@
+{
+  "code": 206,
+  "name": "Partial Content",
+  "group": "2xx",
+  "description": {
+    "en": "The server is delivering only part of the resource due to a range header.",
+    "uk": "Сервер передає лише частину ресурсу через заголовок Range.",
+    "es": "El servidor está entregando solo una parte del recurso debido a un encabezado Range."
+  },
+  "usage": { "en": ["File downloads with resume", "Video streaming", "Large file chunking"], "uk": ["Завантаження файлів із докачкою", "Відео-стрімінг", "Розбиття великих файлів"], "es": ["Descargas de archivos con reanudación", "Transmisión de video", "División de archivos grandes"] },
+  "related": [200, 204, 416]
+}

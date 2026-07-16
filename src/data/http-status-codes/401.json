@@ -1,0 +1,12 @@
+{
+  "code": 401,
+  "name": "Unauthorized",
+  "group": "4xx",
+  "description": {
+    "en": "Authentication is required and has failed or not been provided.",
+    "uk": "Потрібна автентифікація, яка не була надана або не пройшла.",
+    "es": "Se requiere autenticación y ha fallado o no se ha proporcionado."
+  },
+  "usage": { "en": ["Missing auth token", "Invalid credentials", "Expired session"], "uk": ["Відсутній токен авторизації", "Невірні облікові дані", "Термін сесії минув"], "es": ["Token de autenticación faltante", "Credenciales inválidas", "Sesión expirada"] },
+  "related": [403, 403, 429]
+}

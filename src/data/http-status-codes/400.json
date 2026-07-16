@@ -1,0 +1,12 @@
+{
+  "code": 400,
+  "name": "Bad Request",
+  "group": "4xx",
+  "description": {
+    "en": "The server cannot process the request due to malformed syntax.",
+    "uk": "Сервер не може обробити запит через неправильний синтаксис.",
+    "es": "El servidor no puede procesar la solicitud debido a una sintaxis incorrecta."
+  },
+  "usage": { "en": ["Malformed JSON", "Invalid parameters", "Missing required fields"], "uk": ["Неправильний JSON", "Невірні параметри", "Відсутні обов'язкові поля"], "es": ["JSON mal formado", "Parámetros inválidos", "Campos obligatorios faltantes"] },
+  "related": [401, 403, 404, 422]
+}

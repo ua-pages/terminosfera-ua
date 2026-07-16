@@ -1,0 +1,12 @@
+{
+  "code": 103,
+  "name": "Early Hints",
+  "group": "1xx",
+  "description": {
+    "en": "The server sends preliminary headers to help the client preload resources.",
+    "uk": "Сервер надсилає попередні заголовки для попереднього завантаження ресурсів.",
+    "es": "El servidor envía encabezados preliminares para ayudar al cliente a precargar recursos."
+  },
+  "usage": { "en": ["Resource preloading", "Performance optimization"], "uk": ["Попереднє завантаження ресурсів", "Оптимізація продуктивності"], "es": ["Precarga de recursos", "Optimización de rendimiento"] },
+  "related": [200]
+}

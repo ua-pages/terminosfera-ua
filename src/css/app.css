@@ -257,6 +257,20 @@ body {
   color: var(--color-text);
 }
 
+.suggestions__link {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  color: var(--color-accent);
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: var(--space-sm);
+  vertical-align: middle;
+}
+
+.suggestions__link:hover {
+  text-decoration: underline;
+}
+
 /* Stats */
 
 .stats {
@@ -476,6 +490,185 @@ body {
 
 .lang-switcher__btn--active {
   color: var(--color-text);
+}
+
+/* Navigation */
+
+.nav {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.nav__link {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  transition: color 0.15s ease;
+  letter-spacing: 0.02em;
+}
+
+.nav__link:hover {
+  color: var(--color-text);
+}
+
+.nav__link--active {
+  color: var(--color-text);
+}
+
+/* HTTP Status Pages */
+
+.status-page__title {
+  font-family: var(--font-sans);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-xs);
+}
+
+.status-page__subtitle {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+  margin-bottom: var(--space-lg);
+}
+
+.status-group {
+  margin-bottom: var(--space-xl);
+}
+
+.status-group__header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.status-group__label {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.status-group__count {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+}
+
+.status-group__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.status-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-xs) 0;
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-border);
+  transition: background 0.1s ease;
+}
+
+.status-link:last-child {
+  border-bottom: none;
+}
+
+.status-link:hover .status-link__code {
+  text-decoration: underline;
+}
+
+.status-link__code {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text);
+  min-width: 48px;
+}
+
+.status-link__name {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.status-link__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 0;
+  flex-shrink: 0;
+}
+
+/* Status group colors */
+
+.status-group__dot--1xx { background: #6b7280; }
+.status-group__dot--2xx { background: #3c6e4f; }
+.status-group__dot--3xx { background: #7c6e3c; }
+.status-group__dot--4xx { background: #b45309; }
+.status-group__dot--5xx { background: #b91c1c; }
+
+/* Status detail page */
+
+.status-detail__headword {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.status-detail__code {
+  font-family: var(--font-mono);
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--color-text);
+  margin-bottom: var(--space-xs);
+}
+
+.status-detail__name {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--color-text-secondary);
+}
+
+.status-detail__group {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 3px 10px;
+  margin-bottom: var(--space-lg);
+  color: white;
+}
+
+.status-detail__group--1xx { background: #6b7280; }
+.status-detail__group--2xx { background: #3c6e4f; }
+.status-detail__group--3xx { background: #7c6e3c; }
+.status-detail__group--4xx { background: #b45309; }
+.status-detail__group--5xx { background: #b91c1c; }
+
+.status-detail__usage {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  padding-left: var(--space-md);
+  margin: 0;
+}
+
+.status-detail__usage li {
+  list-style: disc;
+  margin-bottom: var(--space-xs);
 }
 
 /* Responsive */

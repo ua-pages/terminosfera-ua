@@ -1,0 +1,142 @@
+[
+  {
+    "code": 100,
+    "name": "Continue",
+    "group": "1xx"
+  },
+  {
+    "code": 101,
+    "name": "Switching Protocols",
+    "group": "1xx"
+  },
+  {
+    "code": 102,
+    "name": "Processing",
+    "group": "1xx"
+  },
+  {
+    "code": 103,
+    "name": "Early Hints",
+    "group": "1xx"
+  },
+  {
+    "code": 200,
+    "name": "OK",
+    "group": "2xx"
+  },
+  {
+    "code": 201,
+    "name": "Created",
+    "group": "2xx"
+  },
+  {
+    "code": 202,
+    "name": "Accepted",
+    "group": "2xx"
+  },
+  {
+    "code": 204,
+    "name": "No Content",
+    "group": "2xx"
+  },
+  {
+    "code": 206,
+    "name": "Partial Content",
+    "group": "2xx"
+  },
+  {
+    "code": 301,
+    "name": "Moved Permanently",
+    "group": "3xx"
+  },
+  {
+    "code": 302,
+    "name": "Found",
+    "group": "3xx"
+  },
+  {
+    "code": 304,
+    "name": "Not Modified",
+    "group": "3xx"
+  },
+  {
+    "code": 307,
+    "name": "Temporary Redirect",
+    "group": "3xx"
+  },
+  {
+    "code": 308,
+    "name": "Permanent Redirect",
+    "group": "3xx"
+  },
+  {
+    "code": 400,
+    "name": "Bad Request",
+    "group": "4xx"
+  },
+  {
+    "code": 401,
+    "name": "Unauthorized",
+    "group": "4xx"
+  },
+  {
+    "code": 403,
+    "name": "Forbidden",
+    "group": "4xx"
+  },
+  {
+    "code": 404,
+    "name": "Not Found",
+    "group": "4xx"
+  },
+  {
+    "code": 405,
+    "name": "Method Not Allowed",
+    "group": "4xx"
+  },
+  {
+    "code": 409,
+    "name": "Conflict",
+    "group": "4xx"
+  },
+  {
+    "code": 410,
+    "name": "Gone",
+    "group": "4xx"
+  },
+  {
+    "code": 422,
+    "name": "Unprocessable Content",
+    "group": "4xx"
+  },
+  {
+    "code": 429,
+    "name": "Too Many Requests",
+    "group": "4xx"
+  },
+  {
+    "code": 500,
+    "name": "Internal Server Error",
+    "group": "5xx"
+  },
+  {
+    "code": 501,
+    "name": "Not Implemented",
+    "group": "5xx"
+  },
+  {
+    "code": 502,
+    "name": "Bad Gateway",
+    "group": "5xx"
+  },
+  {
+    "code": 503,
+    "name": "Service Unavailable",
+    "group": "5xx"
+  },
+  {
+    "code": 504,
+    "name": "Gateway Timeout",
+    "group": "5xx"
+  }
+]

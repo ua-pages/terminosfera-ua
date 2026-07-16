@@ -1,0 +1,12 @@
+{
+  "code": 302,
+  "name": "Found",
+  "group": "3xx",
+  "description": {
+    "en": "The requested resource has been temporarily moved to a different URL.",
+    "uk": "Запрошений ресурс тимчасово переміщено на іншу URL-адресу.",
+    "es": "El recurso solicitado se ha movido temporalmente a una URL diferente."
+  },
+  "usage": { "en": ["Temporary redirects", "Legacy URL forwarding", "A/B testing"], "uk": ["Тимчасові редиректи", "Перенаправлення старих URL", "A/B тестування"], "es": ["Redirecciones temporales", "Reenvío de URL antiguas", "Pruebas A/B"] },
+  "related": [301, 307, 308]
+}

@@ -1,0 +1,12 @@
+{
+  "code": 403,
+  "name": "Forbidden",
+  "group": "4xx",
+  "description": {
+    "en": "The client does not have permission to access the requested resource.",
+    "uk": "Клієнт не має дозволу на доступ до запитаного ресурсу.",
+    "es": "El cliente no tiene permiso para acceder al recurso solicitado."
+  },
+  "usage": { "en": ["Insufficient role", "IP blacklist", "Resource access denied"], "uk": ["Недостатня роль", "IP у чорному списку", "Доступ до ресурсу заборонено"], "es": ["Rol insuficiente", "IP en lista negra", "Acceso al recurso denegado"] },
+  "related": [401, 404, 405]
+}

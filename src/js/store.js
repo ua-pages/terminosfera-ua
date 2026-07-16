@@ -62,12 +62,15 @@ export const appStore = new Store({
   terms: [],
   searchQuery: '',
   categoryFilter: '',
-  learned: loadLearned(),
+  learned: loadLearned('terminosfera-learned'),
+  statusCodes: [],
+  statusCodeSearchQuery: '',
+  statusCodeLearned: loadLearned('terminosfera-status-learned'),
 })
 
-function loadLearned() {
+function loadLearned(key) {
   try {
-    const raw = localStorage.getItem('terminosfera-learned')
+    const raw = localStorage.getItem(key)
     return raw ? JSON.parse(raw) : []
   } catch {
     return []
@@ -81,4 +84,13 @@ export function toggleLearned(id) {
     : [...learned, id]
   appStore.setState({ learned: next })
   localStorage.setItem('terminosfera-learned', JSON.stringify(next))
+}
+
+export function toggleStatusLearned(code) {
+  const { statusCodeLearned } = appStore.state
+  const next = statusCodeLearned.includes(code)
+    ? statusCodeLearned.filter((x) => x !== code)
+    : [...statusCodeLearned, code]
+  appStore.setState({ statusCodeLearned: next })
+  localStorage.setItem('terminosfera-status-learned', JSON.stringify(next))
 }
