@@ -45,3 +45,25 @@ export function getVisibleNodeIds({ query, category, nodes }) {
   const filtered = filterByCategory(category, results)
   return new Set(filtered.map((node) => node.id))
 }
+
+/**
+ * Повертає множини ID для підсвічування пошуку.
+ *
+ * matches   — вузли, чий label містить запит (регістронезалежно).
+ * neighbors — 1-hop сусіди збігів (з adjacencyMap), без самих збігів.
+ *
+ * @param {string} query
+ * @param {Array<{ id: string, label: string }>} nodes
+ * @param {Map<string, Set<string>>} adjacencyMap
+ * @returns {{ matches: Set<string>, neighbors: Set<string> }}
+ */
+export function getSearchSets(query, nodes, adjacencyMap) {
+  const matches = new Set(findNodes(query, nodes).map((n) => n.id))
+  const neighbors = new Set()
+  for (const id of matches) {
+    for (const nb of adjacencyMap.get(id) || []) {
+      if (!matches.has(nb)) neighbors.add(nb)
+    }
+  }
+  return { matches, neighbors }
+}

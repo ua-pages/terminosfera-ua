@@ -86,6 +86,11 @@ export class GraphRenderer {
   /** Знімок стану для порівняння (унікаємо зайвих re-render) */
   #prevHighlight = ''
 
+  /** Множина ID збігів пошуку (порожня = пошук неактивний) */
+  #searchMatch = null
+  /** Множина ID сусідів збігів пошуку */
+  #searchNeighbor = null
+
   /**
    * Ініціалізує renderer.
    *
@@ -270,6 +275,12 @@ export class GraphRenderer {
 
   /** Оновлює CSS-класи для підсвітки на основі стану */
   #updateHighlight(s) {
+    // Пошук має пріоритет: підсвічуємо збіги + сусідів, ігноруємо hover/select.
+    if (this.#searchMatch && this.#searchMatch.size) {
+      this.#applySearchHighlight()
+      return
+    }
+
     const selectedId = s.selected
     const hoveredId = s.hovered
 
@@ -323,10 +334,57 @@ export class GraphRenderer {
       line.classList.remove('graph-edge--highlighted', 'graph-edge--dimmed')
     }
     for (const circle of this.#circleEls.values()) {
-      circle.classList.remove('graph-node__circle--selected', 'graph-node__dimmed')
+      circle.classList.remove('graph-node__circle--selected', 'graph-node__dimmed', 'graph-node__circle--search-match', 'graph-node__circle--search-related')
     }
     // Повертаємо labels — показуємо тільки ті, що мають бути видимі
     this.#updateLabelsVisibility(this.#state.get().scale)
+  }
+
+  /**
+   * Встановлює/скидає підсвітку пошуку.
+   * @param {Set<string>|null} matches — ID збігів (null/порожньо = вимкнути)
+   * @param {Set<string>|null} neighbors — ID сусідів збігів
+   */
+  setSearchHighlight(matches, neighbors) {
+    this.#searchMatch = matches && matches.size ? matches : null
+    this.#searchNeighbor = neighbors && neighbors.size ? neighbors : null
+    if (this.#searchMatch) {
+      this.#applySearchHighlight()
+    } else {
+      // Повертаємо звичайну логіку (hover/select) на поточному стані
+      this.#updateHighlight(this.#state.get())
+    }
+  }
+
+  /** Застосовує підсвітку пошуку: збіги — яскраво, сусіди — середньо, решта — приглушено */
+  #applySearchHighlight() {
+    const matches = this.#searchMatch
+    const neighbors = this.#searchNeighbor || new Set()
+
+    for (const [key, line] of this.#edgeEls) {
+      const src = line.dataset.source
+      const tgt = line.dataset.target
+      const connected = (matches.has(src) && (neighbors.has(tgt) || matches.has(tgt))) ||
+                       (matches.has(tgt) && (neighbors.has(src) || matches.has(src)))
+      line.classList.toggle('graph-edge--highlighted', connected)
+      line.classList.toggle('graph-edge--dimmed', !connected)
+    }
+
+    for (const [id, circle] of this.#circleEls) {
+      const isMatch = matches.has(id)
+      const isNeighbor = neighbors.has(id)
+      circle.classList.toggle('graph-node__circle--search-match', isMatch)
+      circle.classList.toggle('graph-node__circle--search-related', isNeighbor && !isMatch)
+      circle.classList.toggle('graph-node__dimmed', !isMatch && !isNeighbor)
+      circle.classList.remove('graph-node__circle--selected')
+    }
+
+    for (const [id, label] of this.#labelEls) {
+      const isMatch = matches.has(id)
+      const isNeighbor = neighbors.has(id)
+      // Показуємо label тільки збігам та їхнім сусідам
+      label.classList.toggle('graph-node__label--hidden', !isMatch && !isNeighbor)
+    }
   }
 
   /** Оновлює видимість labels залежно від масштабу та degree */

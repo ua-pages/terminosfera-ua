@@ -3,7 +3,8 @@ import { loadAllTerms } from '../loader.js'
 import { buildGraph } from './graph-builder.js'
 import { GraphState } from './graph-state.js'
 import { GraphRenderer } from './graph-renderer.js'
-import { mulberry32, CATEGORY_COLORS, buildAdjacencyMap } from './graph-utils.js'
+import { mulberry32, CATEGORY_COLORS, buildAdjacencyMap, debounce } from './graph-utils.js'
+import { getSearchSets } from './graph-search.js'
 
 /**
  * Orchestrator for the knowledge graph.
@@ -31,6 +32,9 @@ let stageEl = null
 
 /** @type {string|null} активна категорія (null = усі) */
 let currentCategory = null
+
+/** @type {string} активний пошуковий запит (порожній = без пошуку) */
+let searchQuery = ''
 
 /** @type {(() => void)|null} */
 let unsubscribe = null
@@ -112,32 +116,82 @@ function resolveCategory() {
   return cats[0] || null
 }
 
-/** Малює кнопки категорій (перемикач графів) */
+/** Малює поле пошуку + кнопки категорій (перемикач графів) */
 function renderToolbar() {
   if (!toolbarEl || !graph) return
   const present = new Set(graph.nodes.map((n) => n.category))
   const cats = Object.keys(CATEGORY_COLORS).filter((c) => present.has(c))
 
-  const parts = []
+  const searchHtml = `
+    <div class="graph-search">
+      <input id="graph-search-input" class="graph-search__input" type="search" placeholder="Пошук терміна…" aria-label="Пошук терміна" />
+      <button id="graph-search-clear" class="graph-search__clear" type="button" aria-label="Очистити пошук"${searchQuery.trim() ? '' : ' hidden'}>×</button>
+    </div>`
+
+  const parts = [searchHtml]
   for (const c of cats) parts.push(toolbarButton(c, c, currentCategory === c))
   toolbarEl.innerHTML = parts.join('')
+
+  const input = toolbarEl.querySelector('#graph-search-input')
+  const clear = toolbarEl.querySelector('#graph-search-clear')
+  if (input) input.value = searchQuery
+  const onInput = debounce((v) => onSearchInput(v), 150)
+  if (input) {
+    input.addEventListener('input', () => {
+      const v = input.value
+      if (clear) clear.hidden = !v.trim()
+      onInput(v)
+    })
+  }
+  if (clear) {
+    clear.addEventListener('click', () => {
+      if (input) input.value = ''
+      clear.hidden = true
+      onSearchInput('')
+      if (input) input.focus()
+    })
+  }
 
   toolbarEl.querySelectorAll('[data-cat]').forEach((btn) => {
     btn.addEventListener('click', () => {
       const v = btn.dataset.cat
       if (v === currentCategory) return
       currentCategory = v
+      if (searchQuery.trim()) {
+        searchQuery = ''
+        if (input) input.value = ''
+        if (clear) clear.hidden = true
+      }
       renderToolbar()
       renderStage()
     })
   })
 }
 
+/**
+ * Оновлює пошук. При зміні режиму (пошук увімк/вимк) перебудовуємо сцену
+ * (інший набір видимих вузлів → перекладка), інакше — лише підсвітка
+ * поверх вже відмальованого повного графа (без перекладки).
+ *
+ * @param {string} value
+ */
+function onSearchInput(value) {
+  const wasSearching = searchQuery.trim().length > 0
+  searchQuery = value
+  const nowSearching = searchQuery.trim().length > 0
+  if (wasSearching !== nowSearching) {
+    renderStage()
+  } else if (nowSearching && renderer) {
+    const { matches, neighbors } = getSearchSets(searchQuery, graph.nodes, graph.adjacencyMap)
+    renderer.setSearchHighlight(matches, neighbors)
+  }
+}
+
 function toolbarButton(cat, label, active) {
   return `<button type="button" class="graph-toolbar__btn${active ? ' graph-toolbar__btn--active' : ''}" data-cat="${cat}">${label}</button>`
 }
 
-/** Будує відфільтрований граф для поточної категорії і малює його на сцені */
+/** Будує граф для поточного режиму (категорія або пошук) і малює його на сцені */
 function renderStage() {
   if (!stageEl || !graph) return
 
@@ -147,14 +201,25 @@ function renderStage() {
   }
   stageEl.innerHTML = ''
 
-  const filtered = filterGraph(graph, currentCategory)
-  const positions = computeForceLayout(filtered.nodes, filtered.edges, stageEl)
+  const searching = searchQuery.trim().length > 0
+  // Пошук показує ВЕСЬ граф (ігноруючи фільтр категорії), щоб підсвітити
+  // збіги + їхніх сусідів по всіх категоріях. Інакше — поточна категорія.
+  const base = searching
+    ? { nodes: graph.nodes.map((n) => ({ ...n })), edges: graph.edges, adjacencyMap: graph.adjacencyMap }
+    : filterGraph(graph, currentCategory)
+
+  const positions = computeForceLayout(base.nodes, base.edges, stageEl)
 
   state = new GraphState()
   renderer = new GraphRenderer()
-  renderer.init(stageEl, state, filtered.adjacencyMap, filtered.nodes, filtered.edges, positions)
+  renderer.init(stageEl, state, base.adjacencyMap, base.nodes, base.edges, positions)
 
-  renderLegend(stageEl, filtered)
+  if (searching) {
+    const { matches, neighbors } = getSearchSets(searchQuery, graph.nodes, graph.adjacencyMap)
+    renderer.setSearchHighlight(matches, neighbors)
+  }
+
+  renderLegend(stageEl, base)
 }
 
 /**
