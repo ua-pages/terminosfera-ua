@@ -39,6 +39,12 @@ let searchQuery = ''
 /** @type {(() => void)|null} */
 let unsubscribe = null
 
+/** @type {HTMLElement|null} панель деталей вузла */
+let detailsEl = null
+
+/** @type {(() => void)|null} */
+let unsubDetails = null
+
 /**
  * Ініціалізує та показує граф у контейнері.
  *
@@ -220,6 +226,18 @@ function renderStage() {
   }
 
   renderLegend(stageEl, base)
+
+  // Панель деталей вузла — підписуємось на вибір у стані
+  if (unsubDetails) {
+    unsubDetails()
+    unsubDetails = null
+  }
+  detailsEl = document.createElement('div')
+  detailsEl.className = 'graph-details'
+  detailsEl.hidden = true
+  stageEl.append(detailsEl)
+  unsubDetails = state.subscribe((s) => updateDetails(s.selected))
+  updateDetails(state.get().selected)
 }
 
 /**
@@ -294,6 +312,11 @@ export function destroyKnowledgeGraph() {
     renderer.destroy()
     renderer = null
   }
+  if (unsubDetails) {
+    unsubDetails()
+    unsubDetails = null
+  }
+  detailsEl = null
   toolbarEl = null
   stageEl = null
   state = null
@@ -512,4 +535,92 @@ function renderLegend(container, graph) {
     </div>`
 
   container.append(legend)
+}
+
+/**
+ * Оновлює панель деталей вузла за вибраним ID.
+ * @param {string|null} selectedId
+ */
+function updateDetails(selectedId) {
+  if (!detailsEl) return
+  if (!selectedId) {
+    detailsEl.hidden = true
+    detailsEl.innerHTML = ''
+    return
+  }
+  const node = graph.nodes.find((n) => n.id === selectedId)
+  if (!node) {
+    detailsEl.hidden = true
+    detailsEl.innerHTML = ''
+    return
+  }
+
+  detailsEl.hidden = false
+  detailsEl.innerHTML = ''
+
+  const close = document.createElement('button')
+  close.type = 'button'
+  close.className = 'graph-details__close'
+  close.setAttribute('aria-label', 'Закрити')
+  close.textContent = '×'
+  close.addEventListener('click', () => {
+    if (state) state.set({ selected: null })
+  })
+  detailsEl.append(close)
+
+  const title = document.createElement('div')
+  title.className = 'graph-details__title'
+  title.textContent = node.label
+  detailsEl.append(title)
+
+  const neighbors = graph.adjacencyMap.get(node.id) || new Set()
+  const meta = document.createElement('dl')
+  meta.className = 'graph-details__meta'
+  addMeta(meta, 'Категорія', node.category)
+  addMeta(meta, 'Зв’язків', String(neighbors.size))
+  detailsEl.append(meta)
+
+  const relTitle = document.createElement('div')
+  relTitle.className = 'graph-details__related-title'
+  relTitle.textContent = 'Пов’язані'
+  detailsEl.append(relTitle)
+
+  const rel = document.createElement('div')
+  rel.className = 'graph-details__related'
+  const labelById = new Map(graph.nodes.map((n) => [n.id, n.label]))
+  for (const nid of neighbors) {
+    const chip = document.createElement('button')
+    chip.type = 'button'
+    chip.className = 'graph-details__chip'
+    chip.textContent = labelById.get(nid) || nid
+    chip.dataset.id = nid
+    chip.addEventListener('click', () => onRelatedClick(nid))
+    rel.append(chip)
+  }
+  detailsEl.append(rel)
+
+  const open = document.createElement('a')
+  open.className = 'graph-details__open'
+  open.href = `#/term/${node.id}`
+  open.textContent = 'Відкрити термін →'
+  detailsEl.append(open)
+}
+
+/** Додає рядок dt/dd до <dl> */
+function addMeta(dl, dt, dd) {
+  const d1 = document.createElement('dt')
+  d1.textContent = dt
+  const d2 = document.createElement('dd')
+  d2.textContent = dd
+  dl.append(d1, d2)
+}
+
+/** Клік по пов'язаному терміну — виділяє/центрує вузол у графі (або вибирає, якщо не відмальовано) */
+function onRelatedClick(id) {
+  const g = stageEl && stageEl.querySelector(`.graph-node[data-id="${id}"]`)
+  if (g) {
+    g.dispatchEvent(new MouseEvent('click', { bubbles: true }))
+  } else if (state) {
+    state.set({ selected: id })
+  }
 }
