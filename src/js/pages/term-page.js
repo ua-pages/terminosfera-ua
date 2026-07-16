@@ -97,12 +97,23 @@ function escapeHtml(str) {
   return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 }
 
+const LEARN_LABELS = {
+  en: { done: 'Learned', undone: 'Mark as learned' },
+  uk: { done: 'Вивчено', undone: 'Позначити вивченим' },
+  es: { done: 'Aprendido', undone: 'Marcar como aprendido' },
+}
+
 function updateLearnBtn(btn, id) {
-  const { learned } = appStore.state
+  const { learned, lang } = appStore.state
   const isLearned = learned.includes(id)
-  btn.textContent = isLearned ? '●' : '○'
+
+  const icon = btn.querySelector('.term-page__learn-icon')
+  const text = btn.querySelector('.term-page__learn-text')
+  if (icon) icon.textContent = isLearned ? '●' : '○'
+  if (text) text.textContent = isLearned ? LEARN_LABELS[lang].done : LEARN_LABELS[lang].undone
+
   btn.classList.toggle('term-page__learn-btn--learned', isLearned)
-  btn.setAttribute('aria-label', isLearned ? 'Mark as unlearned' : 'Mark as learned')
+  btn.setAttribute('aria-label', LEARN_LABELS[lang][isLearned ? 'done' : 'undone'])
 }
 
 function appendSection(container, title, html) {

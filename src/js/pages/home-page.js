@@ -27,17 +27,23 @@ function render() {
   setupShuffle()
 }
 
+const PROGRESS_LABELS = {
+  en: (c, t) => `Learned ${c} of ${t} terms`,
+  uk: (c, t) => `Вивчено ${c} із ${t} термінів`,
+  es: (c, t) => `Aprendido ${c} de ${t} términos`,
+}
+
 function renderProgress() {
   const bar = document.getElementById('progress-bar')
   if (!bar) return
 
-  const { terms, learned } = appStore.state
+  const { terms, learned, lang } = appStore.state
   const count = learned.length
   const total = terms.length
   const pct = total > 0 ? Math.round((count / total) * 100) : 0
 
   bar.innerHTML = `
-    Вивчено ${count} із ${total} термінів
+    ${PROGRESS_LABELS[lang](count, total)}
     <div class="progress-bar__track">
       <div class="progress-bar__fill" style="width: ${pct}%"></div>
     </div>

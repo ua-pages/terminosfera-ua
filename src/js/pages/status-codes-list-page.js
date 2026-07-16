@@ -42,8 +42,15 @@ function renderStatusProgress() {
   const total = statusCodes.length
   const pct = total > 0 ? Math.round((count / total) * 100) : 0
 
+  const { lang } = appStore.state
+  const statusLabels = {
+    en: `Learned ${count} of ${total} statuses`,
+    uk: `Вивчено ${count} із ${total} статусів`,
+    es: `Aprendido ${count} de ${total} estados`,
+  }
+
   bar.innerHTML = `
-    Вивчено ${count} із ${total} статусів
+    ${statusLabels[lang]}
     <div class="progress-bar__track">
       <div class="progress-bar__fill" style="width: ${pct}%"></div>
     </div>

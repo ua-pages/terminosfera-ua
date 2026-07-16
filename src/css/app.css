@@ -374,22 +374,36 @@ body {
 
 .term-page__learn-btn {
   font-family: var(--font-sans);
-  font-size: 1.2rem;
-  color: var(--color-text-muted);
   background: none;
-  border: none;
-  padding: 0;
-  line-height: 1;
-  transition: color 0.15s ease;
+  border: 1px solid var(--color-border);
+  padding: var(--space-xs) var(--space-sm);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
   flex-shrink: 0;
+  transition: border-color 0.15s ease;
+  color: var(--color-text-muted);
 }
 
 .term-page__learn-btn:hover {
-  color: var(--color-text);
+  border-color: var(--color-text);
 }
 
 .term-page__learn-btn--learned {
+  border-color: var(--color-success);
   color: var(--color-success);
+}
+
+.term-page__learn-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.term-page__learn-text {
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1;
 }
 
 .term-page__title-wrapper {
