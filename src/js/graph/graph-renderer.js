@@ -90,6 +90,10 @@ export class GraphRenderer {
   #searchMatch = null
   /** Множина ID сусідів збігів пошуку */
   #searchNeighbor = null
+  /** Лічильник змін пошуку (для пропуску зайвих re-render підсвітки) */
+  #searchRev = 0
+  /** Ключ попереднього стану підсвітки (transform не враховується) */
+  #prevHlKey = ''
 
   /**
    * Ініціалізує renderer.
@@ -346,10 +350,14 @@ export class GraphRenderer {
    * @param {Set<string>|null} neighbors — ID сусідів збігів
    */
   setSearchHighlight(matches, neighbors) {
+    const wasActive = !!(this.#searchMatch && this.#searchMatch.size)
     this.#searchMatch = matches && matches.size ? matches : null
     this.#searchNeighbor = neighbors && neighbors.size ? neighbors : null
+    this.#searchRev++
     if (this.#searchMatch) {
       this.#applySearchHighlight()
+      // При першому ввімкненні пошуку — плавно наводимо вигляд на знайдені терміни
+      if (!wasActive) this.#fitToNodes(this.#searchMatch)
     } else {
       // Повертаємо звичайну логіку (hover/select) на поточному стані
       this.#updateHighlight(this.#state.get())
@@ -646,11 +654,58 @@ export class GraphRenderer {
     }, 300)
   }
 
+  /** Плавно підганяє viewport, щоб охопити вказані вузли (напр. результати пошуку) */
+  #fitToNodes(ids) {
+    let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity
+    let count = 0
+    for (const id of ids) {
+      const p = this.#positions.get(id)
+      if (!p) continue
+      count++
+      if (p.x < minX) minX = p.x
+      if (p.x > maxX) maxX = p.x
+      if (p.y < minY) minY = p.y
+      if (p.y > maxY) maxY = p.y
+    }
+    if (!count) return
+
+    const rect = this.#svg.getBoundingClientRect()
+    const w = rect.width || 800
+    const h = rect.height || 600
+    const padding = 80
+
+    const spanX = maxX - minX || 1
+    const spanY = maxY - minY || 1
+    const scale = clamp(
+      Math.min((w - padding * 2) / spanX, (h - padding * 2) / spanY),
+      SCALE_MIN,
+      SCALE_MAX,
+    )
+    const cx = (minX + maxX) / 2
+    const cy = (minY + maxY) / 2
+    const tx = w / 2 - cx * scale
+    const ty = h / 2 - cy * scale
+
+    this.#viewport.style.transition = 'transform 0.35s ease-out'
+    this.#state.set({ scale, tx, ty })
+    this.#applyTransform()
+    setTimeout(() => {
+      this.#viewport.style.transition = ''
+    }, 350)
+  }
+
   // ─── State Sync ──────────────────────────────────────────
 
   /** Реагує на зміни GraphState */
   #onStateChange(s) {
     this.#applyTransform()
+    // Підсвітка залежить лише від selected/hovered/пошуку, а не від
+    // transform (zoom/pan) — інакше кожен тик колеса/перетягування
+    // перефарбовує всі вузли (відчутна дужа при активному пошуку).
+    const searchRev = this.#searchMatch ? this.#searchRev : -1
+    const key = searchRev + '|' + (s.selected || '') + '|' + (s.hovered || '')
+    if (key === this.#prevHlKey) return
+    this.#prevHlKey = key
     this.#updateHighlight(s)
   }
 }
