@@ -238,6 +238,8 @@ function renderStage() {
   stageEl.append(detailsEl)
   unsubDetails = state.subscribe((s) => updateDetails(s.selected))
   updateDetails(state.get().selected)
+
+  renderStats(stageEl, graph)
 }
 
 /**
@@ -623,4 +625,46 @@ function onRelatedClick(id) {
   } else if (state) {
     state.set({ selected: id })
   }
+}
+
+/** Екранує HTML-сутності (для безпечного вставлення label у innerHTML) */
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, (c) => (
+    { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
+  ))
+}
+
+/**
+ * Малює панель статистики графа (глобальні підсумки + топ зв'язних).
+ * Топ-елементи клікабельні — виділяють/центрують відповідний вузол.
+ * @param {HTMLElement} container
+ * @param {import('./graph-builder.js').Graph} g
+ */
+function renderStats(container, g) {
+  const terms = g.nodes.length
+  const connections = g.edges.length
+  const categories = new Set(g.nodes.map((n) => n.category)).size
+  const top = [...g.nodes].sort((a, b) => b.degree - a.degree).slice(0, 8)
+
+  const el = document.createElement('div')
+  el.className = 'graph-stats'
+  el.innerHTML = `
+    <div class="graph-stats__title">Граф</div>
+    <div class="graph-stats__row"><span>Термінів</span><b>${terms}</b></div>
+    <div class="graph-stats__row"><span>Зв’язків</span><b>${connections}</b></div>
+    <div class="graph-stats__row"><span>Категорій</span><b>${categories}</b></div>
+    <div class="graph-stats__subtitle">Найбільш зв’язні</div>`
+
+  const list = document.createElement('ul')
+  list.className = 'graph-stats__list'
+  top.forEach((n, i) => {
+    const li = document.createElement('li')
+    li.className = 'graph-stats__item'
+    li.dataset.id = n.id
+    li.innerHTML = `<span>${i + 1}. ${escapeHtml(n.label)}</span><b>${n.degree}</b>`
+    li.addEventListener('click', () => onRelatedClick(n.id))
+    list.append(li)
+  })
+  el.append(list)
+  container.append(el)
 }
