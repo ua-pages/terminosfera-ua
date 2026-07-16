@@ -40,3 +40,22 @@ Claude Desktop) підхоплюють сервер автоматично. Дл
 ```
 
 Сервер працює поверх даних у `../terms/*.json` і не потребує запущеного сайту.
+
+## Verification
+
+Сервер перевірено реальним MCP-клієнтом (SDK `Client` → `StdioClientTransport`):
+клієнт виявив усі 4 тулси (`search_term`, `get_term`, `get_neighbors`,
+`get_category`) і отримав коректні відповіді, зокрема:
+
+- `get_term(docker)` → `{ label: "Docker", category: "DevOps", degree: 4, neighbors: [container, deployment, kubernetes, orchestration] }`
+- `get_neighbors(kubernetes)` → 6 сусідів (container, docker, helm, orchestration, scalability, service-mesh)
+- `search_term("deploy")` → match `deployment` + його 1-hop сусіди
+
+Щоб побачити, які тулси викликає **LLM-агент** у відповідь на природні запити,
+запустіть сервер із `DEBUG=1 node server.js` і попросіть агента:
+
+- *"What is Docker?"* → очікується виклик `get_term`
+- *"Which terms are related to Kubernetes?"* → очікується `get_neighbors`
+- *"Find terms matching 'deploy'."* → очікується `search_term`
+
+Кожен виклик логується у stderr у форматі `[mcp] tool=<name> args=<json>`.

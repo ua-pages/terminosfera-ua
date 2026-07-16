@@ -57,7 +57,19 @@ async function main() {
 
   const server = new McpServer({ name: 'terminosfera-graph', version: '1.0.0' })
 
-  server.tool(
+  // Логування викликів тулсів агентом (для реальної верифікації через MCP-клієнт).
+  // Увімкнення: DEBUG=1 node server.js
+  const DEBUG = process.env.DEBUG === '1' || process.env.DEBUG === 'true'
+  const logCall = (name, args) => {
+    if (DEBUG) console.error(`[mcp] tool=${name} args=${JSON.stringify(args)}`)
+  }
+  const tool = (name, schema, handler) =>
+    server.tool(name, schema, async (args) => {
+      logCall(name, args)
+      return handler(args)
+    })
+
+  tool(
     'search_term',
     { query: z.string(), lang: z.string().optional() },
     async ({ query, lang: l }) => {
@@ -70,7 +82,7 @@ async function main() {
     },
   )
 
-  server.tool(
+  tool(
     'get_term',
     { id: z.string(), lang: z.string().optional() },
     async ({ id, lang: l }) => {
@@ -79,7 +91,7 @@ async function main() {
     },
   )
 
-  server.tool(
+  tool(
     'get_neighbors',
     { id: z.string(), lang: z.string().optional() },
     async ({ id, lang: l }) => {
@@ -88,7 +100,7 @@ async function main() {
     },
   )
 
-  server.tool(
+  tool(
     'get_category',
     { category: z.string(), lang: z.string().optional() },
     async ({ category, lang: l }) => {

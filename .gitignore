@@ -12,3 +12,6 @@ Thumbs.db
 # Local env
 .env
 .env.local
+
+# MCP server dependencies (zero-dep site must stay clean)
+mcp/node_modules/
