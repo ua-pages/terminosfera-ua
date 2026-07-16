@@ -2,11 +2,36 @@
   "id": "javascript",
   "translations": { "en": "JavaScript", "uk": "JavaScript", "es": "JavaScript" },
   "definition": {
-    "en": "A high-level programming language used for dynamic web content.",
-    "uk": "Мова програмування високого рівня для динамічного веб-контенту.",
-    "es": "Lenguaje de programación de alto nivel para contenido web dinámico."
+    "en": "A high-level programming language used for dynamic web content and server-side applications.",
+    "uk": "Мова програмування високого рівня для динамічного веб-контенту та серверних застосунків.",
+    "es": "Lenguaje de programación de alto nivel para contenido web dinámico y aplicaciones del lado del servidor."
   },
-  "etymology": { "origin": "English", "root": "Java + script", "meaning": "named after Java language with scripting syntax" },
+  "etymology": { "origin": "English", "root": "Java + script", "meaning": "named after Java language, with 'script' indicating lightweight syntax" },
   "category": "Frontend",
-  "related": ["html", "css", "framework", "dom", "promise"]
+  "related": ["html", "css", "dom", "promise", "async", "await"],
+  "examples": {
+    "code": {
+      "en": "console.log('Hello, World!');",
+      "uk": "console.log('Привіт, Світ!');",
+      "es": "console.log('¡Hola, Mundo!');"
+    },
+    "life": {
+      "en": "When you click a button on a webpage and something happens without reloading the page — that's JavaScript working behind the scenes.",
+      "uk": "Коли ви натискаєте кнопку на веб-сторінці і щось відбувається без перезавантаження — це JavaScript працює за лаштунками.",
+      "es": "Cuando haces clic en un botón en una página web y algo sucede sin recargar la página — es JavaScript trabajando entre bastidores."
+    }
+  },
+  "ukContext": {
+    "en": "JavaScript is used in Ukrainian tech as a direct borrowing, pronounced 'джаваскрипт'. No native translation is used in professional contexts.",
+    "uk": "JavaScript уживається в українському IT як пряме запозичення, вимовляється «джаваскрипт». Спроби перекласти («ЖаваСкрипт», «ЯваСкрипт») не прижилися. У технічній документації та коді використовується лише оригінальна назва.",
+    "es": "JavaScript se usa en el sector tecnológico ucraniano como préstamo directo, pronunciado 'djavaskrypt'. No se utiliza ninguna traducción nativa en contextos profesionales."
+  },
+  "relatedReasons": {
+    "html": { "en": "HTML structures the content that JavaScript manipulates.", "uk": "HTML створює структуру, якою JavaScript маніпулює.", "es": "HTML estructura el contenido que JavaScript manipula." },
+    "css": { "en": "CSS styles the elements that JavaScript controls.", "uk": "CSS стилізує елементи, якими JavaScript керує.", "es": "CSS estiliza los elementos que JavaScript controla." },
+    "dom": { "en": "The DOM is the document model that JavaScript uses to interact with HTML.", "uk": "DOM — це модель документа, через яку JavaScript взаємодіє з HTML.", "es": "El DOM es el modelo de documento que JavaScript usa para interactuar con HTML." },
+    "promise": { "en": "Promises are a key part of JavaScript's asynchronous programming model.", "uk": "Promise — ключова частина асинхронної моделі JavaScript.", "es": "Las Promises son una parte clave del modelo de programación asíncrona de JavaScript." },
+    "async": { "en": "async/await is the modern syntax for asynchronous JavaScript.", "uk": "async/await — сучасний синтаксис асинхронного JavaScript.", "es": "async/await es la sintaxis moderna para JavaScript asíncrono." },
+    "await": { "en": "Await is a JavaScript keyword used with async functions.", "uk": "Await — ключове слово JavaScript для роботи з асинхронними функціями.", "es": "Await es una palabra clave de JavaScript utilizada con funciones async." }
+  }
 }

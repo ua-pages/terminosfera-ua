@@ -6,7 +6,30 @@
     "uk": "Режим виконання, коли операції не чекають завершення одна одної.",
     "es": "Permite que varias operaciones se ejecuten sin esperar a que cada una termine."
   },
-  "etymology": { "origin": "Greek", "root": "asyn + chronos", "meaning": "not together in time" },
+  "etymology": { "origin": "Greek", "root": "a- + synchronos", "meaning": "not together in time; 'a-' (without) + 'syn' (together) + 'chronos' (time)" },
   "category": "Frontend",
-  "related": ["callback", "promise", "ajax", "event"]
+  "related": ["callback", "promise", "await", "ajax"],
+  "examples": {
+    "code": {
+      "en": "async function fetchUser(id) {\n  const res = await fetch(`/api/users/${id}`);\n  return res.json();\n}",
+      "uk": "async function fetchUser(id) {\n  const res = await fetch(`/api/users/${id}`);\n  return res.json();\n}",
+      "es": "async function fetchUser(id) {\n  const res = await fetch(`/api/users/${id}`);\n  return res.json();\n}"
+    },
+    "life": {
+      "en": "Ordering coffee at a busy café: you place the order (start an async operation), get a buzzer (a Promise), and continue scrolling your phone instead of waiting at the counter. The buzzer rings when the coffee is ready.",
+      "uk": "Замовлення кави в людному кафе: ви робите замовлення (запускаєте асинхронну операцію), отримуєте вібропейджер (Promise) і продовжуєте гортати телефон, замість стояти біля стійки. Пейджер вібрує, коли кава готова.",
+      "es": "Pedir café en una cafetería concurrida: haces el pedido (inicias una operación asíncrona), recibes un localizador (una Promise) y sigues mirando el móvil en lugar de esperar en la barra. El localizador suena cuando el café está listo."
+    }
+  },
+  "ukContext": {
+    "en": "'Асинхронний' is a direct borrowing from Greek via English. The prefix 'а-' corresponds to English 'a-/un-'. The antonym 'синхронний' (synchronous) is more intuitive for Ukrainian speakers.",
+    "uk": "Термін «асинхронний» — калька з англійської через грецьке коріння. Префікс «а-» відповідає англійському «un-» (заперечення). Антонім «синхронний» (synchronous) інтуїтивно зрозуміліший. У розмовній мові часто скорочують до «асинк» (async).",
+    "es": "'Асинхронний' es un calco del inglés a través del griego. El prefijo 'а-' corresponde al inglés 'un-' (negación). El antónimo 'синхронний' (síncrono) es más intuitivo para los hablantes de ucraniano."
+  },
+  "relatedReasons": {
+    "callback": { "en": "Callbacks are the original pattern for async operations in JavaScript.", "uk": "Колбеки — оригінальний патерн для асинхронних операцій у JavaScript.", "es": "Los callbacks son el patrón original para operaciones asíncronas en JavaScript." },
+    "promise": { "en": "Promises provide a structured way to handle async results.", "uk": "Promise надають структурований спосіб обробки асинхронних результатів.", "es": "Las Promises proporcionan una forma estructurada de manejar resultados asíncronos." },
+    "await": { "en": "Await is the operator that pauses async function execution until a Promise resolves.", "uk": "Await — оператор, що призупиняє виконання асинхронної функції до виконання Promise.", "es": "Await es el operador que pausa la ejecución de la función async hasta que se resuelve una Promise." },
+    "ajax": { "en": "AJAX was the first widespread use of async JavaScript in browsers.", "uk": "AJAX — перше масове використання асинхронного JavaScript у браузерах.", "es": "AJAX fue el primer uso generalizado de JavaScript asíncrono en navegadores." }
+  }
 }

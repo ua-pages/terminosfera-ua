@@ -36,6 +36,14 @@
     "category": "Backend"
   },
   {
+    "id": "authorization",
+    "category": "Backend"
+  },
+  {
+    "id": "await",
+    "category": "Frontend"
+  },
+  {
     "id": "availability-zone",
     "category": "Cloud"
   },

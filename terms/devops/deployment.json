@@ -2,11 +2,35 @@
   "id": "deployment",
   "translations": { "en": "Deployment", "uk": "Деплой", "es": "Despliegue" },
   "definition": {
-    "en": "The process of making an application available for use on a server.",
-    "uk": "Процес запуску застосунку в робоче середовище на сервері.",
-    "es": "Proceso de poner una aplicación a disposición de los usuarios en un servidor."
+    "en": "The process of making an application available for use on a server or production environment.",
+    "uk": "Процес запуску застосунку в робоче середовище на сервері або продакшені.",
+    "es": "Proceso de poner una aplicación a disposición de los usuarios en un servidor o entorno de producción."
   },
-  "etymology": { "origin": "French", "root": "déployer", "meaning": "to unfold, spread out" },
+  "etymology": { "origin": "French", "root": "déployer", "meaning": "to unfold, spread out; from Latin 'dis-' (apart) + 'plicare' (to fold)" },
   "category": "DevOps",
-  "related": ["ci-cd", "pipeline", "container", "infrastructure"]
+  "related": ["ci-cd", "pipeline", "container", "infrastructure", "docker"],
+  "examples": {
+    "code": {
+      "en": "npm run build\nscp -r dist/* user@server:/var/www/\n# Application is now live",
+      "uk": "npm run build\nscp -r dist/* user@server:/var/www/\n# Застосунок тепер у продакшені",
+      "es": "npm run build\nscp -r dist/* user@server:/var/www/\n# La aplicación ya está en producción"
+    },
+    "life": {
+      "en": "Deployment is like moving into a new apartment: you've built all the furniture in your workshop (development), but until everything is assembled and arranged in the actual apartment (production), nobody can visit you.",
+      "uk": "Деплой — це як переїзд у нову квартиру: ви зібрали всі меблі у своїй майстерні (розробка), але поки все не зібрано та не розставлено у справжній квартирі (продакшен), ніхто не може прийти до вас у гості.",
+      "es": "El despliegue es como mudarse a un nuevo apartamento: has construido todos los muebles en tu taller (desarrollo), pero hasta que todo esté montado y colocado en el apartamento real (producción), nadie puede visitarte."
+    }
+  },
+  "ukContext": {
+    "en": "'Деплой' (transliteration) is universally used in Ukrainian tech. The normative translation 'розгортання' is common in official documentation. The verb forms 'задеплоїти' (perfective) and 'деплоїти' (imperfective) are widely used in spoken language. Interestingly, 'деплоймент' is very rare — Ukrainian prefers the shorter 'деплой'.",
+    "uk": "«Деплой» (транслітерація) — загальновживаний термін в українському IT. Нормативний переклад «розгортання» поширений в офіційній документації. Дієслівні форми «задеплоїти» (доконаний вид) та «деплоїти» (недоконаний) широко вживаються в розмовній мові. Цікаво, що «деплоймент» майже не використовується — українські розробники віддають перевагу коротшому «деплой».",
+    "es": "'Деплой' (transliteración) se usa universalmente en el sector tecnológico ucraniano. La traducción normativa 'розгортання' es común en documentación oficial. Las formas verbales 'задеплоїти' (perfectivo) y 'деплоїти' (imperfectivo) se usan ampliamente en el habla cotidiana."
+  },
+  "relatedReasons": {
+    "ci-cd": { "en": "CI/CD automates the deployment process.", "uk": "CI/CD автоматизує процес деплою.", "es": "CI/CD automatiza el proceso de despliegue." },
+    "pipeline": { "en": "A pipeline defines the steps from code commit to deployment.", "uk": "Pipeline визначає кроки від коміту до деплою.", "es": "Un pipeline define los pasos desde el commit hasta el despliegue." },
+    "container": { "en": "Containers simplify deployment by bundling dependencies.", "uk": "Контейнери спрощують деплой, об'єднуючи залежності.", "es": "Los contenedores simplifican el despliegue al empaquetar dependencias." },
+    "infrastructure": { "en": "Infrastructure provides the underlying resources for deployment.", "uk": "Інфраструктура надає ресурси для деплою.", "es": "La infraestructura proporciona los recursos subyacentes para el despliegue." },
+    "docker": { "en": "Docker is the most common tool for containerized deployments.", "uk": "Docker — найпоширеніший інструмент для контейнеризованого деплою.", "es": "Docker es la herramienta más común para despliegues containerizados." }
+  }
 }

@@ -8,5 +8,28 @@
   },
   "etymology": { "origin": "English", "root": "call + back", "meaning": "to call again later" },
   "category": "Frontend",
-  "related": ["javascript", "promise", "async", "event"]
+  "related": ["javascript", "promise", "async", "event"],
+  "examples": {
+    "code": {
+      "en": "setTimeout(() => {\n  console.log('2 seconds later');\n}, 2000);",
+      "uk": "setTimeout(() => {\n  console.log('2 секунди потому');\n}, 2000);",
+      "es": "setTimeout(() => {\n  console.log('2 segundos después');\n}, 2000);"
+    },
+    "life": {
+      "en": "You give your phone number to a restaurant host. Instead of waiting, they call you back when your table is ready — that's a callback.",
+      "uk": "Ви залишаєте номер телефону адміністратору ресторану. Замість того щоб чекати, вам передзвонюють, коли стіл готовий — це колбек.",
+      "es": "Dejas tu número de teléfono al anfitrión del restaurante. En lugar de esperar, te devuelven la llamada cuando la mesa está lista — eso es un callback."
+    }
+  },
+  "ukContext": {
+    "en": "The term 'колбек' (transliteration) is standard in Ukrainian tech. 'Зворотний виклик' is the official normative translation but rarely used in practice. Junior developers often confuse callbacks with promises.",
+    "uk": "Термін «колбек» (транслітерація) є стандартом в українському IT. Нормативний переклад «зворотний виклик» існує в офіційній документації, але майже не вживається в реальній роботі. Програмісти-початківці часто плутають колбеки з промісами.",
+    "es": "El término 'колбек' (transliteración) es estándar en el sector tecnológico ucraniano. La traducción normativa 'зворотний виклик' existe en documentación oficial pero apenas se usa en la práctica."
+  },
+  "relatedReasons": {
+    "javascript": { "en": "Callbacks are a fundamental pattern in JavaScript, especially for event handling.", "uk": "Колбеки — фундаментальний патерн у JavaScript, особливо для обробки подій.", "es": "Los callbacks son un patrón fundamental en JavaScript, especialmente para el manejo de eventos." },
+    "promise": { "en": "Promises were created to solve the 'callback hell' problem.", "uk": "Promise були створені для вирішення проблеми 'callback hell'.", "es": "Las Promises fueron creadas para resolver el problema del 'callback hell'." },
+    "async": { "en": "Understanding callbacks is essential before moving to async/await.", "uk": "Розуміння колбеків необхідне перед вивченням async/await.", "es": "Entender los callbacks es esencial antes de pasar a async/await." },
+    "event": { "en": "Event handlers in the browser are callbacks triggered by user actions.", "uk": "Обробники подій у браузері — це колбеки, що спрацьовують на дії користувача.", "es": "Los manejadores de eventos en el navegador son callbacks activados por acciones del usuario." }
+  }
 }

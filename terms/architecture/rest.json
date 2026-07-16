@@ -2,11 +2,35 @@
   "id": "rest",
   "translations": { "en": "REST", "uk": "REST", "es": "REST" },
   "definition": {
-    "en": "An architectural style for designing networked applications using HTTP.",
-    "uk": "Архітектурний стиль для проєктування мережевих застосунків через HTTP.",
-    "es": "Estilo arquitectónico para diseñar aplicaciones en red utilizando HTTP."
+    "en": "An architectural style for designing networked applications using HTTP with stateless communication and standard methods.",
+    "uk": "Архітектурний стиль для проєктування мережевих застосунків через HTTP зі stateless взаємодією та стандартними методами.",
+    "es": "Estilo arquitectónico para diseñar aplicaciones en red utilizando HTTP con comunicación sin estado y métodos estándar."
   },
-  "etymology": { "origin": "English", "root": "Representational State Transfer", "meaning": "acronym" },
+  "etymology": { "origin": "English", "root": "Representational State Transfer", "meaning": "acronym coined by Roy Fielding in his 2000 PhD dissertation" },
   "category": "Architecture",
-  "related": ["api", "endpoint", "api-gateway", "json"]
+  "related": ["api", "endpoint", "api-gateway", "json", "middleware"],
+  "examples": {
+    "code": {
+      "en": "GET /api/users      → List users\nPOST /api/users     → Create a user\nGET /api/users/42   → Get user 42\nPUT /api/users/42   → Update user 42\nDELETE /api/users/42 → Delete user 42",
+      "uk": "GET /api/users      → Список користувачів\nPOST /api/users     → Створити користувача\nGET /api/users/42   → Отримати користувача 42\nPUT /api/users/42   → Оновити користувача 42\nDELETE /api/users/42 → Видалити користувача 42",
+      "es": "GET /api/users      → Listar usuarios\nPOST /api/users     → Crear un usuario\nGET /api/users/42   → Obtener usuario 42\nPUT /api/users/42   → Actualizar usuario 42\nDELETE /api/users/42 → Eliminar usuario 42"
+    },
+    "life": {
+      "en": "REST is like a library: every book (resource) has a unique shelf number (URL). You can GET a book (read it), POST a new book (add it), PUT a book back (update), or DELETE a book (remove it). The librarian doesn't need to remember who you are between visits.",
+      "uk": "REST — це як бібліотека: кожна книга (ресурс) має унікальний номер на полиці (URL). Ви можете GET книгу (прочитати), POST нову книгу (додати), PUT книгу на місце (оновити) або DELETE книгу (видалити). Бібліотекарю не потрібно пам'ятати, хто ви, між візитами.",
+      "es": "REST es como una biblioteca: cada libro (recurso) tiene un número de estante único (URL). Puedes GET un libro (leerlo), POST un libro nuevo (añadirlo), PUT un libro en su lugar (actualizarlo) o DELETE un libro (eliminarlo). El bibliotecario no necesita recordar quién eres entre visitas."
+    }
+  },
+  "ukContext": {
+    "en": "REST is used as a direct acronym in Ukrainian, pronounced 'рест'. The full translation 'передача репрезентативного стану' exists academically but is never used in practice. Ukrainian developers commonly say 'REST API' as a set phrase, treating 'API' as the noun and 'REST' as the adjective.",
+    "uk": "REST вживається як пряма абревіатура, вимовляється «рест». Повний переклад «передача репрезентативного стану» існує в академічному контексті, але ніколи не використовується на практиці. Українські розробники часто вживають «REST API» як сталий вираз, де «API» — іменник, а «REST» — прикметник.",
+    "es": "REST se usa como acrónimo directo en ucraniano, pronunciado 'rest'. La traducción completa 'передача репрезентативного стану' existe académicamente pero nunca se usa en la práctica."
+  },
+  "relatedReasons": {
+    "api": { "en": "REST is the most common architectural style for APIs.", "uk": "REST — найпоширеніший архітектурний стиль для API.", "es": "REST es el estilo arquitectónico más común para APIs." },
+    "endpoint": { "en": "Endpoints are specific URLs that implement REST operations.", "uk": "Endpoints — конкретні URL, що реалізують REST-операції.", "es": "Los endpoints son URLs específicas que implementan operaciones REST." },
+    "api-gateway": { "en": "API Gateways often expose REST interfaces to clients.", "uk": "API Gateway часто надають REST-інтерфейс для клієнтів.", "es": "Los API Gateways a menudo exponen interfaces REST a los clientes." },
+    "json": { "en": "JSON is the most common data format in REST APIs.", "uk": "JSON — найпоширеніший формат даних у REST API.", "es": "JSON es el formato de datos más común en las APIs REST." },
+    "middleware": { "en": "Middleware processes requests and responses in REST applications.", "uk": "Middleware обробляє запити та відповіді в REST-застосунках.", "es": "El middleware procesa solicitudes y respuestas en aplicaciones REST." }
+  }
 }

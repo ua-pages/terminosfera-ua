@@ -2,11 +2,35 @@
   "id": "repository",
   "translations": { "en": "Repository", "uk": "Репозиторій", "es": "Repositorio" },
   "definition": {
-    "en": "A storage location for source code with version history.",
-    "uk": "Сховище вихідного коду з історією версій.",
-    "es": "Ubicación de almacenamiento para código fuente con historial de versiones."
+    "en": "A storage location for source code with complete version history.",
+    "uk": "Сховище вихідного коду з повною історією версій.",
+    "es": "Ubicación de almacenamiento para código fuente con historial completo de versiones."
   },
-  "etymology": { "origin": "Latin", "root": "repositorium", "meaning": "storage place" },
+  "etymology": { "origin": "Latin", "root": "repositorium", "meaning": "a place where things are stored for later use" },
   "category": "Git",
-  "related": ["commit", "branch", "remote", "clone", "fork"]
+  "related": ["commit", "branch", "remote", "clone", "fork"],
+  "examples": {
+    "code": {
+      "en": "git init my-project\ncd my-project\n# A new repository is ready",
+      "uk": "git init my-project\ncd my-project\n# Новий репозиторій готовий",
+      "es": "git init my-project\ncd my-project\n# Un nuevo repositorio está listo"
+    },
+    "life": {
+      "en": "A repository is like a project folder with a magical undo button for every change ever made. Every save is a photograph of your entire project at that moment.",
+      "uk": "Репозиторій — це папка проєкту з магічною кнопкою «скасувати» для кожної зміни, коли-небудь зробленої. Кожне збереження — це фотографія всього проєкту в цей момент.",
+      "es": "Un repositorio es como una carpeta de proyecto con un botón mágico de deshacer para cada cambio realizado. Cada guardado es una fotografía de todo tu proyecto en ese momento."
+    }
+  },
+  "ukContext": {
+    "en": "'Репозиторій' is the standard Ukrainian term, a direct borrowing from Latin via English. The alternative 'сховище' (literally 'storage') exists but is rarely used in Git context. The adjective 'репозиторний' is occasionally heard but considered non-standard.",
+    "uk": "«Репозиторій» — стандартний український термін, пряме запозичення з латини через англійську. Варіант «сховище» існує, але рідко вживається в контексті Git. Прикметник «репозиторний» іноді зустрічається, але вважається нестандартним.",
+    "es": "'Репозиторій' es el término estándar en ucraniano, un préstamo directo del latín a través del inglés. La alternativa 'сховище' (literalmente 'almacén') existe pero rara vez se usa en el contexto de Git."
+  },
+  "relatedReasons": {
+    "commit": { "en": "A commit saves a snapshot of changes to the repository.", "uk": "Commit зберігає знімок змін у репозиторій.", "es": "Un commit guarda una instantánea de los cambios en el repositorio." },
+    "branch": { "en": "Branches allow developing features in isolated copies of the repository.", "uk": "Гілки дозволяють розробляти функції в ізольованих копіях репозиторію.", "es": "Las ramas permiten desarrollar funcionalidades en copias aisladas del repositorio." },
+    "remote": { "en": "A remote is a repository hosted on another server for collaboration.", "uk": "Remote — це репозиторій на іншому сервері для спільної роботи.", "es": "Un remote es un repositorio alojado en otro servidor para colaboración." },
+    "clone": { "en": "Cloning creates a local copy of a remote repository.", "uk": "Clone створює локальну копію віддаленого репозиторію.", "es": "Clonar crea una copia local de un repositorio remoto." },
+    "fork": { "en": "Forking creates a personal copy of someone else's repository.", "uk": "Fork створює особисту копію чужого репозиторію.", "es": "Hacer fork crea una copia personal del repositorio de otra persona." }
+  }
 }

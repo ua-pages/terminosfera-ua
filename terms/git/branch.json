@@ -2,11 +2,35 @@
   "id": "branch",
   "translations": { "en": "Branch", "uk": "Гілка", "es": "Rama" },
   "definition": {
-    "en": "A parallel version of the repository used for isolated development.",
-    "uk": "Паралельна версія репозиторію для ізольованої розробки.",
-    "es": "Versión paralela del repositorio utilizada para desarrollo aislado."
+    "en": "A parallel version of the repository for isolated development without affecting the main codebase.",
+    "uk": "Паралельна версія репозиторію для ізольованої розробки без впливу на основну кодову базу.",
+    "es": "Versión paralela del repositorio para desarrollo aislado sin afectar el código principal."
   },
-  "etymology": { "origin": "Latin", "root": "branca", "meaning": "paw, limb" },
+  "etymology": { "origin": "Latin", "root": "branca", "meaning": "paw, limb; later used for tree branches, then adopted in computing for parallel code lines" },
   "category": "Git",
-  "related": ["repository", "merge", "rebase", "fork", "conflict"]
+  "related": ["repository", "merge", "rebase", "fork", "conflict"],
+  "examples": {
+    "code": {
+      "en": "git checkout -b feature-dark-mode\n# Work on dark mode independently\ngit checkout main\ngit merge feature-dark-mode",
+      "uk": "git checkout -b feature-dark-mode\n# Розробка темної теми ізольовано\ngit checkout main\ngit merge feature-dark-mode",
+      "es": "git checkout -b feature-dark-mode\n# Trabajar en modo oscuro independientemente\ngit checkout main\ngit merge feature-dark-mode"
+    },
+    "life": {
+      "en": "A branch is like a separate workbench where you can build a new feature without cluttering the main workshop floor. When the feature is ready, you move it to the main floor.",
+      "uk": "Гілка — це окремий верстак, де можна створювати нову функцію, не захаращуючи основну майстерню. Коли функція готова, ви переносите її на основне робоче місце.",
+      "es": "Una rama es como un banco de trabajo separado donde puedes construir una nueva funcionalidad sin desordenar el taller principal. Cuando la funcionalidad está lista, la llevas al área principal."
+    }
+  },
+  "ukContext": {
+    "en": "Ukraine has a rare advantage: 'гілка' is a natural, intuitive word that exactly matches the computing concept. Unlike 'branch' in English (which needed a metaphorical leap), Ukrainian developers immediately understand 'гілка' as 'a fork in a tree of code'. The verb 'відгалузитися' (to branch off) is sometimes used humorously.",
+    "uk": "Українська має рідкісну перевагу: «гілка» — природне, інтуїтивно зрозуміле слово, яке точно відповідає обчислювальному поняттю. На відміну від англійського 'branch' (яке потребувало метафоричного стрибка), українські розробники одразу розуміють «гілку» як розгалуження в дереві коду. Дієслово «відгалузитися» іноді вживається жартома.",
+    "es": "Ucraniano tiene una rara ventaja: 'гілка' es una palabra natural e intuitiva que coincide exactamente con el concepto informático. A diferencia del inglés 'branch' (que necesitó un salto metafórico), los desarrolladores ucranianos entienden inmediatamente 'гілка' como una bifurcación en el árbol del código."
+  },
+  "relatedReasons": {
+    "repository": { "en": "A repository contains all branches of a project.", "uk": "Репозиторій містить усі гілки проєкту.", "es": "Un repositorio contiene todas las ramas de un proyecto." },
+    "merge": { "en": "Merge integrates changes from one branch into another.", "uk": "Merge інтегрує зміни з однієї гілки в іншу.", "es": "Merge integra cambios de una rama en otra." },
+    "rebase": { "en": "Rebase rewrites branch history for a cleaner commit sequence.", "uk": "Rebase переписує історію гілки для чистішої послідовності комітів.", "es": "Rebase reescribe el historial de la rama para una secuencia de commits más limpia." },
+    "fork": { "en": "A fork is a server-side copy of a repository, while a branch is a light-weight line of development within the same repo.", "uk": "Fork — це серверна копія репозиторію, а гілка — легковагова лінія розробки в межах того ж репозиторію.", "es": "Un fork es una copia del repositorio en el servidor, mientras que una rama es una línea de desarrollo ligera dentro del mismo repositorio." },
+    "conflict": { "en": "Conflicts occur when merging branches that have diverged.", "uk": "Конфлікти виникають при злитті гілок, що розійшлися.", "es": "Los conflictos ocurren al fusionar ramas que han divergido." }
+  }
 }

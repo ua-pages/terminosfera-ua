@@ -6,7 +6,30 @@
     "uk": "Набір правил для взаємодії між програмними компонентами.",
     "es": "Conjunto de reglas para la comunicación entre componentes de software."
   },
-  "etymology": { "origin": "English", "root": "Application Programming Interface", "meaning": "acronym" },
+  "etymology": { "origin": "English", "root": "Application Programming Interface", "meaning": "acronym; 'interface' from Latin 'inter' (between) + 'facies' (face, form)" },
   "category": "Frontend",
-  "related": ["endpoint", "ajax", "json", "rest"]
+  "related": ["endpoint", "rest", "json", "ajax"],
+  "examples": {
+    "code": {
+      "en": "fetch('https://api.github.com/users/octocat')\n  .then(res => res.json())\n  .then(data => console.log(data));",
+      "uk": "fetch('https://api.github.com/users/octocat')\n  .then(res => res.json())\n  .then(data => console.log(data));",
+      "es": "fetch('https://api.github.com/users/octocat')\n  .then(res => res.json())\n  .then(data => console.log(data));"
+    },
+    "life": {
+      "en": "A restaurant menu is an API: it lists what the kitchen can prepare (available operations) and how to order them (the interface). You don't need to know how the kitchen works — just the menu.",
+      "uk": "Меню в ресторані — це API: воно показує, що кухня може приготувати (доступні операції) і як замовити (інтерфейс). Вам не потрібно знати, як працює кухня — достатньо меню.",
+      "es": "El menú de un restaurante es una API: muestra lo que la cocina puede preparar (operaciones disponibles) y cómo pedirlo (la interfaz). No necesitas saber cómo funciona la cocina — solo el menú."
+    }
+  },
+  "ukContext": {
+    "en": "API is used universally as an acronym in Ukrainian tech. The full translation 'інтерфейс програмування застосунків' (IPA) exists but is never used in practice. Developers pronounce it 'ей-пі-ай' following English pronunciation.",
+    "uk": "API вживається в українському IT як універсальна абревіатура. Повний переклад «інтерфейс програмування застосунків» (ІПЗ) існує, але ніколи не використовується на практиці. Розробники вимовляють «ей-пі-ай» (англійською), рідше — «а-пі-ай».",
+    "es": "API se usa universalmente como acrónimo en el sector tecnológico ucraniano. La traducción completa 'інтерфейс програмування застосунків' (IPA) existe pero nunca se usa en la práctica."
+  },
+  "relatedReasons": {
+    "endpoint": { "en": "Endpoints are the specific URLs through which an API is accessed.", "uk": "Endpoints — конкретні URL, через які здійснюється доступ до API.", "es": "Los endpoints son las URLs específicas a través de las cuales se accede a una API." },
+    "rest": { "en": "REST is the most common architectural style for designing APIs.", "uk": "REST — найпоширеніший архітектурний стиль для проєктування API.", "es": "REST es el estilo arquitectónico más común para diseñar APIs." },
+    "json": { "en": "JSON is the most common data format used in API responses.", "uk": "JSON — найпоширеніший формат даних у відповідях API.", "es": "JSON es el formato de datos más común en las respuestas de API." },
+    "ajax": { "en": "AJAX is the browser technology that enables API calls from web pages.", "uk": "AJAX — браузерна технологія, що дозволяє викликати API з веб-сторінок.", "es": "AJAX es la tecnología del navegador que permite llamadas a API desde páginas web." }
+  }
 }

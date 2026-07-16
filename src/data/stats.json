@@ -1,10 +1,10 @@
 {
-  "termCount": 96,
+  "termCount": 97,
   "categoriesCount": 15,
   "categories": [
     {
       "name": "Frontend",
-      "count": 15
+      "count": 16
     },
     {
       "name": "Git",
@@ -63,10 +63,10 @@
       "count": 3
     }
   ],
-  "translationsCount": 288,
-  "etymologyFilled": 96,
+  "translationsCount": 291,
+  "etymologyFilled": 97,
   "etymologyEmpty": 0,
   "etymologyPercent": 100,
-  "relatedConnections": 348,
-  "lastUpdated": "2026-07-15"
+  "relatedConnections": 380,
+  "lastUpdated": "2026-07-16"
 }

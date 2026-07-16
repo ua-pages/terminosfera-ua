@@ -1,0 +1,35 @@
+{
+  "id": "await",
+  "translations": { "en": "Await", "uk": "Await", "es": "Await" },
+  "definition": {
+    "en": "An operator that pauses the execution of an async function until a Promise is resolved.",
+    "uk": "Оператор, який призупиняє виконання асинхронної функції до моменту виконання Promise.",
+    "es": "Operador que pausa la ejecución de una función asíncrona hasta que se resuelve una Promise."
+  },
+  "etymology": { "origin": "English", "root": "a- (intensive) + wait", "meaning": "to wait for something with expectation" },
+  "category": "Frontend",
+  "related": ["async", "promise", "callback", "javascript"],
+  "examples": {
+    "code": {
+      "en": "const data = await fetch('/api/users');\nconst users = await data.json();\nconsole.log(users);",
+      "uk": "const data = await fetch('/api/users');\nconst users = await data.json();\nconsole.log(users);",
+      "es": "const data = await fetch('/api/users');\nconst users = await data.json();\nconsole.log(users);"
+    },
+    "life": {
+      "en": "You order a pizza (start an async operation), but instead of standing at the door doing nothing (blocking), you watch TV (continue other work). When the doorbell rings (Promise resolves), you stop watching and get the pizza (await). That 'pausing to answer the door' is await.",
+      "uk": "Ви замовляєте піцу (запускаєте асинхронну операцію), але замість стояти біля дверей без діла (blocking), ви дивитеся телевізор (продовжуєте іншу роботу). Коли дзвінок у двері (Promise виконано), ви зупиняєте перегляд і йдете за піцою (await). Оця «зупинка, щоб відкрити двері» — це await.",
+      "es": "Pides una pizza (inicias una operación asíncrona), pero en lugar de esperar en la puerta sin hacer nada (bloqueando), ves la televisión (continúas con otro trabajo). Cuando suena el timbre (la Promise se resuelve), dejas de ver la tele y recoges la pizza (await). Esa 'pausa para atender la puerta' es await."
+    }
+  },
+  "ukContext": {
+    "en": "Await is not translated in Ukrainian tech — it's used as-is in code. In spoken language, developers say 'авейт' (transliteration). The phrase 'зробити авейт' (to await) is common. Since await is a reserved keyword, it never appears translated in actual code, making any translation purely academic.",
+    "uk": "Await не перекладається в українському IT — використовується як є в коді. У розмовній мові розробники кажуть «авейт» (транслітерація). Фраза «зробити авейт» поширена. Оскільки await — зарезервоване ключове слово, в коді воно ніколи не з'являється в перекладі, що робить будь-який переклад суто академічним.",
+    "es": "Await no se traduce en el sector tecnológico ucraniano — se usa tal cual en el código. En el habla cotidiana, los desarrolladores dicen 'авейт' (transliteración). La frase 'зробити авейт' (hacer await) es común."
+  },
+  "relatedReasons": {
+    "async": { "en": "Await can only be used inside async functions.", "uk": "Await можна використовувати лише всередині async-функцій.", "es": "Await solo puede usarse dentro de funciones async." },
+    "promise": { "en": "Await waits for a Promise to resolve — it's syntactic sugar over .then().", "uk": "Await чекає виконання Promise — це синтаксичний цукор над .then().", "es": "Await espera a que una Promise se resuelva — es azúcar sintáctico sobre .then()." },
+    "callback": { "en": "Before async/await, callbacks were the only way to handle async operations.", "uk": "До появи async/await колбеки були єдиним способом обробки асинхронних операцій.", "es": "Antes de async/await, los callbacks eran la única forma de manejar operaciones asíncronas." },
+    "javascript": { "en": "Await is a JavaScript keyword introduced in ES2017.", "uk": "Await — ключове слово JavaScript, введене в ES2017.", "es": "Await es una palabra clave de JavaScript introducida en ES2017." }
+  }
+}

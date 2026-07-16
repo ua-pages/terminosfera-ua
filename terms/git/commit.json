@@ -2,11 +2,35 @@
   "id": "commit",
   "translations": { "en": "Commit", "uk": "Коміт", "es": "Commit" },
   "definition": {
-    "en": "A snapshot of changes saved to the repository history.",
-    "uk": "Знімок змін, збережений в історії репозиторію.",
-    "es": "Instantánea de cambios guardada en el historial del repositorio."
+    "en": "A snapshot of changes saved to the repository history with a description message.",
+    "uk": "Знімок змін, збережений в історії репозиторію з описовим повідомленням.",
+    "es": "Instantánea de cambios guardada en el historial del repositorio con un mensaje descriptivo."
   },
-  "etymology": { "origin": "Latin", "root": "committere", "meaning": "to bring together" },
+  "etymology": { "origin": "Latin", "root": "committere", "meaning": "to bring together, to join; from 'com-' (together) + 'mittere' (to send)" },
   "category": "Git",
-  "related": ["repository", "branch", "merge", "log", "push"]
+  "related": ["repository", "branch", "merge", "push", "log"],
+  "examples": {
+    "code": {
+      "en": "git add .\ngit commit -m \"Add user authentication\"",
+      "uk": "git add .\ngit commit -m \"Додати автентифікацію користувача\"",
+      "es": "git add .\ngit commit -m \"Añadir autenticación de usuario\""
+    },
+    "life": {
+      "en": "A commit is like saving a checkpoint in a video game. If something breaks later, you can always return to this exact moment.",
+      "uk": "Коміт — це як збереження в відеогрі. Якщо потім щось зламається, ви завжди можете повернутися в цей момент.",
+      "es": "Un commit es como guardar la partida en un videojuego. Si algo se rompe después, siempre puedes volver a este momento exacto."
+    }
+  },
+  "ukContext": {
+    "en": "'Коміт' (transliteration) is the standard term. The normative translation 'фіксація' appears in official Ukrainian Git documentation but is rarely used by developers. The verb form 'закомітити' (to commit) is common in spoken tech Ukrainian.",
+    "uk": "«Коміт» (транслітерація) — стандартний термін. Нормативний переклад «фіксація» зустрічається в офіційній українській документації Git, але майже не вживається розробниками. Дієслівна форма «закомітити» є загальновживаною в розмовному IT-українському.",
+    "es": "'Коміт' (transliteración) es el término estándar. La traducción normativa 'фіксація' aparece en la documentación oficial ucraniana de Git pero apenas la usan los desarrolladores."
+  },
+  "relatedReasons": {
+    "repository": { "en": "Commits are the building blocks of a repository's history.", "uk": "Коміти — це цеглинки історії репозиторію.", "es": "Los commits son los componentes básicos del historial de un repositorio." },
+    "branch": { "en": "Commits on different branches form separate lines of development.", "uk": "Коміти на різних гілках формують окремі лінії розробки.", "es": "Los commits en diferentes ramas forman líneas de desarrollo separadas." },
+    "merge": { "en": "Merge combines commits from different branches into one.", "uk": "Merge об'єднує коміти з різних гілок в одну.", "es": "Merge combina commits de diferentes ramas en una." },
+    "push": { "en": "Push sends your commits to a remote repository.", "uk": "Push надсилає ваші коміти у віддалений репозиторій.", "es": "Push envía tus commits a un repositorio remoto." },
+    "log": { "en": "Log displays the history of commits in a repository.", "uk": "Log показує історію комітів у репозиторії.", "es": "Log muestra el historial de commits en un repositorio." }
+  }
 }
