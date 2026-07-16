@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Editor / OS junk
+Thumbs.db
+*.swp
+
+# Logs
+*.log
+
+# Local env
+.env
+.env.local
