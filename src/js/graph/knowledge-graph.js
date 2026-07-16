@@ -83,7 +83,9 @@ function renderGraph(container) {
   const terms = appStore.state.terms
   const lang = appStore.state.lang
   graph = buildGraph(terms, lang)
-  currentCategory = null
+  // Не скидаємо currentCategory (зберігаємо вибір між перемиканнями мови/роуту);
+  // якщо ще не вибрано або категорії більше нема — дефолт на першу наявну.
+  currentCategory = resolveCategory()
 
   toolbarEl = document.createElement('div')
   toolbarEl.className = 'graph-toolbar'
@@ -97,19 +99,32 @@ function renderGraph(container) {
   renderStage()
 }
 
+/**
+ * Повертає ефективну активну категорію.
+ * Якщо currentCategory не задано або відсутнє у даних — перша наявна категорія.
+ * @returns {string|null}
+ */
+function resolveCategory() {
+  if (!graph) return null
+  const present = new Set(graph.nodes.map((n) => n.category))
+  if (currentCategory && present.has(currentCategory)) return currentCategory
+  const cats = Object.keys(CATEGORY_COLORS).filter((c) => present.has(c))
+  return cats[0] || null
+}
+
 /** Малює кнопки категорій (перемикач графів) */
 function renderToolbar() {
   if (!toolbarEl || !graph) return
   const present = new Set(graph.nodes.map((n) => n.category))
   const cats = Object.keys(CATEGORY_COLORS).filter((c) => present.has(c))
 
-  const parts = [toolbarButton(null, 'Усі', currentCategory === null)]
+  const parts = []
   for (const c of cats) parts.push(toolbarButton(c, c, currentCategory === c))
   toolbarEl.innerHTML = parts.join('')
 
   toolbarEl.querySelectorAll('[data-cat]').forEach((btn) => {
     btn.addEventListener('click', () => {
-      const v = btn.dataset.cat === '__all__' ? null : btn.dataset.cat
+      const v = btn.dataset.cat
       if (v === currentCategory) return
       currentCategory = v
       renderToolbar()
@@ -119,8 +134,7 @@ function renderToolbar() {
 }
 
 function toolbarButton(cat, label, active) {
-  const val = cat === null ? '__all__' : cat
-  return `<button type="button" class="graph-toolbar__btn${active ? ' graph-toolbar__btn--active' : ''}" data-cat="${val}">${label}</button>`
+  return `<button type="button" class="graph-toolbar__btn${active ? ' graph-toolbar__btn--active' : ''}" data-cat="${cat}">${label}</button>`
 }
 
 /** Будує відфільтрований граф для поточної категорії і малює його на сцені */
@@ -217,7 +231,6 @@ export function destroyKnowledgeGraph() {
   }
   toolbarEl = null
   stageEl = null
-  currentCategory = null
   state = null
   graph = null
 }
