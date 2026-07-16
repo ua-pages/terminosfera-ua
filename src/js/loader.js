@@ -24,7 +24,9 @@ function url(relativePath) {
 
 export async function loadAllTerms() {
   try {
-    const indexRes = await fetch(url('../../terms/index.json'))
+    const termsUrl = url('../../terms/index.json')
+    console.log('Fetching terms from:', termsUrl)
+    const indexRes = await fetch(termsUrl)
     if (!indexRes.ok) throw new Error('Failed to load index')
     const index = await indexRes.json()
 
@@ -35,6 +37,7 @@ export async function loadAllTerms() {
     console.log(`Loaded ${valid.length} terms`)
   } catch (err) {
     console.error('Failed to load terms:', err)
+    showError('Failed to load terms: ' + err.message)
   }
 }
 
@@ -57,7 +60,9 @@ async function loadTermFile(id, category) {
 
 export async function loadStatusCodes() {
   try {
-    const indexRes = await fetch(url('../data/http-status-codes/index.json'))
+    const statusUrl = url('../data/http-status-codes/index.json')
+    console.log('Fetching status codes from:', statusUrl)
+    const indexRes = await fetch(statusUrl)
     if (!indexRes.ok) throw new Error('Failed to load status index')
     const index = await indexRes.json()
 
@@ -68,6 +73,14 @@ export async function loadStatusCodes() {
     console.log(`Loaded ${valid.length} HTTP status codes`)
   } catch (err) {
     console.error('Failed to load status codes:', err)
+  }
+}
+
+function showError(msg) {
+  const el = document.getElementById('data-error')
+  if (el) {
+    el.textContent = msg
+    el.style.display = 'block'
   }
 }
 
