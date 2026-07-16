@@ -8,5 +8,5 @@
   },
   "etymology": { "origin": "English", "root": "flutter", "meaning": "to move quickly, flap" },
   "category": "Mobile",
-  "related": ["react-native", "sdk", "apk", "ipa"]
+  "related": ["sdk", "apk", "ipa"]
 }

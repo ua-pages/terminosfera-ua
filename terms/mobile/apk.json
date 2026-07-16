@@ -8,5 +8,5 @@
   },
   "etymology": { "origin": "English", "root": "Android Package Kit", "meaning": "acronym" },
   "category": "Mobile",
-  "related": ["ipa", "sdk", "flutter", "react-native"]
+  "related": ["ipa", "sdk", "flutter"]
 }

@@ -540,10 +540,6 @@
     "category": "Backend"
   },
   {
-    "id": "react-native",
-    "category": "Mobile"
-  },
-  {
     "id": "rebase",
     "category": "Git"
   },
