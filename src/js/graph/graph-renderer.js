@@ -1,4 +1,4 @@
-import { clamp, throttle, createSVGElement } from './graph-utils.js'
+import { clamp, throttle, createSVGElement, categoryColor } from './graph-utils.js'
 
 const SVG_NS = 'http://www.w3.org/2000/svg'
 
@@ -198,6 +198,8 @@ export class GraphRenderer {
         r: this.#nodeRadius(node),
         'data-category': node.category,
       })
+      // Колір за категорією (inline style має пріоритет над CSS fill)
+      circle.style.fill = categoryColor(node.category)
 
       const text = createSVGElement('text', {
         class: 'graph-node__label',
@@ -215,9 +217,9 @@ export class GraphRenderer {
     this.#nodesGroup.append(fragment)
   }
 
-  /** Радіус вузла залежить від degree */
+  /** Радіус вузла залежить від degree (площа ∝ degree — сприйнятливо) */
   #nodeRadius(node) {
-    return Math.max(3, Math.min(16, 3 + node.degree * 0.7))
+    return Math.max(3, Math.min(18, 2.5 + Math.sqrt(node.degree) * 2.4))
   }
 
   /** Автоматично підганяє viewport під розмір контейнера */

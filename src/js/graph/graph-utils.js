@@ -4,6 +4,46 @@
  */
 
 /**
+ * Deterministic PRNG (mulberry32) for reproducible layouts.
+ * @param {number} seed
+ * @returns {() => number}
+ */
+export function mulberry32(seed) {
+  let a = seed >>> 0
+  return function () {
+    a |= 0
+    a = (a + 0x6d2b79f5) | 0
+    let t = Math.imul(a ^ (a >>> 15), 1 | a)
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
+  }
+}
+
+/** Колір для кожної категорії (легенда + вузли) */
+export const CATEGORY_COLORS = {
+  'Git': '#f97316',
+  'Frontend': '#06b6d4',
+  'DevOps': '#8b5cf6',
+  'Backend': '#3b82f6',
+  'Database': '#10b981',
+  'Architecture': '#ec4899',
+  'Computer Science': '#6366f1',
+  'Design': '#ef4444',
+  'Network': '#14b8a6',
+  'Security': '#eab308',
+  'Testing': '#84cc16',
+  'AI/ML': '#a855f7',
+  'Cloud': '#0ea5e9',
+  'Mobile': '#f43f5e',
+  'Project Management': '#78716c',
+}
+
+/** Повертає колір категорії або нейтральний за замовчуванням */
+export function categoryColor(category) {
+  return CATEGORY_COLORS[category] || '#9ca3af'
+}
+
+/**
  * Euclidean distance between two points.
  * @param {{ x: number, y: number }} a
  * @param {{ x: number, y: number }} b
