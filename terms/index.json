@@ -200,6 +200,10 @@
     "category": "Database"
   },
   {
+    "id": "index",
+    "category": "Database"
+  },
+  {
     "id": "deep-learning",
     "category": "AI/ML"
   },

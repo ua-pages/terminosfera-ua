@@ -8,5 +8,5 @@
   },
   "etymology": { "origin": "Germanic", "root": "tagō", "meaning": "to touch, mark" },
   "category": "Git",
-  "related": ["commit", "branch", "release"]
+  "related": ["commit", "branch"]
 }

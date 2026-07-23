@@ -18,7 +18,6 @@
   "category": "Backend",
   "related": [
     "authentication",
-    "cookie",
     "jwt",
     "server"
   ]

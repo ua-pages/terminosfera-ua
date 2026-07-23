@@ -8,5 +8,5 @@
   },
   "etymology": { "origin": "English", "root": "Continuous Integration / Continuous Delivery", "meaning": "acronym" },
   "category": "DevOps",
-  "related": ["deployment", "pipeline", "infrastructure", "testing"]
+  "related": ["deployment", "pipeline", "infrastructure"]
 }

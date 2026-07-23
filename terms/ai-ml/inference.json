@@ -8,5 +8,5 @@
   },
   "etymology": { "origin": "Latin", "root": "inferre", "meaning": "to bring in, deduce" },
   "category": "AI/ML",
-  "related": ["model", "training", "token"]
+  "related": ["model", "token"]
 }

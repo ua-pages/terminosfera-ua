@@ -4,8 +4,8 @@
   "description": "Multilingual IT terminology database with translations, definitions, and etymology.",
   "languages": ["en", "uk", "es"],
   "schemaVersion": "1.1",
-  "termCount": 97,
+  "termCount": 200,
   "categories": 15,
-  "lastUpdated": "2026-07-15",
-  "status": "MVP"
+  "lastUpdated": "2026-07-23",
+  "status": "stable"
 }

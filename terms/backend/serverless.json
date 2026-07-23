@@ -17,7 +17,6 @@
   },
   "category": "Backend",
   "related": [
-    "cloud",
     "endpoint",
     "deployment",
     "microservices"
