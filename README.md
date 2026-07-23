@@ -9,7 +9,7 @@
 
 ## Статус
 
-**v1.0.0 — стабільний реліз.** 199 термінів у 15 категоріях. Схема даних: v1.0 (стабільна).
+**v1.0.0 — стабільний реліз.** 200 термінів у 15 категоріях. Схема даних: v1.1.
 
 Проєкт zero-dependency: веб-застосунок не потребує збірки та не має залежностей.
 Усі дані — статичні JSON у `terms/`.
@@ -38,7 +38,7 @@
 | Git | 20 |
 | Backend | 16 |
 | Architecture | 14 |
-| Database | 13 |
+| Database | 14 |
 | Computer Science | 12 |
 | AI/ML | 12 |
 | Design | 10 |
@@ -146,9 +146,7 @@ npm start        # stdio-транспорт
 
 ## Документація
 
-- [Vision](./docs/vision.md)
-- [Roadmap](./docs/roadmap.md)
-- [Data Model (Schema v1.0)](./docs/data-model.md)
+- [Data Model (Schema v1.1)](./docs/data-model.md)
 - [Terminology Guidelines](./docs/terminology-guidelines.md)
 - [Categories](./docs/categories.md)
 - [Etymology Sources](./docs/etymology-sources.md)
@@ -158,8 +156,8 @@ npm start        # stdio-транспорт
 ## Структура проєкту
 
 ```
-├── src/          # Веб-застосунок (HTML, CSS, JS) — zero-dependency, без збірки
-│   ├── index.html
+├── index.html    # Точка входу GitHub Pages
+├── src/          # Веб-застосунок — zero-dependency, без збірки
 │   ├── css/
 │   └── js/
 │       └── graph/   # knowledge-graph + graph-api (спільний модуль для UI та MCP)
@@ -167,6 +165,7 @@ npm start        # stdio-транспорт
 │   ├── index.json
 │   └── <category>/  # файли термінів за категоріями
 ├── mcp/          # MCP-сервер (окремий package.json + @modelcontextprotocol/sdk)
+├── test/         # Native Node.js перевірки даних
 ├── docs/         # Документація
 └── .mcp.json     # автопідхоплення MCP-сервер агентами
 ```
@@ -180,9 +179,3 @@ npm start        # stdio-транспорт
 відповідний каталог `terms/<category>/` із записом у `terms/index.json`.
 Див. [Terminology Guidelines](./docs/terminology-guidelines.md) і
 [Categories](./docs/categories.md).
-
----
-
-## Ліцензія
-
-Відкритий проєкт. Деталі — у файлі LICENSE.

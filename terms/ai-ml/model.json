@@ -8,5 +8,5 @@
   },
   "etymology": { "origin": "Latin", "root": "modulus", "meaning": "small measure, standard" },
   "category": "AI/ML",
-  "related": ["inference", "training", "algorithm"]
+  "related": ["inference", "algorithm"]
 }

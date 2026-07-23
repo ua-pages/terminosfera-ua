@@ -207,11 +207,11 @@ AI-валідацію.
 
 1. Відкрити Issue із пропозицією терміна.
 2. Дочекатися обговорення перекладу та визначення.
-3. Додати запис у `terms.json`.
+3. Додати JSON-файл у `terms/<category>/` і запис у `terms/index.json`.
 4. Переконатися, що зв'язки симетричні.
 5. Запустити валідацію схеми.
 6. Створити Pull Request.
 
 ---
 
-Див. також: [Vision](./vision.md) · [Roadmap](./roadmap.md)
+Див. також: [Data Model](./data-model.md) · [Categories](./categories.md)

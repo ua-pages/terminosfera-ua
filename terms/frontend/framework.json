@@ -8,5 +8,5 @@
   },
   "etymology": { "origin": "English", "root": "frame + work", "meaning": "structure for building" },
   "category": "Frontend",
-  "related": ["component", "module", "library"]
+  "related": ["component", "module"]
 }

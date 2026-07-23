@@ -8,5 +8,5 @@
   },
   "etymology": { "origin": "German + English", "root": "Feuer + wall", "meaning": "fire + wall" },
   "category": "Security",
-  "related": ["encryption", "vulnerability", "network"]
+  "related": ["encryption", "vulnerability"]
 }

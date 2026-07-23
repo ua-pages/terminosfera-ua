@@ -17,7 +17,6 @@
   },
   "category": "Computer Science",
   "related": [
-    "memory",
     "abstraction",
     "algorithm",
     "thread"
